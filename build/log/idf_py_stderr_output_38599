@@ -1,0 +1,49 @@
+[0;33m--- esp-idf-monitor 1.3.4 on /dev/ttyACM0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x4200f92f: task_wdt_timeout_handling at /home/dsopocko/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:441
+[0m
+[0;33m0x4200fd4c: task_wdt_isr at /home/dsopocko/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:515
+[0m
+[0;33m0x403773d1: _xt_lowint1 at /home/dsopocko/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m0x40378b91: check_trans_valid at /home/dsopocko/esp/esp-idf/components/esp_driver_spi/src/gpspi/spi_master.c:879
+[0m
+[0;33m0x40379261: spi_device_polling_transmit at /home/dsopocko/esp/esp-idf/components/esp_driver_spi/src/gpspi/spi_master.c:1238
+[0m
+[0;33m0x42013fe5: poll_busy at /home/dsopocko/esp/esp-idf/components/esp_driver_sdspi/src/sdspi_host.c:587
+[0m
+[0;33m0x420140ab: start_command_default at /home/dsopocko/esp/esp-idf/components/esp_driver_sdspi/src/sdspi_host.c:561
+[0m
+[0;33m0x42014905: sdspi_host_start_command at /home/dsopocko/esp/esp-idf/components/esp_driver_sdspi/src/sdspi_host.c:494
+[0m
+[0;33m0x42014c36: sdspi_host_do_transaction at /home/dsopocko/esp/esp-idf/components/esp_driver_sdspi/src/sdspi_transaction.c:153
+[0m
+[0;33m0x420299bb: sdmmc_send_cmd at /home/dsopocko/esp/esp-idf/components/sdmmc/sdmmc_cmd.c:25
+[0m
+[0;33m0x42012357: sdmmc_erase_sectors at /home/dsopocko/esp/esp-idf/components/sdmmc/sdmmc_cmd.c:677
+[0m
+[0;33m0x4200bfeb: ff_sdmmc_trim at /home/dsopocko/esp/esp-idf/components/fatfs/diskio/diskio_sdmmc.c:82
+[0m
+[0;33m0x4200c07d: ff_sdmmc_ioctl at /home/dsopocko/esp/esp-idf/components/fatfs/diskio/diskio_sdmmc.c:108
+[0m
+[0;33m0x420095f5: ff_disk_ioctl at /home/dsopocko/esp/esp-idf/components/fatfs/diskio/diskio.c:104
+[0m
+[0;33m0x4200ba6c: f_mkfs at /home/dsopocko/esp/esp-idf/components/fatfs/src/ff.c:6264
+[0m
+[0;33m0x42009117: partition_card at /home/dsopocko/esp/esp-idf/components/fatfs/vfs/vfs_fat_sdmmc.c:211
+[0m
+[0;33m0x420091a2: s_f_mount at /home/dsopocko/esp/esp-idf/components/fatfs/vfs/vfs_fat_sdmmc.c:132
+[0m
+[0;33m0x4200922d: mount_to_vfs_fat at /home/dsopocko/esp/esp-idf/components/fatfs/vfs/vfs_fat_sdmmc.c:170
+[0m
+[0;33m0x420093bb: esp_vfs_fat_sdspi_mount at /home/dsopocko/esp/esp-idf/components/fatfs/vfs/vfs_fat_sdmmc.c:363
+[0m
+[0;33m0x42008f11: sdspi_init at /home/dsopocko/espressif/esp-git/heatmap/components/sdcard/sdcard.c:110
+[0m
+[0;33m0x42008d2b: app_main at /home/dsopocko/espressif/esp-git/heatmap/main/main.c:18
+[0m
+[0;33m0x4202ba93: main_task at /home/dsopocko/esp/esp-idf/components/freertos/app_startup.c:208
+[0m
+[0;33m0x4037b899: vPortTaskWrapper at /home/dsopocko/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0m

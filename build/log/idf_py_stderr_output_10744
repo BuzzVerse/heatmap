@@ -1,0 +1,195 @@
+[0;33m--- esp-idf-monitor 1.3.4 on /dev/ttyACM0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40375b02: panic_abort at /home/dsopocko/esp/esp-idf/components/esp_system/panic.c:472
+[0m
+[0;33m0x4037ae05: esp_system_abort at /home/dsopocko/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x40382679: __assert_func at /home/dsopocko/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x4037b686: xQueueSemaphoreTake at /home/dsopocko/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+[0m
+[0;33m0x4037b7a2: xQueueTakeMutexRecursive at /home/dsopocko/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:835
+[0m
+[0;33m0x40376ab5: lock_acquire_generic at /home/dsopocko/esp/esp-idf/components/newlib/locks.c:144
+[0m
+[0;33m0x40376ba9: _lock_acquire_recursive at /home/dsopocko/esp/esp-idf/components/newlib/locks.c:158
+[0m
+[0;33m0x42007d21: usb_serial_jtag_write at /home/dsopocko/esp/esp-idf/components/vfs/vfs_usb_serial_jtag.c:147
+[0m
+[0;33m0x42007879: console_write at /home/dsopocko/esp/esp-idf/components/vfs/vfs_console.c:75 (discriminator 1)
+[0m
+[0;33m0x420073d6: esp_vfs_write at /home/dsopocko/esp/esp-idf/components/vfs/vfs.c:482 (discriminator 4)
+[0m
+[0;33m0x42018c4e: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+[0m
+[0;33m0x42017fe1: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+[0m
+[0;33m0x4201803e: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+ (inlined by) _fflush_r at /builds/idf/crosstool-NG/.build/src/newlib-git-af24ceb7/newlib/libc/include/stdio.h:417
+[0m
+[0;33m0x420187fd: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+[0m
+[0;33m0x42022d5f: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+[0m
+[0;33m0x42022722: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+[0m
+[0;33m0x42018cc5: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+[0m
+[0;33m0x4202c8b5: esp_log_writev at /home/dsopocko/esp/esp-idf/components/log/log.c:215
+[0m
+[0;33m0x403823ed: esp_log_write at /home/dsopocko/esp/esp-idf/components/log/log.c:225
+[0m
+[0;33m0x42008e7e: sdspi_test at /home/dsopocko/espressif/esp-git/heatmap/components/sdcard/sdcard.c:79 (discriminator 1)
+[0m
+[0;33m0x42008d33: save_to_sdcard at /home/dsopocko/espressif/esp-git/heatmap/main/main.c:8
+[0m
+[0;33m0x4037b899: vPortTaskWrapper at /home/dsopocko/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40375a3c: esp_restart_noos at /home/dsopocko/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375b02: panic_abort at /home/dsopocko/esp/esp-idf/components/esp_system/panic.c:472
+[0m
+[0;33m0x4037ae05: esp_system_abort at /home/dsopocko/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x40382679: __assert_func at /home/dsopocko/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x4037b686: xQueueSemaphoreTake at /home/dsopocko/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+[0m
+[0;33m0x4037b7a2: xQueueTakeMutexRecursive at /home/dsopocko/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:835
+[0m
+[0;33m0x40376ab5: lock_acquire_generic at /home/dsopocko/esp/esp-idf/components/newlib/locks.c:144
+[0m
+[0;33m0x40376ba9: _lock_acquire_recursive at /home/dsopocko/esp/esp-idf/components/newlib/locks.c:158
+[0m
+[0;33m0x42007d21: usb_serial_jtag_write at /home/dsopocko/esp/esp-idf/components/vfs/vfs_usb_serial_jtag.c:147
+[0m
+[0;33m0x42007879: console_write at /home/dsopocko/esp/esp-idf/components/vfs/vfs_console.c:75 (discriminator 1)
+[0m
+[0;33m0x420073d6: esp_vfs_write at /home/dsopocko/esp/esp-idf/components/vfs/vfs.c:482 (discriminator 4)
+[0m
+[0;33m0x42018c4e: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+[0m
+[0;33m0x42017fe1: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+[0m
+[0;33m0x4201803e: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+ (inlined by) _fflush_r at /builds/idf/crosstool-NG/.build/src/newlib-git-af24ceb7/newlib/libc/include/stdio.h:417
+[0m
+[0;33m0x420187fd: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+[0m
+[0;33m0x42022d5f: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+[0m
+[0;33m0x42022722: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+[0m
+[0;33m0x42018cc5: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+[0m
+[0;33m0x4202c8b5: esp_log_writev at /home/dsopocko/esp/esp-idf/components/log/log.c:215
+[0m
+[0;33m0x403823ed: esp_log_write at /home/dsopocko/esp/esp-idf/components/log/log.c:225
+[0m
+[0;33m0x42008e7e: sdspi_test at /home/dsopocko/espressif/esp-git/heatmap/components/sdcard/sdcard.c:79 (discriminator 1)
+[0m
+[0;33m0x42008d33: save_to_sdcard at /home/dsopocko/espressif/esp-git/heatmap/main/main.c:8
+[0m
+[0;33m0x4037b899: vPortTaskWrapper at /home/dsopocko/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40375a3c: esp_restart_noos at /home/dsopocko/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375b02: panic_abort at /home/dsopocko/esp/esp-idf/components/esp_system/panic.c:472
+[0m
+[0;33m0x4037ae05: esp_system_abort at /home/dsopocko/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x40382679: __assert_func at /home/dsopocko/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x4037b686: xQueueSemaphoreTake at /home/dsopocko/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+[0m
+[0;33m0x4037b7a2: xQueueTakeMutexRecursive at /home/dsopocko/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:835
+[0m
+[0;33m0x40376ab5: lock_acquire_generic at /home/dsopocko/esp/esp-idf/components/newlib/locks.c:144
+[0m
+[0;33m0x40376ba9: _lock_acquire_recursive at /home/dsopocko/esp/esp-idf/components/newlib/locks.c:158
+[0m
+[0;33m0x42007d21: usb_serial_jtag_write at /home/dsopocko/esp/esp-idf/components/vfs/vfs_usb_serial_jtag.c:147
+[0m
+[0;33m0x42007879: console_write at /home/dsopocko/esp/esp-idf/components/vfs/vfs_console.c:75 (discriminator 1)
+[0m
+[0;33m0x420073d6: esp_vfs_write at /home/dsopocko/esp/esp-idf/components/vfs/vfs.c:482 (discriminator 4)
+[0m
+[0;33m0x42018c4e: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+[0m
+[0;33m0x42017fe1: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+[0m
+[0;33m0x4201803e: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+ (inlined by) _fflush_r at /builds/idf/crosstool-NG/.build/src/newlib-git-af24ceb7/newlib/libc/include/stdio.h:417
+[0m
+[0;33m0x420187fd: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+[0m
+[0;33m0x42022d5f: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+[0m
+[0;33m0x42022722: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+[0m
+[0;33m0x42018cc5: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+[0m
+[0;33m0x4202c8b5: esp_log_writev at /home/dsopocko/esp/esp-idf/components/log/log.c:215
+[0m
+[0;33m0x403823ed: esp_log_write at /home/dsopocko/esp/esp-idf/components/log/log.c:225
+[0m
+[0;33m0x42008e7e: sdspi_test at /home/dsopocko/espressif/esp-git/heatmap/components/sdcard/sdcard.c:79 (discriminator 1)
+[0m
+[0;33m0x42008d33: save_to_sdcard at /home/dsopocko/espressif/esp-git/heatmap/main/main.c:8
+[0m
+[0;33m0x4037b899: vPortTaskWrapper at /home/dsopocko/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40375a3c: esp_restart_noos at /home/dsopocko/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0;33m0x40375b02: panic_abort at /home/dsopocko/esp/esp-idf/components/esp_system/panic.c:472
+[0m
+[0;33m0x4037ae05: esp_system_abort at /home/dsopocko/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x40382679: __assert_func at /home/dsopocko/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x4037b686: xQueueSemaphoreTake at /home/dsopocko/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+[0m
+[0;33m0x4037b7a2: xQueueTakeMutexRecursive at /home/dsopocko/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:835
+[0m
+[0;33m0x40376ab5: lock_acquire_generic at /home/dsopocko/esp/esp-idf/components/newlib/locks.c:144
+[0m
+[0;33m0x40376ba9: _lock_acquire_recursive at /home/dsopocko/esp/esp-idf/components/newlib/locks.c:158
+[0m
+[0;33m0x42007d21: usb_serial_jtag_write at /home/dsopocko/esp/esp-idf/components/vfs/vfs_usb_serial_jtag.c:147
+[0m
+[0;33m0x42007879: console_write at /home/dsopocko/esp/esp-idf/components/vfs/vfs_console.c:75 (discriminator 1)
+[0m
+[0;33m0x420073d6: esp_vfs_write at /home/dsopocko/esp/esp-idf/components/vfs/vfs.c:482 (discriminator 4)
+[0m
+[0;33m0x42018c4e: __swrite at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+[0m
+[0;33m0x42017fe1: __sflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+[0m
+[0;33m0x4201803e: _fflush_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+ (inlined by) _fflush_r at /builds/idf/crosstool-NG/.build/src/newlib-git-af24ceb7/newlib/libc/include/stdio.h:417
+[0m
+[0;33m0x420187fd: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+[0m
+[0;33m0x42022d5f: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+[0m
+[0;33m0x42022722: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+[0m
+[0;33m0x42018cc5: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+[0m
+[0;33m0x4202c8b5: esp_log_writev at /home/dsopocko/esp/esp-idf/components/log/log.c:215
+[0m
+[0;33m0x403823ed: esp_log_write at /home/dsopocko/esp/esp-idf/components/log/log.c:225
+[0m
+[0;33m0x42008e7e: sdspi_test at /home/dsopocko/espressif/esp-git/heatmap/components/sdcard/sdcard.c:79 (discriminator 1)
+[0m
+[0;33m0x42008d33: save_to_sdcard at /home/dsopocko/espressif/esp-git/heatmap/main/main.c:8
+[0m
+[0;33m0x4037b899: vPortTaskWrapper at /home/dsopocko/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40375a3c: esp_restart_noos at /home/dsopocko/esp/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:159
+[0m
+[0m
