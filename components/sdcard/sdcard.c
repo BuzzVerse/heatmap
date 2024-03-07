@@ -8,7 +8,7 @@
 #include "esp_log.h"
 
 
-static const char *TAG = "example";
+static const char *TAG = "SDCard";
 
 #define MOUNT_POINT "/sdcard"
 

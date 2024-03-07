@@ -1,0 +1,56 @@
+[0;32mI (104) esp_image: segment 2: paddr=0001c0ec vaddr=403800ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xf (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40382792
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1738
+load:0x403cc710,len:0xb9c
+load:0x403ce710,len:0x2e34
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.3-dev-892-g692c1fcc52-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Mar  5 2024 17:13:58[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (29) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (34) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (75) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (82) boot: End of partition table[0m
+[0;32mI (86) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0ae00h ( 44544) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001ae28 vaddr=3fc8c200 size=012bch (  4796) load[0m
+[0;32mI (104) esp_image: segment 2: paddr=0001c0ec vaddr=40380000 size=03f2ch ( 16172) load[0m
+[0;32mI (115) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=19e74h (106100) map[0m
+[0;32mI (137) esp_image: segment 4: paddr=00039e9c vaddr=40383f2c size=0819ch ( 33180) load[0m
+[0;32mI (147) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (148) boot: Disabling RNG early entropy source...[0m
+[0;32mI (159) cpu_start: Unicore app[0m
+[0;32mI (168) cpu_start: Pro cpu start user code[0m
+[0;32mI (168) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (168) cpu_start: Application information:[0m
+[0;32mI (171) cpu_start: Project name:     .[0m
+[0;32mI (175) cpu_start: App version:      728655c-dirty[0m
+[0;32mI (181) cpu_start: Compile time:     Mar  5 2024 17:13:51[0m
+[0;32mI (187) cpu_start: ELF file SHA256:  56e7b7d12...[0m
+[0;32mI (192) cpu_start: ESP-IDF:          v5.3-dev-892-g692c1fcc52-dirty[0m
+[0;32mI (199) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (204) cpu_start: Max chip rev:     v1.99 [0m
+[0;32mI (209) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (214) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (221) heap_init: At 3FC8E460 len 00031BA0 (198 KiB): RAM[0m
+[0;32mI (227) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (234) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (241) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (248) spi_flash: detected chip: generic[0m
+[0;32mI (252) spi_flash: flash io: dio[0m
+[0;33mW (256) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (269) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (276) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (283) main_task: Started on CPU0[0m
+[0;32mI (283) main_task: Calling app_main()[0m
+[0;32mI (283) main_task: Returned from app_main()[0m
+[0;32mI (2373) GPS: write 2024 bytes: '$PCAS10,2*1C'[0m

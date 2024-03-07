@@ -1,4 +1,4 @@
-/home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/xtensa/libxtensa.a
+/home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/riscv/libriscv.a
 /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/esp_driver_gpio/libesp_driver_gpio.a
 /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/esp_pm/libesp_pm.a
 /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/mbedtls/libmbedtls.a
@@ -25,12 +25,9 @@
 /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/esp_timer/libesp_timer.a
 /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/esp_driver_gptimer/libesp_driver_gptimer.a
 /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/esp_ringbuf/libesp_ringbuf.a
-/home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/esp_driver_pcnt/libesp_driver_pcnt.a
 /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/esp_driver_spi/libesp_driver_spi.a
-/home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/esp_driver_mcpwm/libesp_driver_mcpwm.a
 /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/esp_driver_i2s/libesp_driver_i2s.a
 /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/sdmmc/libsdmmc.a
-/home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/esp_driver_sdmmc/libesp_driver_sdmmc.a
 /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/esp_driver_sdspi/libesp_driver_sdspi.a
 /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/esp_driver_rmt/libesp_driver_rmt.a
 /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/esp_driver_tsens/libesp_driver_tsens.a
@@ -70,10 +67,8 @@
 /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/json/libjson.a
 /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/mqtt/libmqtt.a
 /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/nvs_sec_provider/libnvs_sec_provider.a
-/home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/perfmon/libperfmon.a
 /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/spiffs/libspiffs.a
-/home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/touch_element/libtouch_element.a
-/home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/usb/libusb.a
 /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
 /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/main/libmain.a
+/home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/gps/libgps.a
 /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/sdcard/libsdcard.a

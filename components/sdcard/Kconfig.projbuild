@@ -43,3 +43,22 @@ menu "SD SPI Example Configuration"
         default 1  # C3 and others
 
 endmenu
+
+menu "GPS Module Example Configuration"
+
+    config EXAMPLE_PIN_RX
+        int "MOSI GPIO number"
+        default 22 if IDF_TARGET_ESP32
+        default 22 if IDF_TARGET_ESP32S2
+        default 22 if IDF_TARGET_ESP32S3
+        default 7  # C3 and others
+
+    config EXAMPLE_PIN_TX
+        int "MISO GPIO number"
+        default 23 if IDF_TARGET_ESP32
+        default 23 if IDF_TARGET_ESP32S
+        default 23 if IDF_TARGET_ESP32S3
+        default 6  # C3 and others
+
+
+endmenu

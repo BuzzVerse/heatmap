@@ -1,0 +1,155 @@
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42006f06
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1738
+load:0x403cc710,len:0xb9c
+load:0x403ce710,len:0x2e34
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.3-dev-892-g692c1fcc52-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Mar  5 2024 17:13:58[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (29) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (34) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (75) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (82) boot: End of partition table[0m
+[0;32mI (86) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0ad38h ( 44344) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001ad60 vaddr=3fc8c200 size=012bch (  4796) load[0m
+[0;32mI (104) esp_image: segment 2: paddr=0001c024 vaddr=40380000 size=03ff4h ( 16372) load[0m
+[0;32mI (115) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=19ac8h (105160) map[0m
+[0;32mI (137) esp_image: segment 4: paddr=00039af0 vaddr=40383ff4 size=080a4h ( 32932) load[0m
+[0;32mI (147) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (147) boot: Disabling RNG early entropy source...[0m
+[0;32mI (159) cpu_start: Unicore app[0m
+[0;32mI (168) cpu_start: Pro cpu start user code[0m
+[0;32mI (168) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (168) cpu_start: Application information:[0m
+[0;32mI (171) cpu_start: Project name:     .[0m
+[0;32mI (175) cpu_start: App version:      728655c-dirty[0m
+[0;32mI (181) cpu_start: Compile time:     Mar  5 2024 17:13:51[0m
+[0;32mI (187) cpu_start: ELF file SHA256:  07ca78b43...[0m
+[0;32mI (192) cpu_start: ESP-IDF:          v5.3-dev-892-g692c1fcc52-dirty[0m
+[0;32mI (199) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (204) cpu_start: Max chip rev:     v1.99 [0m
+[0;32mI (209) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (213) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (221) heap_init: At 3FC8E460 len 00031BA0 (198 KiB): RAM[0m
+[0;32mI (227) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (234) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (241) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (248) spi_flash: detected chip: generic[0m
+[0;32mI (252) spi_flash: flash io: dio[0m
+[0;33mW (256) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (269) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (275) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (283) main_task: Started on CPU0[0m
+[0;32mI (283) main_task: Calling app_main()[0m
+[0;32mI (283) GPS: GITES[0m
+[0;32mI (293) main_task: Returned from app_main()[0m
+[0;32mI (793) GPS: GITES[0m
+[0;32mI (1293) GPS: GITES[0m
+[0;32mI (1793) GPS: GITES[0m
+[0;32mI (2293) GPS: GITES[0m
+[0;32mI (2793) GPS: GITES[0m
+[0;32mI (3293) GPS: GITES[0m
+[0;32mI (3793) GPS: GITES[0m
+[0;32mI (4293) GPS: GITES[0m
+[0;32mI (4793) GPS: GITES[0m
+[0;32mI (5293) GPS: GITES[0m
+[0;32mI (5793) GPS: GITES[0m
+[0;32mI (6293) GPS: GITES[0m
+[0;32mI (6793) GPS: GITES[0m
+[0;32mI (7293) GPS: GITES[0m
+[0;32mI (7793) GPS: GITES[0m
+[0;32mI (8293) GPS: GITES[0m
+[0;32mI (8793) GPS: GITES[0m
+[0;32mI (9293) GPS: GITES[0m
+[0;32mI (9793) GPS: GITES[0m
+[0;32mI (10293) GPS: GITES[0m
+[0;32mI (10793) GPS: GITES[0m
+[0;32mI (11293) GPS: GITES[0m
+[0;32mI (11793) GPS: GITES[0m
+[0;32mI (12293) GPS: GITES[0m
+[0;32mI (12793) GPS: GITES[0m
+[0;32mI (13293) GPS: GITES[0m
+[0;32mI (13793) GPS: GITES[0m
+[0;32mI (14293) GPS: GITES[0m
+[0;32mI (14793) GPS: GITES[0m
+[0;32mI (15293) GPS: GITES[0m
+[0;32mI (15793) GPS: GITES[0m
+[0;32mI (16293) GPS: GITES[0m
+[0;32mI (16793) GPS: GITES[0m
+[0;32mI (17293) GPS: GITES[0m
+[0;32mI (17793) GPS: GITES[0m
+[0;32mI (18293) GPS: GITES[0m
+[0;32mI (18793) GPS: GITES[0m
+[0;32mI (19293) GPS: GITES[0m
+[0;32mI (19793) GPS: GITES[0m
+[0;32mI (20293) GPS: GITES[0m
+[0;32mI (20793) GPS: GITES[0m
+[0;32mI (21293) GPS: GITES[0m
+[0;32mI (21793) GPS: GITES[0m
+[0;32mI (22293) GPS: GITES[0m
+[0;32mI (22793) GPS: GITES[0m
+[0;32mI (23293) GPS: GITES[0m
+[0;32mI (23793) GPS: GITES[0m
+[0;32mI (24293) GPS: GITES[0m
+[0;32mI (24793) GPS: GITES[0m
+[0;32mI (25293) GPS: GITES[0m
+[0;32mI (25793) GPS: GITES[0m
+[0;32mI (26293) GPS: GITES[0m
+[0;32mI (26793) GPS: GITES[0m
+[0;32mI (27293) GPS: GITES[0m
+[0;32mI (27793) GPS: GITES[0m
+[0;32mI (28293) GPS: GITES[0m
+[0;32mI (28793) GPS: GITES[0m
+[0;32mI (29293) GPS: GITES[0m
+[0;32mI (29793) GPS: GITES[0m
+[0;32mI (30293) GPS: GITES[0m
+[0;32mI (30793) GPS: GITES[0m
+[0;32mI (31293) GPS: GITES[0m
+[0;32mI (31793) GPS: GITES[0m
+[0;32mI (32293) GPS: GITES[0m
+[0;32mI (32793) GPS: GITES[0m
+[0;32mI (33293) GPS: GITES[0m
+[0;32mI (33793) GPS: GITES[0m
+[0;32mI (34293) GPS: GITES[0m
+[0;32mI (34793) GPS: GITES[0m
+[0;32mI (35293) GPS: GITES[0m
+[0;32mI (35793) GPS: GITES[0m
+[0;32mI (36293) GPS: GITES[0m
+[0;32mI (36793) GPS: GITES[0m
+[0;32mI (37293) GPS: GITES[0m
+[0;32mI (37793) GPS: GITES[0m
+[0;32mI (38293) GPS: GITES[0m
+[0;32mI (38793) GPS: GITES[0m
+[0;32mI (39293) GPS: GITES[0m
+[0;32mI (39793) GPS: GITES[0m
+[0;32mI (40293) GPS: GITES[0m
+[0;32mI (40793) GPS: GITES[0m
+[0;32mI (41293) GPS: GITES[0m
+[0;32mI (41793) GPS: GITES[0m
+[0;32mI (42293) GPS: GITES[0m
+[0;32mI (42793) GPS: GITES[0m
+[0;32mI (43293) GPS: GITES[0m
+[0;32mI (43793) GPS: GITES[0m
+[0;32mI (44293) GPS: GITES[0m
+[0;32mI (44793) GPS: GITES[0m
+[0;32mI (45293) GPS: GITES[0m
+[0;32mI (45793) GPS: GITES[0m
+[0;32mI (46293) GPS: GITES[0m
+[0;32mI (46793) GPS: GITES[0m
+[0;32mI (47293) GPS: GITES[0m
+[0;32mI (47793) GPS: GITES[0m
+[0;32mI (48293) GPS: GITES[0m
+[0;32mI (48793) GPS: GITES[0m
+[0;32mI (49293) GPS: GITES[0m
+[0;32mI (49793) GPS: GITES[0m

@@ -1,0 +1,642 @@
+[0;32mI (293) GPS: GITES[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42006f08
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1738
+load:0x403cc710,len:0xb9c
+load:0x403ce710,len:0x2e34
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.3-dev-892-g692c1fcc52-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Mar  5 2024 17:13:58[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (29) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (34) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (75) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (82) boot: End of partition table[0m
+[0;32mI (86) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0ad38h ( 44344) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001ad60 vaddr=3fc8c200 size=012bch (  4796) load[0m
+[0;32mI (104) esp_image: segment 2: paddr=0001c024 vaddr=40380000 size=03ff4h ( 16372) load[0m
+[0;32mI (115) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=19ac8h (105160) map[0m
+[0;32mI (137) esp_image: segment 4: paddr=00039af0 vaddr=40383ff4 size=080a4h ( 32932) load[0m
+[0;32mI (147) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (147) boot: Disabling RNG early entropy source...[0m
+[0;32mI (159) cpu_start: Unicore app[0m
+[0;32mI (168) cpu_start: Pro cpu start user code[0m
+[0;32mI (168) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (168) cpu_start: Application information:[0m
+[0;32mI (171) cpu_start: Project name:     .[0m
+[0;32mI (175) cpu_start: App version:      728655c-dirty[0m
+[0;32mI (181) cpu_start: Compile time:     Mar  5 2024 17:13:51[0m
+[0;32mI (187) cpu_start: ELF file SHA256:  6c173e678...[0m
+[0;32mI (192) cpu_start: ESP-IDF:          v5.3-dev-892-g692c1fcc52-dirty[0m
+[0;32mI (199) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (204) cpu_start: Max chip rev:     v1.99 [0m
+[0;32mI (209) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (213) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (221) heap_init: At 3FC8E460 len 00031BA0 (198 KiB): RAM[0m
+[0;32mI (227) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (234) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (241) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (248) spi_flash: detected chip: generic[0m
+[0;32mI (252) spi_flash: flash io: dio[0m
+[0;33mW (256) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (269) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (275) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (283) main_task: Started on CPU0[0m
+[0;32mI (283) main_task: Calling app_main()[0m
+[0;32mI (283) GPS: GITES[0m
+[0;32mI (293) main_task: Returned from app_main()[0m
+[0;32mI (793) GPS: GITES[0m
+[0;32mI (1293) GPS: GITES[0m
+[0;32mI (1793) GPS: GITES[0m
+[0;32mI (2293) GPS: GITES[0m
+[0;32mI (2793) GPS: GITES[0m
+[0;32mI (3293) GPS: GITES[0m
+[0;32mI (3793) GPS: GITES[0m
+[0;32mI (4293) GPS: GITES[0m
+[0;32mI (4793) GPS: GITES[0m
+[0;32mI (5293) GPS: GITES[0m
+[0;32mI (5793) GPS: GITES[0m
+[0;32mI (6293) GPS: GITES[0m
+[0;32mI (6793) GPS: GITES[0m
+[0;32mI (7293) GPS: GITES[0m
+[0;32mI (7793) GPS: GITES[0m
+[0;32mI (8293) GPS: GITES[0m
+[0;32mI (8793) GPS: GITES[0m
+[0;32mI (9293) GPS: GITES[0m
+[0;32mI (9793) GPS: GITES[0m
+[0;32mI (10293) GPS: GITES[0m
+[0;32mI (10793) GPS: GITES[0m
+[0;32mI (11293) GPS: GITES[0m
+[0;32mI (11793) GPS: GITES[0m
+[0;32mI (12293) GPS: GITES[0m
+[0;32mI (12793) GPS: GITES[0m
+[0;32mI (13293) GPS: GITES[0m
+[0;32mI (13793) GPS: GITES[0m
+[0;32mI (14293) GPS: GITES[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40382792
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1738
+load:0x403cc710,len:0xb9c
+load:0x403ce710,len:0x2e34
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.3-dev-892-g692c1fcc52-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Mar  5 2024 17:13:58[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (29) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (34) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (75) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (82) boot: End of partition table[0m
+[0;32mI (86) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0ad38h ( 44344) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001ad60 vaddr=3fc8c200 size=012bch (  4796) load[0m
+[0;32mI (104) esp_image: segment 2: paddr=0001c024 vaddr=40380000 size=03ff4h ( 16372) load[0m
+[0;32mI (115) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=19ac8h (105160) map[0m
+[0;32mI (137) esp_image: segment 4: paddr=00039af0 vaddr=40383ff4 size=080a4h ( 32932) load[0m
+[0;32mI (147) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (148) boot: Disabling RNG early entropy source...[0m
+[0;32mI (159) cpu_start: Unicore app[0m
+[0;32mI (168) cpu_start: Pro cpu start user code[0m
+[0;32mI (168) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (168) cpu_start: Application information:[0m
+[0;32mI (171) cpu_start: Project name:     .[0m
+[0;32mI (175) cpu_start: App version:      728655c-dirty[0m
+[0;32mI (181) cpu_start: Compile time:     Mar  5 2024 17:13:51[0m
+[0;32mI (187) cpu_start: ELF file SHA256:  6c173e678...[0m
+[0;32mI (192) cpu_start: ESP-IDF:          v5.3-dev-892-g692c1fcc52-dirty[0m
+[0;32mI (199) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (204) cpu_start: Max chip rev:     v1.99 [0m
+[0;32mI (209) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (213) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (221) heap_init: At 3FC8E460 len 00031BA0 (198 KiB): RAM[0m
+[0;32mI (227) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (234) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (241) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (248) spi_flash: detected chip: generic[0m
+[0;32mI (252) spi_flash: flash io: dio[0m
+[0;33mW (256) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (269) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (276) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (283) main_task: Started on CPU0[0m
+[0;32mI (283) main_task: Calling app_main()[0m
+[0;32mI (283) GPS: GITES[0m
+[0;32mI (293) main_task: Returned from app_main()[0m
+[0;32mI (793) GPS: GITES[0m
+[0;32mI (1293) GPS: GITES[0m
+[0;32mI (1793) GPS: GITES[0m
+[0;32mI (2293) GPS: GITES[0m
+[0;32mI (2793) GPS: GITES[0m
+[0;32mI (3293) GPS: GITES[0m
+[0;32mI (3793) GPS: GITES[0m
+[0;32mI (4293) GPS: GITES[0m
+[0;32mI (4793) GPS: GITES[0m
+[0;32mI (5293) GPS: GITES[0m
+[0;32mI (5793) GPS: GITES[0m
+[0;32mI (6293) GPS: GITES[0m
+[0;32mI (6793) GPS: GITES[0m
+[0;32mI (7293) GPS: GITES[0m
+[0;32mI (7793) GPS: GITES[0m
+[0;32mI (8293) GPS: GITES[0m
+[0;32mI (8793) GPS: GITES[0m
+[0;32mI (9293) GPS: GITES[0m
+[0;32mI (9793) GPS: GITES[0m
+[0;32mI (10293) GPS: GITES[0m
+[0;32mI (10793) GPS: GITES[0m
+[0;32mI (11293) GPS: GITES[0m
+[0;32mI (11793) GPS: GITES[0m
+[0;32mI (12293) GPS: GITES[0m
+[0;32mI (12793) GPS: GITES[0m
+[0;32mI (13293) GPS: GITES[0m
+[0;32mI (13793) GPS: GITES[0m
+[0;32mI (14293) GPS: GITES[0m
+[0;32mI (14793) GPS: GITES[0m
+[0;32mI (15293) GPS: GITES[0m
+[0;32mI (15793) GPS: GITES[0m
+[0;32mI (16293) GPS: GITES[0m
+[0;32mI (16793) GPS: GITES[0m
+[0;32mI (17293) GPS: GITES[0m
+[0;32mI (17793) GPS: GITES[0m
+[0;32mI (18293) GPS: GITES[0m
+[0;32mI (18793) GPS: GITES[0m
+[0;32mI (19293) GPS: GITES[0m
+[0;32mI (19793) GPS: GITES[0m
+[0;32mI (20293) GPS: GITES[0m
+[0;32mI (20793) GPS: GITES[0m
+[0;32mI (21293) GPS: GITES[0m
+[0;32mI (21793) GPS: GITES[0m
+[0;32mI (22293) GPS: GITES[0m
+[0;32mI (22793) GPS: GITES[0m
+[0;32mI (23293) GPS: GITES[0m
+[0;32mI (23793) GPS: GITES[0m
+[0;32mI (24293) GPS: GITES[0m
+[0;32mI (24793) GPS: GITES[0m
+[0;32mI (25293) GPS: GITES[0m
+[0;32mI (25793) GPS: GITES[0m
+[0;32mI (26293) GPS: GITES[0m
+[0;32mI (26793) GPS: GITES[0m
+[0;32mI (27293) GPS: GITES[0m
+[0;32mI (27793) GPS: GITES[0m
+[0;32mI (28293) GPS: GITES[0m
+[0;32mI (28793) GPS: GITES[0m
+[0;32mI (29293) GPS: GITES[0m
+[0;32mI (29793) GPS: GITES[0m
+[0;32mI (30293) GPS: GITES[0m
+[0;32mI (30793) GPS: GITES[0m
+[0;32mI (31293) GPS: GITES[0m
+[0;32mI (31793) GPS: GITES[0m
+[0;32mI (32293) GPS: GITES[0m
+[0;32mI (32793) GPS: GITES[0m
+[0;32mI (33293) GPS: GITES[0m
+[0;32mI (33793) GPS: GITES[0m
+[0;32mI (34293) GPS: GITES[0m
+[0;32mI (34793) GPS: GITES[0m
+[0;32mI (35293) GPS: GITES[0m
+[0;32mI (35793) GPS: GITES[0m
+[0;32mI (36293) GPS: GITES[0m
+[0;32mI (36793) GPS: GITES[0m
+[0;32mI (37293) GPS: GITES[0m
+[0;32mI (37793) GPS: GITES[0m
+[0;32mI (38293) GPS: GITES[0m
+[0;32mI (38793) GPS: GITES[0m
+[0;32mI (39293) GPS: GITES[0m
+[0;32mI (39793) GPS: GITES[0m
+[0;32mI (40293) GPS: GITES[0m
+[0;32mI (40793) GPS: GITES[0m
+[0;32mI (41293) GPS: GITES[0m
+[0;32mI (41793) GPS: GITES[0m
+[0;32mI (42293) GPS: GITES[0m
+[0;32mI (42793) GPS: GITES[0m
+[0;32mI (43293) GPS: GITES[0m
+[0;32mI (43793) GPS: GITES[0m
+[0;32mI (44293) GPS: GITES[0m
+[0;32mI (44793) GPS: GITES[0m
+[0;32mI (45293) GPS: GITES[0m
+[0;32mI (45793) GPS: GITES[0m
+[0;32mI (46293) GPS: GITES[0m
+[0;32mI (46793) GPS: GITES[0m
+[0;32mI (47293) GPS: GITES[0m
+[0;32mI (47793) GPS: GITES[0m
+[0;32mI (48293) GPS: GITES[0m
+[0;32mI (48793) GPS: GITES[0m
+[0;32mI (49293) GPS: GITES[0m
+[0;32mI (49793) GPS: GITES[0m
+[0;32mI (50293) GPS: GITES[0m
+[0;32mI (50793) GPS: GITES[0m
+[0;32mI (51293) GPS: GITES[0m
+[0;32mI (51793) GPS: GITES[0m
+[0;32mI (52293) GPS: GITES[0m
+[0;32mI (52793) GPS: GITES[0m
+[0;32mI (53293) GPS: GITES[0m
+[0;32mI (53793) GPS: GITES[0m
+[0;32mI (54293) GPS: GITES[0m
+[0;32mI (54793) GPS: GITES[0m
+[0;32mI (55293) GPS: GITES[0m
+[0;32mI (55793) GPS: GITES[0m
+[0;32mI (56293) GPS: GITES[0m
+[0;32mI (56793) GPS: GITES[0m
+[0;32mI (57293) GPS: GITES[0m
+[0;32mI (57793) GPS: GITES[0m
+[0;32mI (58293) GPS: GITES[0m
+[0;32mI (58793) GPS: GITES[0m
+[0;32mI (59293) GPS: GITES[0m
+[0;32mI (59793) GPS: GITES[0m
+[0;32mI (60293) GPS: GITES[0m
+[0;32mI (60793) GPS: GITES[0m
+[0;32mI (61293) GPS: GITES[0m
+[0;32mI (61793) GPS: GITES[0m
+[0;32mI (62293) GPS: GITES[0m
+[0;32mI (62793) GPS: GITES[0m
+[0;32mI (63293) GPS: GITES[0m
+[0;32mI (63793) GPS: GITES[0m
+[0;32mI (64293) GPS: GITES[0m
+[0;32mI (64793) GPS: GITES[0m
+[0;32mI (65293) GPS: GITES[0m
+[0;32mI (65793) GPS: GITES[0m
+[0;32mI (66293) GPS: GITES[0m
+[0;32mI (66793) GPS: GITES[0m
+[0;32mI (67293) GPS: GITES[0m
+[0;32mI (67793) GPS: GITES[0m
+[0;32mI (68293) GPS: GITES[0m
+[0;32mI (68793) GPS: GITES[0m
+[0;32mI (69293) GPS: GITES[0m
+[0;32mI (69793) GPS: GITES[0m
+[0;32mI (70293) GPS: GITES[0m
+[0;32mI (70793) GPS: GITES[0m
+[0;32mI (71293) GPS: GITES[0m
+[0;32mI (71793) GPS: GITES[0m
+[0;32mI (72293) GPS: GITES[0m
+[0;32mI (72793) GPS: GITES[0m
+[0;32mI (73293) GPS: GITES[0m
+[0;32mI (73793) GPS: GITES[0m
+[0;32mI (74293) GPS: GITES[0m
+[0;32mI (74793) GPS: GITES[0m
+[0;32mI (75293) GPS: GITES[0m
+[0;32mI (75793) GPS: GITES[0m
+[0;32mI (76293) GPS: GITES[0m
+[0;32mI (76793) GPS: GITES[0m
+[0;32mI (77293) GPS: GITES[0m
+[0;32mI (77793) GPS: GITES[0m
+[0;32mI (78293) GPS: GITES[0m
+[0;32mI (78793) GPS: GITES[0m
+[0;32mI (79293) GPS: GITES[0m
+[0;32mI (79793) GPS: GITES[0m
+[0;32mI (80293) GPS: GITES[0m
+[0;32mI (80793) GPS: GITES[0m
+[0;32mI (81293) GPS: GITES[0m
+[0;32mI (81793) GPS: GITES[0m
+[0;32mI (82293) GPS: GITES[0m
+[0;32mI (82793) GPS: GITES[0m
+[0;32mI (83293) GPS: GITES[0m
+[0;32mI (83793) GPS: GITES[0m
+[0;32mI (84293) GPS: GITES[0m
+[0;32mI (84793) GPS: GITES[0m
+[0;32mI (85293) GPS: GITES[0m
+[0;32mI (85793) GPS: GITES[0m
+[0;32mI (86293) GPS: GITES[0m
+[0;32mI (86793) GPS: GITES[0m
+[0;32mI (87293) GPS: GITES[0m
+[0;32mI (87793) GPS: GITES[0m
+[0;32mI (88293) GPS: GITES[0m
+[0;32mI (88793) GPS: GITES[0m
+[0;32mI (89293) GPS: GITES[0m
+[0;32mI (89793) GPS: GITES[0m
+[0;32mI (90293) GPS: GITES[0m
+[0;32mI (90793) GPS: GITES[0m
+[0;32mI (91293) GPS: GITES[0m
+[0;32mI (91793) GPS: GITES[0m
+[0;32mI (92293) GPS: GITES[0m
+[0;32mI (92793) GPS: GITES[0m
+[0;32mI (93293) GPS: GITES[0m
+[0;32mI (93793) GPS: GITES[0m
+[0;32mI (94293) GPS: GITES[0m
+[0;32mI (94793) GPS: GITES[0m
+[0;32mI (95293) GPS: GITES[0m
+[0;32mI (95793) GPS: GITES[0m
+[0;32mI (96293) GPS: GITES[0m
+[0;32mI (96793) GPS: GITES[0m
+[0;32mI (97293) GPS: GITES[0m
+[0;32mI (97793) GPS: GITES[0m
+[0;32mI (98293) GPS: GITES[0m
+[0;32mI (98793) GPS: GITES[0m
+[0;32mI (99293) GPS: GITES[0m
+[0;32mI (99793) GPS: GITES[0m
+[0;32mI (100293) GPS: GITES[0m
+[0;32mI (100793) GPS: GITES[0m
+[0;32mI (101293) GPS: GITES[0m
+[0;32mI (101793) GPS: GITES[0m
+[0;32mI (102293) GPS: GITES[0m
+[0;32mI (102793) GPS: GITES[0m
+[0;32mI (103293) GPS: GITES[0m
+[0;32mI (103793) GPS: GITES[0m
+[0;32mI (104293) GPS: GITES[0m
+[0;32mI (104793) GPS: GITES[0m
+[0;32mI (105293) GPS: GITES[0m
+[0;32mI (105793) GPS: GITES[0m
+[0;32mI (106293) GPS: GITES[0m
+[0;32mI (106793) GPS: GITES[0m
+[0;32mI (107293) GPS: GITES[0m
+[0;32mI (107793) GPS: GITES[0m
+[0;32mI (108293) GPS: GITES[0m
+[0;32mI (108793) GPS: GITES[0m
+[0;32mI (109293) GPS: GITES[0m
+[0;32mI (109793) GPS: GITES[0m
+[0;32mI (110293) GPS: GITES[0m
+[0;32mI (110793) GPS: GITES[0m
+[0;32mI (111293) GPS: GITES[0m
+[0;32mI (111793) GPS: GITES[0m
+[0;32mI (112293) GPS: GITES[0m
+[0;32mI (112793) GPS: GITES[0m
+[0;32mI (113293) GPS: GITES[0m
+[0;32mI (113793) GPS: GITES[0m
+[0;32mI (114293) GPS: GITES[0m
+[0;32mI (114793) GPS: GITES[0m
+[0;32mI (115293) GPS: GITES[0m
+[0;32mI (115793) GPS: GITES[0m
+[0;32mI (116293) GPS: GITES[0m
+[0;32mI (116793) GPS: GITES[0m
+[0;32mI (117293) GPS: GITES[0m
+[0;32mI (117793) GPS: GITES[0m
+[0;32mI (118293) GPS: GITES[0m
+[0;32mI (118793) GPS: GITES[0m
+[0;32mI (119293) GPS: GITES[0m
+[0;32mI (119793) GPS: GITES[0m
+[0;32mI (120293) GPS: GITES[0m
+[0;32mI (120793) GPS: GITES[0m
+[0;32mI (121293) GPS: GITES[0m
+[0;32mI (121793) GPS: GITES[0m
+[0;32mI (122293) GPS: GITES[0m
+[0;32mI (122793) GPS: GITES[0m
+[0;32mI (123293) GPS: GITES[0m
+[0;32mI (123793) GPS: GITES[0m
+[0;32mI (124293) GPS: GITES[0m
+[0;32mI (124793) GPS: GITES[0m
+[0;32mI (125293) GPS: GITES[0m
+[0;32mI (125793) GPS: GITES[0m
+[0;32mI (126293) GPS: GITES[0m
+[0;32mI (126793) GPS: GITES[0m
+[0;32mI (127293) GPS: GITES[0m
+[0;32mI (127793) GPS: GITES[0m
+[0;32mI (128293) GPS: GITES[0m
+[0;32mI (128793) GPS: GITES[0m
+[0;32mI (129293) GPS: GITES[0m
+[0;32mI (129793) GPS: GITES[0m
+[0;32mI (130293) GPS: GITES[0m
+[0;32mI (130793) GPS: GITES[0m
+[0;32mI (131293) GPS: GITES[0m
+[0;32mI (131793) GPS: GITES[0m
+[0;32mI (132293) GPS: GITES[0m
+[0;32mI (132793) GPS: GITES[0m
+[0;32mI (133293) GPS: GITES[0m
+[0;32mI (133793) GPS: GITES[0m
+[0;32mI (134293) GPS: GITES[0m
+[0;32mI (134793) GPS: GITES[0m
+[0;32mI (135293) GPS: GITES[0m
+[0;32mI (135793) GPS: GITES[0m
+[0;32mI (136293) GPS: GITES[0m
+[0;32mI (136793) GPS: GITES[0m
+[0;32mI (137293) GPS: GITES[0m
+[0;32mI (137793) GPS: GITES[0m
+[0;32mI (138293) GPS: GITES[0m
+[0;32mI (138793) GPS: GITES[0m
+[0;32mI (139293) GPS: GITES[0m
+[0;32mI (139793) GPS: GITES[0m
+[0;32mI (140293) GPS: GITES[0m
+[0;32mI (140793) GPS: GITES[0m
+[0;32mI (141293) GPS: GITES[0m
+[0;32mI (141793) GPS: GITES[0m
+[0;32mI (142293) GPS: GITES[0m
+[0;32mI (142793) GPS: GITES[0m
+[0;32mI (143293) GPS: GITES[0m
+[0;32mI (143793) GPS: GITES[0m
+[0;32mI (144293) GPS: GITES[0m
+[0;32mI (144793) GPS: GITES[0m
+[0;32mI (145293) GPS: GITES[0m
+[0;32mI (145793) GPS: GITES[0m
+[0;32mI (146293) GPS: GITES[0m
+[0;32mI (146793) GPS: GITES[0m
+[0;32mI (147293) GPS: GITES[0m
+[0;32mI (147793) GPS: GITES[0m
+[0;32mI (148293) GPS: GITES[0m
+[0;32mI (148793) GPS: GITES[0m
+[0;32mI (149293) GPS: GITES[0m
+[0;32mI (149793) GPS: GITES[0m
+[0;32mI (150293) GPS: GITES[0m
+[0;32mI (150793) GPS: GITES[0m
+[0;32mI (151293) GPS: GITES[0m
+[0;32mI (151793) GPS: GITES[0m
+[0;32mI (152293) GPS: GITES[0m
+[0;32mI (152793) GPS: GITES[0m
+[0;32mI (153293) GPS: GITES[0m
+[0;32mI (153793) GPS: GITES[0m
+[0;32mI (154293) GPS: GITES[0m
+[0;32mI (154793) GPS: GITES[0m
+[0;32mI (155293) GPS: GITES[0m
+[0;32mI (155793) GPS: GITES[0m
+[0;32mI (156293) GPS: GITES[0m
+[0;32mI (156793) GPS: GITES[0m
+[0;32mI (157293) GPS: GITES[0m
+[0;32mI (157793) GPS: GITES[0m
+[0;32mI (158293) GPS: GITES[0m
+[0;32mI (158793) GPS: GITES[0m
+[0;32mI (159293) GPS: GITES[0m
+[0;32mI (159793) GPS: GITES[0m
+[0;32mI (160293) GPS: GITES[0m
+[0;32mI (160793) GPS: GITES[0m
+[0;32mI (161293) GPS: GITES[0m
+[0;32mI (161793) GPS: GITES[0m
+[0;32mI (162293) GPS: GITES[0m
+[0;32mI (162793) GPS: GITES[0m
+[0;32mI (163293) GPS: GITES[0m
+[0;32mI (163793) GPS: GITES[0m
+[0;32mI (164293) GPS: GITES[0m
+[0;32mI (164793) GPS: GITES[0m
+[0;32mI (165293) GPS: GITES[0m
+[0;32mI (165793) GPS: GITES[0m
+[0;32mI (166293) GPS: GITES[0m
+[0;32mI (166793) GPS: GITES[0m
+[0;32mI (167293) GPS: GITES[0m
+[0;32mI (167793) GPS: GITES[0m
+[0;32mI (168293) GPS: GITES[0m
+[0;32mI (168793) GPS: GITES[0m
+[0;32mI (169293) GPS: GITES[0m
+[0;32mI (169793) GPS: GITES[0m
+[0;32mI (170293) GPS: GITES[0m
+[0;32mI (170793) GPS: GITES[0m
+[0;32mI (171293) GPS: GITES[0m
+[0;32mI (171793) GPS: GITES[0m
+[0;32mI (172293) GPS: GITES[0m
+[0;32mI (172793) GPS: GITES[0m
+[0;32mI (173293) GPS: GITES[0m
+[0;32mI (173793) GPS: GITES[0m
+[0;32mI (174293) GPS: GITES[0m
+[0;32mI (174793) GPS: GITES[0m
+[0;32mI (175293) GPS: GITES[0m
+[0;32mI (175793) GPS: GITES[0m
+[0;32mI (176293) GPS: GITES[0m
+[0;32mI (176793) GPS: GITES[0m
+[0;32mI (177293) GPS: GITES[0m
+[0;32mI (177793) GPS: GITES[0m
+[0;32mI (178293) GPS: GITES[0m
+[0;32mI (178793) GPS: GITES[0m
+[0;32mI (179293) GPS: GITES[0m
+[0;32mI (179793) GPS: GITES[0m
+[0;32mI (180293) GPS: GITES[0m
+[0;32mI (180793) GPS: GITES[0m
+[0;32mI (181293) GPS: GITES[0m
+[0;32mI (181793) GPS: GITES[0m
+[0;32mI (182293) GPS: GITES[0m
+[0;32mI (182793) GPS: GITES[0m
+[0;32mI (183293) GPS: GITES[0m
+[0;32mI (183793) GPS: GITES[0m
+[0;32mI (184293) GPS: GITES[0m
+[0;32mI (184793) GPS: GITES[0m
+[0;32mI (185293) GPS: GITES[0m
+[0;32mI (185793) GPS: GITES[0m
+[0;32mI (186293) GPS: GITES[0m
+[0;32mI (186793) GPS: GITES[0m
+[0;32mI (187293) GPS: GITES[0m
+[0;32mI (187793) GPS: GITES[0m
+[0;32mI (188293) GPS: GITES[0m
+[0;32mI (188793) GPS: GITES[0m
+[0;32mI (189293) GPS: GITES[0m
+[0;32mI (189793) GPS: GITES[0m
+[0;32mI (190293) GPS: GITES[0m
+[0;32mI (190793) GPS: GITES[0m
+[0;32mI (191293) GPS: GITES[0m
+[0;32mI (191793) GPS: GITES[0m
+[0;32mI (192293) GPS: GITES[0m
+[0;32mI (192793) GPS: GITES[0m
+[0;32mI (193293) GPS: GITES[0m
+[0;32mI (193793) GPS: GITES[0m
+[0;32mI (194293) GPS: GITES[0m
+[0;32mI (194793) GPS: GITES[0m
+[0;32mI (195293) GPS: GITES[0m
+[0;32mI (195793) GPS: GITES[0m
+[0;32mI (196293) GPS: GITES[0m
+[0;32mI (196793) GPS: GITES[0m
+[0;32mI (197293) GPS: GITES[0m
+[0;32mI (197793) GPS: GITES[0m
+[0;32mI (198293) GPS: GITES[0m
+[0;32mI (198793) GPS: GITES[0m
+[0;32mI (199293) GPS: GITES[0m
+[0;32mI (199793) GPS: GITES[0m
+[0;32mI (200293) GPS: GITES[0m
+[0;32mI (200793) GPS: GITES[0m
+[0;32mI (201293) GPS: GITES[0m
+[0;32mI (201793) GPS: GITES[0m
+[0;32mI (202293) GPS: GITES[0m
+[0;32mI (202793) GPS: GITES[0m
+[0;32mI (203293) GPS: GITES[0m
+[0;32mI (203793) GPS: GITES[0m
+[0;32mI (204293) GPS: GITES[0m
+[0;32mI (204793) GPS: GITES[0m
+[0;32mI (205293) GPS: GITES[0m
+[0;32mI (205793) GPS: GITES[0m
+[0;32mI (206293) GPS: GITES[0m
+[0;32mI (206793) GPS: GITES[0m
+[0;32mI (207293) GPS: GITES[0m
+[0;32mI (207793) GPS: GITES[0m
+[0;32mI (208293) GPS: GITES[0m
+[0;32mI (208793) GPS: GITES[0m
+[0;32mI (209293) GPS: GITES[0m
+[0;32mI (209793) GPS: GITES[0m
+[0;32mI (210293) GPS: GITES[0m
+[0;32mI (210793) GPS: GITES[0m
+[0;32mI (211293) GPS: GITES[0m
+[0;32mI (211793) GPS: GITES[0m
+[0;32mI (212293) GPS: GITES[0m
+[0;32mI (212793) GPS: GITES[0m
+[0;32mI (213293) GPS: GITES[0m
+[0;32mI (213793) GPS: GITES[0m
+[0;32mI (214293) GPS: GITES[0m
+[0;32mI (214793) GPS: GITES[0m
+[0;32mI (215293) GPS: GITES[0m
+[0;32mI (215793) GPS: GITES[0m
+[0;32mI (216293) GPS: GITES[0m
+[0;32mI (216793) GPS: GITES[0m
+[0;32mI (217293) GPS: GITES[0m
+[0;32mI (217793) GPS: GITES[0m
+[0;32mI (218293) GPS: GITES[0m
+[0;32mI (218793) GPS: GITES[0m
+[0;32mI (219293) GPS: GITES[0m
+[0;32mI (219793) GPS: GITES[0m
+[0;32mI (220293) GPS: GITES[0m
+[0;32mI (220793) GPS: GITES[0m
+[0;32mI (221293) GPS: GITES[0m
+[0;32mI (221793) GPS: GITES[0m
+[0;32mI (222293) GPS: GITES[0m
+[0;32mI (222793) GPS: GITES[0m
+[0;32mI (223293) GPS: GITES[0m
+[0;32mI (223793) GPS: GITES[0m
+[0;32mI (224293) GPS: GITES[0m
+[0;32mI (224793) GPS: GITES[0m
+[0;32mI (225293) GPS: GITES[0m
+[0;32mI (225793) GPS: GITES[0m
+[0;32mI (226293) GPS: GITES[0m
+[0;32mI (226793) GPS: GITES[0m
+[0;32mI (227293) GPS: GITES[0m
+[0;32mI (227793) GPS: GITES[0m
+[0;32mI (228293) GPS: GITES[0m
+[0;32mI (228793) GPS: GITES[0m
+[0;32mI (229293) GPS: GITES[0m
+[0;32mI (229793) GPS: GITES[0m
+[0;32mI (230293) GPS: GITES[0m
+[0;32mI (230793) GPS: GITES[0m
+[0;32mI (231293) GPS: GITES[0m
+[0;32mI (231793) GPS: GITES[0m
+[0;32mI (232293) GPS: GITES[0m
+[0;32mI (232793) GPS: GITES[0m
+[0;32mI (233293) GPS: GITES[0m
+[0;32mI (233793) GPS: GITES[0m
+[0;32mI (234293) GPS: GITES[0m
+[0;32mI (234793) GPS: GITES[0m
+[0;32mI (235293) GPS: GITES[0m
+[0;32mI (235793) GPS: GITES[0m
+[0;32mI (236293) GPS: GITES[0m
+[0;32mI (236793) GPS: GITES[0m
+[0;32mI (237293) GPS: GITES[0m
+[0;32mI (237793) GPS: GITES[0m
+[0;32mI (238293) GPS: GITES[0m
+[0;32mI (238793) GPS: GITES[0m
+[0;32mI (239293) GPS: GITES[0m
+[0;32mI (239793) GPS: GITES[0m
+[0;32mI (240293) GPS: GITES[0m
+[0;32mI (240793) GPS: GITES[0m
+[0;32mI (241293) GPS: GITES[0m
+[0;32mI (241793) GPS: GITES[0m
+[0;32mI (242293) GPS: GITES[0m
+[0;32mI (242793) GPS: GITES[0m
+[0;32mI (243293) GPS: GITES[0m
+[0;32mI (243793) GPS: GITES[0m
+[0;32mI (244293) GPS: GITES[0m
+[0;32mI (244793) GPS: GITES[0m
+[0;32mI (245293) GPS: GITES[0m
+[0;32mI (245793) GPS: GITES[0m
+[0;32mI (246293) GPS: GITES[0m
+[0;32mI (246793) GPS: GITES[0m
+[0;32mI (247293) GPS: GITES[0m
+[0;32mI (247793) GPS: GITES[0m
+[0;32mI (248293) GPS: GITES[0m
+[0;32mI (248793) GPS: GITES[0m
+[0;32mI (249293) GPS: GITES[0m
+[0;32mI (249793) GPS: GITES[0m
+[0;32mI (250293) GPS: GITES[0m
+[0;32mI (250793) GPS: GITES
