@@ -1,0 +1,19 @@
+
+menu "GPS Module Example Configuration"
+
+    config GPS_EXAMPLE_PIN_RXD
+        int "GPS RXD GPIO number"
+        default 22 if IDF_TARGET_ESP32
+        default 22 if IDF_TARGET_ESP32S2
+        default 22 if IDF_TARGET_ESP32S3
+        default 20  # C3 and others
+
+    config GPS_EXAMPLE_PIN_TXD
+        int "GPS TXD GPIO number"
+        default 23 if IDF_TARGET_ESP32
+        default 23 if IDF_TARGET_ESP32S
+        default 23 if IDF_TARGET_ESP32S3
+        default 21  # C3 and others
+
+
+endmenu

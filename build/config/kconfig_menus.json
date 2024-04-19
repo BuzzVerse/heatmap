@@ -5173,6 +5173,34 @@
             {
                 "children": [],
                 "depends_on": null,
+                "help": null,
+                "id": "GPS_EXAMPLE_PIN_RXD",
+                "name": "GPS_EXAMPLE_PIN_RXD",
+                "range": null,
+                "title": "GPS RXD GPIO number",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": null,
+                "id": "GPS_EXAMPLE_PIN_TXD",
+                "name": "GPS_EXAMPLE_PIN_TXD",
+                "range": null,
+                "title": "GPS TXD GPIO number",
+                "type": "int"
+            }
+        ],
+        "depends_on": null,
+        "id": "gps-module-example-configuration",
+        "title": "GPS Module Example Configuration",
+        "type": "menu"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "depends_on": null,
                 "help": "If this config item is set, format_if_mount_failed will be set to true and the card will be formatted if\nthe mount has failed.",
                 "id": "EXAMPLE_FORMAT_IF_MOUNT_FAILED",
                 "name": "EXAMPLE_FORMAT_IF_MOUNT_FAILED",
@@ -5224,34 +5252,6 @@
         "depends_on": null,
         "id": "sd-spi-example-configuration",
         "title": "SD SPI Example Configuration",
-        "type": "menu"
-    },
-    {
-        "children": [
-            {
-                "children": [],
-                "depends_on": null,
-                "help": null,
-                "id": "EXAMPLE_PIN_RX",
-                "name": "EXAMPLE_PIN_RX",
-                "range": null,
-                "title": "MOSI GPIO number",
-                "type": "int"
-            },
-            {
-                "children": [],
-                "depends_on": null,
-                "help": null,
-                "id": "EXAMPLE_PIN_TX",
-                "name": "EXAMPLE_PIN_TX",
-                "range": null,
-                "title": "MISO GPIO number",
-                "type": "int"
-            }
-        ],
-        "depends_on": null,
-        "id": "gps-module-example-configuration",
-        "title": "GPS Module Example Configuration",
         "type": "menu"
     },
     {

@@ -8,7 +8,7 @@
 #include "esp_log.h"
 
 
-static const char *TAG = "SDCard";
+static const char *TAG = "SDSPI";
 
 #define MOUNT_POINT "/sdcard"
 
@@ -22,6 +22,10 @@ static const char *TAG = "SDCard";
 
 //Initialize card struct
 sdmmc_card_t *card;
+//Initialize lora struct
+spi_device_handle_t lorahandle;
+
+
 
 static esp_err_t sd_write_file(const char *path, char *data){
     ESP_LOGI(TAG, "Opening file %s", path);
@@ -49,13 +53,6 @@ static esp_err_t sd_read_file(const char *path){
         printf( "Reading from line: %s", line);
     }
      fclose(file);
-    // strip newline
-    // char *pos = strchr(line, '\n');
-    // if (pos) {
-    //     *pos = '\0';
-    // }
-    // ESP_LOGI(TAG, "Read from file: '%s'", line);
-
     return ESP_OK;
 }
 
@@ -100,6 +97,22 @@ void sdspi_init(){
         ESP_LOGE(TAG, "Failed to initialize bus.");
         return;
     }
+    //add lora device on same spi bus
+ 
+    spi_device_interface_config_t loracfg={
+        .clock_speed_hz = 1000000,
+        .mode = SPICOMMON_BUSFLAG_QUAD,
+        .spics_io_num = 2,
+        .queue_size = 7,
+    };
+    ESP_LOGI(TAG, "Initializing LoRa");
+    ret = spi_bus_add_device(host.slot, &loracfg, &lorahandle);
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to initialize LoRa.");
+        return;
+    }
+
+
     //initialize slot
     sdspi_device_config_t slot_config = SDSPI_DEVICE_CONFIG_DEFAULT();
     slot_config.gpio_cs = PIN_NUM_CS;
@@ -141,9 +154,12 @@ void sdspi_close(){
 
     const char mount_point[] = MOUNT_POINT;
     // All done, unmount partition and disable SPI peripheral
+    spi_bus_remove_device(lorahandle);
+    ESP_LOGI(TAG, "LoRa removed");
     esp_vfs_fat_sdcard_unmount(mount_point, card);
     ESP_LOGI(TAG, "Card unmounted");
 
     //deinitialize the bus after all devices are removed
     spi_bus_free(host.slot);
 }
+

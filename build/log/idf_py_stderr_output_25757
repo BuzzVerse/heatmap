@@ -1,0 +1,24 @@
+[0;33m--- esp-idf-monitor 1.3.4 on /dev/ttyACM0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x42006d98: uart_tx_char at /home/dsopocko/esp/esp-idf/components/vfs/vfs_uart.c:165 (discriminator 1)
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x42006d88: uart_ll_get_txfifo_len at /home/dsopocko/esp/esp-idf/components/hal/esp32c3/include/hal/uart_ll.h:403
+ (inlined by) uart_tx_char at /home/dsopocko/esp/esp-idf/components/vfs/vfs_uart.c:165
+[0m
+[0;33m0x42007e84: uart_write at /home/dsopocko/esp/esp-idf/components/vfs/vfs_uart.c:210 (discriminator 2)
+[0m
+[0;33m0x4005890e: memset in ROM
+[0m
+[0;33m0x420065d6: console_write at /home/dsopocko/esp/esp-idf/components/vfs/vfs_console.c:71
+[0m
+[0;33m0x42006d88: uart_ll_get_txfifo_len at /home/dsopocko/esp/esp-idf/components/hal/esp32c3/include/hal/uart_ll.h:403
+ (inlined by) uart_tx_char at /home/dsopocko/esp/esp-idf/components/vfs/vfs_uart.c:165
+[0m
+[0;33m0x42007e84: uart_write at /home/dsopocko/esp/esp-idf/components/vfs/vfs_uart.c:210 (discriminator 2)
+[0m
+[0;33m0x4005890e: memset in ROM
+[0m
+[0;33m0x420065d6: console_write at /home/dsopocko/esp/esp-idf/components/vfs/vfs_console.c:71
+[0m
+[0m
