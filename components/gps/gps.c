@@ -7,12 +7,15 @@
 #include "driver/uart.h"
 #include "esp_log.h"
 
-static const int RX_BUF_SIZE = 2024;
+static const int RX_BUF_SIZE = 2048;
 
 #define TXD_PIN CONFIG_GPS_EXAMPLE_PIN_TXD
 #define RXD_PIN CONFIG_GPS_EXAMPLE_PIN_RXD
 
 static const char *TAG = "GPS";
+
+
+
 
 void uart_init()
 {
@@ -32,8 +35,15 @@ void uart_init()
     ESP_ERROR_CHECK(
         uart_set_pin(UART_NUM_1, TXD_PIN, RXD_PIN, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE)
     );
-
 }
+void gps_cold_start(){
+    char* data = "$PCAS10,3*1C";
+    ESP_LOGI(TAG, "GPS cold start %s", data);
+    uart_write_bytes(UART_NUM_1, data, RX_BUF_SIZE);
+    vTaskDelay(30000 / portTICK_PERIOD_MS);
+}
+
+
 
 void get_gps_data(){
     uint8_t* data = (uint8_t*) malloc(RX_BUF_SIZE+1);
@@ -42,9 +52,9 @@ void get_gps_data(){
         if (rxBytes > 0) {
             data[rxBytes] = 0;
             ESP_LOGI(TAG, "Read %d bytes:\n '%s'", rxBytes, (char *)data);
-        }
 
-        
+        }
+        //vTaskDelay(15000 / portTICK_PERIOD_MS);
     }
     free(data);
 }
@@ -54,7 +64,7 @@ void get_gps_data(){
 
 
 //conversion -- TODO: catch empty data 
-//UNUSED FOR NOW
+// UNUSED FOR NOW
 // float convertToDegrees(char *raw, char *direction){
 //     int sign=1;
 //     if(strspn(direction, "N")==1
@@ -83,12 +93,13 @@ void get_gps_data(){
 
 // void decodeCoordinates(char* data){
 //     //get $GPGLL line
-//     char *coordinates = strstr(data, "$GPGLL");
+//     char *coordinates = malloc(RX_BUF_SIZE);
+//     coordinates = strstr(data, "$GPGLL");
 //     unsigned int lineSize;
-//     lineSize = (unsigned int) strcspn(coordinates, "\n");
+//     //lineSize = (unsigned int) strcspn(coordinates, "\n");
 //     //get values
-//     char *substr = malloc(lineSize);
-//     memcpy(substr, coordinates, lineSize);
+//     char *substr = malloc(RX_BUF_SIZE);
+//     memcpy(substr, coordinates, RX_BUF_SIZE);
 //     //char *messageId =
 //             strtok(substr, ",");
 //     char *rawLatitude = strtok(NULL, ",");
@@ -117,4 +128,3 @@ void get_gps_data(){
 //     //free memory
 //     free(substr);
 // }
-

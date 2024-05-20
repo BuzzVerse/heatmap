@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       ".",
-    "project_version":    "30004bd-dirty",
+    "project_version":    "a064ac0-dirty",
     "project_path":       "/home/dsopocko/espressif/esp-git/heatmap",
     "idf_path":           "/home/dsopocko/esp/esp-idf",
     "build_dir":          "/home/dsopocko/espressif/esp-git/heatmap/build",

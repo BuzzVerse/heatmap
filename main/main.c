@@ -20,6 +20,7 @@ void app_main(void){
     sdspi_test();  
     sdspi_close();
     uart_init();
+    gps_cold_start();
     get_gps_data();
     // xTaskCreate(&save_to_sdcard, "sdspi_test_task", 2048, NULL, 5, NULL);
     
