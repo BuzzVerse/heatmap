@@ -10,7 +10,7 @@
 
 static const char *TAG = "SDSPI";
 
-#define MOUNT_POINT "/sdcard"
+
 
 // Pin assignments can be set in menuconfig, see "SD SPI Example Configuration" menu.
 #define PIN_NUM_MISO  CONFIG_EXAMPLE_PIN_MISO
@@ -24,7 +24,6 @@ static const char *TAG = "SDSPI";
 sdmmc_card_t *card;
 //Initialize lora struct
 spi_device_handle_t lorahandle;
-
 
 
 static esp_err_t sd_write_file(const char *path, char *data){
@@ -50,7 +49,7 @@ static esp_err_t sd_read_file(const char *path){
     char line[EXAMPLE_MAX_CHAR_SIZE];
 
     while(fgets(line, sizeof(line), file)){
-        printf( "Reading from line: %s", line);
+        ESP_LOGI(TAG,"Reading from line: %s", line);
     }
      fclose(file);
     return ESP_OK;
@@ -163,3 +162,8 @@ void sdspi_close(){
     spi_bus_free(host.slot);
 }
 
+
+
+void sdspi_write_file(const char *path, char *data){
+    sd_write_file(path, data);
+}

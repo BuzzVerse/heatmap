@@ -4,27 +4,28 @@
 #include "sdcard.h"
 #include "gps.h"
 #include <string.h>
+static const char *TAG = "Main";
+//path to txt in sd card
+const char *path = MOUNT_POINT"/gps.txt";
+//for gps
+static const int RX_BUF_SIZE = 1024;
 
-// void save_to_sdcard(){
-//     sdspi_test();
-//     while(1){
-//         vTaskDelay(30000 / portTICK_PERIOD_MS);
-//         sdspi_test();
-//     }
-
-// }
+void transmitter_task(){
+    char* coordinates = (char*) malloc(RX_BUF_SIZE+1);
+    while (1) {
+        get_gps_data(&coordinates);
+        ESP_LOGI(TAG,"%s",coordinates);
+    }
+    free(coordinates);
+}
 
 
 void app_main(void){
     sdspi_init();
-    sdspi_test();  
-    sdspi_close();
     uart_init();
-    gps_cold_start();
-    get_gps_data();
-    // xTaskCreate(&save_to_sdcard, "sdspi_test_task", 2048, NULL, 5, NULL);
-    
-    // uart_init();
-    // xTaskCreate(get_gps_data, "uart_tx_task", 1024*2, NULL, configMAX_PRIORITIES-2, NULL);
+    //gps_cold_start();
 
+    transmitter_task();
+
+    sdspi_close();
 }

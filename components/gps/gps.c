@@ -7,12 +7,13 @@
 #include "driver/uart.h"
 #include "esp_log.h"
 
-static const int RX_BUF_SIZE = 2048;
+static const int RX_BUF_SIZE = 1024;
 
 #define TXD_PIN CONFIG_GPS_EXAMPLE_PIN_TXD
 #define RXD_PIN CONFIG_GPS_EXAMPLE_PIN_RXD
-
+#define READ_COOLDOWN 10000
 static const char *TAG = "GPS";
+
 
 
 
@@ -45,15 +46,17 @@ void gps_cold_start(){
 
 
 
-void get_gps_data(){
+void get_gps_data(char** coordinates){
     uint8_t* data = (uint8_t*) malloc(RX_BUF_SIZE+1);
-    while (1) {
-        const int rxBytes = uart_read_bytes(UART_NUM_1, data, RX_BUF_SIZE, 500 / portTICK_PERIOD_MS);
+        const int rxBytes = uart_read_bytes(UART_NUM_1, data, RX_BUF_SIZE, READ_COOLDOWN / portTICK_PERIOD_MS);
         if (rxBytes > 0) {
             data[rxBytes] = 0;
+            //get only $GNGLL line
+            *coordinates = strstr((char *)data, "$GNGLL");
+            strtok(*coordinates, "\n");
             ESP_LOGI(TAG, "Read %d bytes:\n '%s'", rxBytes, (char *)data);
+            ESP_LOGI(TAG, "GNGLL LINE: %s", *coordinates);
 
-        }
         //vTaskDelay(15000 / portTICK_PERIOD_MS);
     }
     free(data);
@@ -61,70 +64,3 @@ void get_gps_data(){
 
 
 
-
-
-//conversion -- TODO: catch empty data 
-// UNUSED FOR NOW
-// float convertToDegrees(char *raw, char *direction){
-//     int sign=1;
-//     if(strspn(direction, "N")==1
-//     || strspn(direction, "S")==1){
-//         if(strspn(direction, "N")!=1) sign = -1;
-//         //latitude ddmm.mmmm
-//         char degrees[3] = {raw[0], raw[1], '\0'};
-//         char *minutes = &raw[2];
-//         //printf("%s\n", minutes);
-//         return (atof(degrees) + atof(minutes)/60)*sign;
-//     }
-//     if(strspn(direction, "W")==1
-//     || strspn(direction, "E")==1){
-//         if(strspn(direction, "W")==1) sign = -1;
-//         //longitude dddmm.mmmm
-//         char degrees[4] = {raw[0], raw[1],raw[2], '\0'};
-
-//         char *minutes = &raw[3];
-//         printf("%s\n", minutes);
-//         return (atof(degrees) + atof(minutes)/60)*sign;
-//     }
-//     printf("Invalid direction"); //logw
-
-//     return 0;
-// }
-
-// void decodeCoordinates(char* data){
-//     //get $GPGLL line
-//     char *coordinates = malloc(RX_BUF_SIZE);
-//     coordinates = strstr(data, "$GPGLL");
-//     unsigned int lineSize;
-//     //lineSize = (unsigned int) strcspn(coordinates, "\n");
-//     //get values
-//     char *substr = malloc(RX_BUF_SIZE);
-//     memcpy(substr, coordinates, RX_BUF_SIZE);
-//     //char *messageId =
-//             strtok(substr, ",");
-//     char *rawLatitude = strtok(NULL, ",");
-//     char *latDirection = strtok(NULL, ",");
-//     char *rawLongitude = strtok(NULL, ",");
-//     char *lonDirection = strtok(NULL, ",");
-//     //char *utc =
-//         strtok(NULL, ",");
-//     char *dataStatus = strtok(NULL, ",");
-//     //check data status and convert
-//     printf("%s", dataStatus);
-//     if(dataStatus[0]!='A'){
-//         //ESP_LOGW
-//         printf("Invalid data status");
-//         return;
-//     }
-//     printf("%s", rawLatitude);
-
-//     float lat = convertToDegrees(rawLatitude,  latDirection);
-//     float lon = convertToDegrees(rawLongitude,  lonDirection);
-
-//     //put coordinates into data string
-//     char buffer[50];
-//     sprintf(buffer,"%f %f", lat, lon);
-//     strcpy(data, buffer);
-//     //free memory
-//     free(substr);
-// }
