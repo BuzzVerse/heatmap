@@ -1,0 +1,62 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/dsopocko/espressif/esp-git/heatmap/build/bootloader/esp-idf/esptool_py && /home/dsopocko/.espressif/python_env/idf5.3_py3.10_env/bin/python /home/dsopocko/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/dsopocko/espressif/esp-git/heatmap/build/bootloader/bootloader.bin
+Bootloader binary size 0x5160 bytes. 0x2ea0 bytes (36%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+/home/dsopocko/espressif/esp-git/heatmap/main/main.c: In function 'app_main':
+/home/dsopocko/espressif/esp-git/heatmap/main/main.c:29:19: warning: unused variable 'ret' [-Wunused-variable]
+   29 |     lora_status_t ret = lora_init();
+      |                   ^~~
+[3/8] Linking C static library esp-idf/main/libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable ..elf
+[6/8] Generating binary image from built executable
+esptool.py v4.7.dev3
+Creating esp32c3 image...
+Merged 2 ELF sections
+Successfully created esp32c3 image.
+Generated /home/dsopocko/espressif/esp-git/heatmap/build/..bin
+[7/8] cd /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/esptool_py && /home/dsopocko/.espressif/python_env/idf5.3_py3.10_env/bin/python /home/dsopocko/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/dsopocko/espressif/esp-git/heatmap/build/partition_table/partition-table.bin /home/dsopocko/espressif/esp-git/heatmap/build/..bin
+..bin binary size 0x4dbc0 bytes. Smallest app partition is 0x100000 bytes. 0xb2440 bytes (70%) free.
+[7/8] cd /home/dsopocko/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/dsopocko/esp/esp-idf -D "SERIAL_TOOL=/home/dsopocko/.espressif/python_env/idf5.3_py3.10_env/bin/python;;/home/dsopocko/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32c3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/dsopocko/espressif/esp-git/heatmap/build -P /home/dsopocko/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32c3 -p /dev/ttyACM0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 ..bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.dev3
+Serial port /dev/ttyACM0
+Connecting...
+Chip is ESP32-C3 (QFN32) (revision v0.4)
+Features: WiFi, BLE, Embedded Flash 4MB (XMC)
+Crystal is 40MHz
+MAC: 84:fc:e6:84:48:74
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x0005dfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 20832 bytes to 12762...
+Writing at 0x00000000... (100 %)
+Wrote 20832 bytes (12762 compressed) at 0x00000000 in 0.3 seconds (effective 578.3 kbit/s)...
+Hash of data verified.
+Compressed 318400 bytes to 165389...
+Writing at 0x00010000... (9 %)
+Writing at 0x0001c610... (18 %)
+Writing at 0x00024256... (27 %)
+Writing at 0x0002ae20... (36 %)
+Writing at 0x00032531... (45 %)
+Writing at 0x00039dc4... (54 %)
+Writing at 0x00040005... (63 %)
+Writing at 0x00047ebe... (72 %)
+Writing at 0x0004f0f2... (81 %)
+Writing at 0x00055b5b... (90 %)
+Writing at 0x0005d060... (100 %)
+Wrote 318400 bytes (165389 compressed) at 0x00010000 in 2.5 seconds (effective 1036.9 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 578.5 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

@@ -41,5 +41,4 @@ menu "SD SPI Example Configuration"
         default 38 if IDF_TARGET_ESP32S3
         default 10 if IDF_TARGET_ESP32P4
         default 1  # C3 and others
-
 endmenu

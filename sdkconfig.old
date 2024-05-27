@@ -425,6 +425,42 @@ CONFIG_PARTITION_TABLE_MD5=y
 # end of Partition Table
 
 #
+# GPS Module Example Configuration
+#
+CONFIG_GPS_EXAMPLE_PIN_RXD=20
+CONFIG_GPS_EXAMPLE_PIN_TXD=21
+# end of GPS Module Example Configuration
+
+#
+# LoRa Configuration
+#
+CONFIG_LORA_RECEIVER=y
+# CONFIG_LORA_TRANSMITTER is not set
+# CONFIG_LORA_TESTER is not set
+
+#
+# GPIO Config
+#
+CONFIG_GPIO_RANGE_MAX=19
+CONFIG_MISO_GPIO=10
+CONFIG_SCK_GPIO=7
+CONFIG_MOSI_GPIO=8
+CONFIG_CS_GPIO=2
+CONFIG_RST_GPIO=5
+# end of GPIO Config
+
+#
+# LoRa Parameters Config
+#
+CONFIG_LORA_FREQUENCY=433
+CONFIG_LORA_CODING_RATE=8
+CONFIG_LORA_BANDWIDTH=3
+CONFIG_LORA_SPREADING_FACTOR=12
+CONFIG_LORA_CRC=y
+# end of LoRa Parameters Config
+# end of LoRa Configuration
+
+#
 # SD SPI Example Configuration
 #
 CONFIG_EXAMPLE_FORMAT_IF_MOUNT_FAILED=y
@@ -433,13 +469,6 @@ CONFIG_EXAMPLE_PIN_MISO=7
 CONFIG_EXAMPLE_PIN_CLK=8
 CONFIG_EXAMPLE_PIN_CS=3
 # end of SD SPI Example Configuration
-
-#
-# GPS Module Example Configuration
-#
-CONFIG_EXAMPLE_PIN_RX=7
-CONFIG_EXAMPLE_PIN_TX=6
-# end of GPS Module Example Configuration
 
 #
 # Compiler options

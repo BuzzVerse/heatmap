@@ -22,8 +22,6 @@ static const char *TAG = "SDSPI";
 
 //Initialize card struct
 sdmmc_card_t *card;
-//Initialize lora struct
-spi_device_handle_t lorahandle;
 
 
 static esp_err_t sd_write_file(const char *path, char *data){
@@ -83,33 +81,35 @@ void sdspi_init(){
 
 
     //bus config
-    spi_bus_config_t bus_cfg = {
-        .mosi_io_num = PIN_NUM_MOSI,
-        .miso_io_num = PIN_NUM_MISO,
-        .sclk_io_num = PIN_NUM_CLK,
-        .quadwp_io_num = -1,
-        .quadhd_io_num = -1,
-        .max_transfer_sz = 4000,
-    };
-    ret = spi_bus_initialize(host.slot, &bus_cfg, SDSPI_DEFAULT_DMA);
-    if (ret != ESP_OK) {
-        ESP_LOGE(TAG, "Failed to initialize bus.");
-        return;
-    }
-    //add lora device on same spi bus
+    // spi_bus_config_t bus_cfg = {
+    //     .mosi_io_num = PIN_NUM_MOSI,
+    //     .miso_io_num = PIN_NUM_MISO,
+    //     .sclk_io_num = PIN_NUM_CLK,
+    //     .quadwp_io_num = -1,
+    //     .quadhd_io_num = -1,
+    //     .max_transfer_sz = 4000,
+    // };
+    // ret = spi_bus_initialize(host.slot, &bus_cfg, SDSPI_DEFAULT_DMA);
+    // if (ret != ESP_OK) {
+    //     ESP_LOGE(TAG, "Failed to initialize bus.");
+    //     return;
+    // }
+
+
+    //// add lora device on same spi bus
  
-    spi_device_interface_config_t loracfg={
-        .clock_speed_hz = 1000000,
-        .mode = SPICOMMON_BUSFLAG_QUAD,
-        .spics_io_num = 2,
-        .queue_size = 7,
-    };
-    ESP_LOGI(TAG, "Initializing LoRa");
-    ret = spi_bus_add_device(host.slot, &loracfg, &lorahandle);
-    if (ret != ESP_OK) {
-        ESP_LOGE(TAG, "Failed to initialize LoRa.");
-        return;
-    }
+    // spi_device_interface_config_t loracfg={
+    //     .clock_speed_hz = 1000000,
+    //     .mode = SPICOMMON_BUSFLAG_QUAD,
+    //     .spics_io_num = 2,
+    //     .queue_size = 7,
+    // };
+    // ESP_LOGI(TAG, "Initializing LoRa");
+    // ret = spi_bus_add_device(host.slot, &loracfg, &lorahandle);
+    // if (ret != ESP_OK) {
+    //     ESP_LOGE(TAG, "Failed to initialize LoRa.");
+    //     return;
+    // }
 
 
     //initialize slot
@@ -153,8 +153,8 @@ void sdspi_close(){
 
     const char mount_point[] = MOUNT_POINT;
     // All done, unmount partition and disable SPI peripheral
-    spi_bus_remove_device(lorahandle);
-    ESP_LOGI(TAG, "LoRa removed");
+    // spi_bus_remove_device(lorahandle);
+    // ESP_LOGI(TAG, "LoRa removed");
     esp_vfs_fat_sdcard_unmount(mount_point, card);
     ESP_LOGI(TAG, "Card unmounted");
 

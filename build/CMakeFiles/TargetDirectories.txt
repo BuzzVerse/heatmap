@@ -728,6 +728,13 @@
 /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/gps/CMakeFiles/install.dir
 /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/gps/CMakeFiles/install/local.dir
 /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/gps/CMakeFiles/install/strip.dir
+/home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/lora/CMakeFiles/__idf_lora.dir
+/home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/lora/CMakeFiles/edit_cache.dir
+/home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/lora/CMakeFiles/rebuild_cache.dir
+/home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/lora/CMakeFiles/list_install_components.dir
+/home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/lora/CMakeFiles/install.dir
+/home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/lora/CMakeFiles/install/local.dir
+/home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/lora/CMakeFiles/install/strip.dir
 /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/sdcard/CMakeFiles/__idf_sdcard.dir
 /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/sdcard/CMakeFiles/edit_cache.dir
 /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/sdcard/CMakeFiles/rebuild_cache.dir

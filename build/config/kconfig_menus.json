@@ -5199,6 +5199,207 @@
     {
         "children": [
             {
+                "children": [
+                    {
+                        "children": [],
+                        "depends_on": "<choice>",
+                        "help": "Receiver puts the device into receiving mode.",
+                        "id": "LORA_RECEIVER",
+                        "name": "LORA_RECEIVER",
+                        "range": null,
+                        "title": "Receiver",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "<choice>",
+                        "help": "Transmitter puts the device into transmitting mode.",
+                        "id": "LORA_TRANSMITTER",
+                        "name": "LORA_TRANSMITTER",
+                        "range": null,
+                        "title": "Transmitter",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "<choice>",
+                        "help": "Tester puts the device into testing mode.",
+                        "id": "LORA_TESTER",
+                        "name": "LORA_TESTER",
+                        "range": null,
+                        "title": "Tester",
+                        "type": "bool"
+                    }
+                ],
+                "depends_on": null,
+                "help": "Select the class in which LoRa operates.",
+                "id": "lora-configuration-class-that-lora-works-in-",
+                "name": null,
+                "title": "Class that LoRa works in.",
+                "type": "choice"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "GPIO_RANGE_MAX",
+                        "name": "GPIO_RANGE_MAX",
+                        "range": null,
+                        "title": null,
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Pin Number to be used as the MISO SPI signal.",
+                        "id": "MISO_GPIO",
+                        "name": "MISO_GPIO",
+                        "range": [
+                            0,
+                            19
+                        ],
+                        "title": "MISO GPIO",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Pin Number to be used as the SCK SPI signal.",
+                        "id": "SCK_GPIO",
+                        "name": "SCK_GPIO",
+                        "range": [
+                            0,
+                            19
+                        ],
+                        "title": "SCK GPIO",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Pin Number to be used as the MOSI SPI signal.",
+                        "id": "MOSI_GPIO",
+                        "name": "MOSI_GPIO",
+                        "range": [
+                            0,
+                            19
+                        ],
+                        "title": "MOSI GPIO",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Pin Number where the NCS pin of the LoRa module is connected to.",
+                        "id": "CS_GPIO",
+                        "name": "CS_GPIO",
+                        "range": [
+                            0,
+                            19
+                        ],
+                        "title": "NSS GPIO",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Pin Number where the NRST pin of the LoRa module is connected to.",
+                        "id": "RST_GPIO",
+                        "name": "RST_GPIO",
+                        "range": [
+                            0,
+                            19
+                        ],
+                        "title": "RST GPIO",
+                        "type": "int"
+                    }
+                ],
+                "depends_on": null,
+                "id": "lora-configuration-gpio-config",
+                "title": "GPIO Config",
+                "type": "menu"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Set the operating frequency for the LoRa module in MHz.\nCommon frequencies are:\n- 169 for 169 MHz\n- 433 for 433 MHz\n- 470 for 470 MHz\n- 866 for 866 MHz\n- 915 for 915 MHz",
+                        "id": "LORA_FREQUENCY",
+                        "name": "LORA_FREQUENCY",
+                        "range": [
+                            169,
+                            915
+                        ],
+                        "title": "LoRa Frequency (MHz)",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Set the coding rate for the LoRa module.\nCoding rates can be 5 (4/5), 6 (4/6), 7 (4/7), or 8 (4/8).",
+                        "id": "LORA_CODING_RATE",
+                        "name": "LORA_CODING_RATE",
+                        "range": [
+                            5,
+                            8
+                        ],
+                        "title": "LoRa Coding Rate",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Set the bandwidth for the LoRa module.\nBandwidth can be 0 to 9.",
+                        "id": "LORA_BANDWIDTH",
+                        "name": "LORA_BANDWIDTH",
+                        "range": [
+                            0,
+                            9
+                        ],
+                        "title": "LoRa Bandwidth",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Set the spreading factor for the LoRa module.\nSpreading factors can be 6 to 12.",
+                        "id": "LORA_SPREADING_FACTOR",
+                        "name": "LORA_SPREADING_FACTOR",
+                        "range": [
+                            6,
+                            12
+                        ],
+                        "title": "LoRa Spreading Factor",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Enable or disable CRC for the LoRa module.",
+                        "id": "LORA_CRC",
+                        "name": "LORA_CRC",
+                        "range": null,
+                        "title": "Enable CRC",
+                        "type": "bool"
+                    }
+                ],
+                "depends_on": null,
+                "id": "lora-configuration-lora-parameters-config",
+                "title": "LoRa Parameters Config",
+                "type": "menu"
+            }
+        ],
+        "depends_on": null,
+        "id": "lora-configuration",
+        "title": "LoRa Configuration",
+        "type": "menu"
+    },
+    {
+        "children": [
+            {
                 "children": [],
                 "depends_on": null,
                 "help": "If this config item is set, format_if_mount_failed will be set to true and the card will be formatted if\nthe mount has failed.",
