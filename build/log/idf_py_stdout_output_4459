@@ -1,0 +1,232 @@
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xa (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40383bc6
+SPIWP:0xee
+mode:DIO, clock div:3
+load:0x3fcd5820,len:0x3fc
+load:0x403cc710,len:0x8ec
+load:0x403ce710,len:0x24bc
+entry 0x403cc710
+[0;32mI (118) cpu_start: Unicore app[0m
+[0;32mI (128) cpu_start: Pro cpu start user code[0m
+[0;32mI (128) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (128) cpu_start: Application information:[0m
+[0;32mI (131) cpu_start: Project name:     .[0m
+[0;32mI (135) cpu_start: App version:      0cb8190-dirty[0m
+[0;32mI (141) cpu_start: Compile time:     Jun 17 2024 22:52:14[0m
+[0;32mI (147) cpu_start: ELF file SHA256:  69218f9e2...[0m
+[0;32mI (152) cpu_start: ESP-IDF:          v5.3-dev-892-g692c1fcc52-dirty[0m
+[0;32mI (159) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (164) cpu_start: Max chip rev:     v1.99 [0m
+[0;32mI (169) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (174) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (181) heap_init: At 3FC91330 len 0002ECD0 (187 KiB): RAM[0m
+[0;32mI (187) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (194) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (201) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (209) spi_flash: detected chip: generic[0m
+[0;32mI (212) spi_flash: flash io: dio[0m
+[0;33mW (216) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (229) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (236) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (243) main_task: Started on CPU0[0m
+[0;32mI (243) main_task: Calling app_main()[0m
+[0;32mI (243) LORA_API: Initializing spi...
+[0m
+[0;32mI (253) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (263) LORA_API: Resetting LoRa module...[0m
+[0;32mI (463) LORA_API: LoRa module reset![0m
+[0;32mI (463) gpio: GPIO[10]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (463) LORA_API: Initializing SD card[0m
+[0;32mI (463) LORA_API: Using SPI peripheral[0m
+[0;32mI (473) LORA_API: Mounting filesystem[0m
+[0;32mI (473) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (523) sdspi_transaction: cmd=52, R1 response: command not supported[0m
+[0;32mI (603) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (723) LORA_API: Mounting filesystem[0m
+[0;32mI (723) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (723) sdspi_transaction: cmd=52, R1 response: command not supported[0m
+[0;32mI (843) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;33mW (893) vfs_fat_sdmmc: failed to mount card (12)[0m
+[0;31mE (893) vfs_fat_sdmmc: mount_to_vfs failed (0xffffffff).[0m
+[0;32mI (893) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (903) LORA_API: Failed to mount filesystem. If you want the card to be formatted, set the CONFIG_EXAMPLE_FORMAT_IF_MOUNT_FAILED menuconfig option.[0m
+[0;32mI (953) LORA_API: Mounting filesystem[0m
+[0;32mI (953) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (993) sdspi_transaction: cmd=52, R1 response: command not supported[0m
+[0;32mI (1083) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (1223) LORA_API: Mounting filesystem[0m
+[0;31mE (1223) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (1223) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (1273) LORA_API: Mounting filesystem[0m
+[0;31mE (1273) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (1273) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (1323) LORA_API: Mounting filesystem[0m
+[0;31mE (1323) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (1323) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (1373) LORA_API: Mounting filesystem[0m
+[0;31mE (1373) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (1373) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (1423) LORA_API: Mounting filesystem[0m
+[0;31mE (1423) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (1423) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (1473) LORA_API: Mounting filesystem[0m
+[0;31mE (1473) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (1473) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (1523) LORA_API: Mounting filesystem[0m
+[0;31mE (1523) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (1523) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (1573) LORA_API: Mounting filesystem[0m
+[0;31mE (1573) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (1573) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (1623) LORA_API: Mounting filesystem[0m
+[0;31mE (1623) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (1623) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (1673) LORA_API: Mounting filesystem[0m
+[0;31mE (1673) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (1673) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (1723) LORA_API: Mounting filesystem[0m
+[0;31mE (1723) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (1723) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (1773) LORA_API: Mounting filesystem[0m
+[0;31mE (1773) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (1773) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (1823) LORA_API: Mounting filesystem[0m
+[0;31mE (1823) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (1823) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (1873) LORA_API: Mounting filesystem[0m
+[0;31mE (1873) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (1873) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (1923) LORA_API: Mounting filesystem[0m
+[0;31mE (1923) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (1923) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (1973) LORA_API: Mounting filesystem[0m
+[0;31mE (1973) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (1973) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (2023) LORA_API: Mounting filesystem[0m
+[0;31mE (2023) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (2023) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (2073) LORA_API: Mounting filesystem[0m
+[0;31mE (2073) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (2073) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (2123) LORA_API: Mounting filesystem[0m
+[0;31mE (2123) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (2123) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (2173) LORA_API: Mounting filesystem[0m
+[0;31mE (2173) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (2173) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (2223) LORA_API: Mounting filesystem[0m
+[0;31mE (2223) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (2223) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (2273) LORA_API: Mounting filesystem[0m
+[0;31mE (2273) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (2273) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (2323) LORA_API: Mounting filesystem[0m
+[0;31mE (2323) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (2323) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (2373) LORA_API: Mounting filesystem[0m
+[0;31mE (2373) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (2373) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (2423) LORA_API: Mounting filesystem[0m
+[0;31mE (2423) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (2423) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (2473) LORA_API: Mounting filesystem[0m
+[0;31mE (2473) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (2473) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (2523) LORA_API: Mounting filesystem[0m
+[0;31mE (2523) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (2523) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (2573) LORA_API: Mounting filesystem[0m
+[0;31mE (2573) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (2573) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (2623) LORA_API: Mounting filesystem[0m
+[0;31mE (2623) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (2623) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (2673) LORA_API: Mounting filesystem[0m
+[0;31mE (2673) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (2673) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (2723) LORA_API: Mounting filesystem[0m
+[0;31mE (2723) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (2723) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (2773) LORA_API: Mounting filesystem[0m
+[0;31mE (2773) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (2773) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (2823) LORA_API: Mounting filesystem[0m
+[0;31mE (2823) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (2823) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (2873) LORA_API: Mounting filesystem[0m
+[0;31mE (2873) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (2873) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (2923) LORA_API: Mounting filesystem[0m
+[0;31mE (2923) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (2923) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (2973) LORA_API: Mounting filesystem[0m
+[0;31mE (2973) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (2973) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (3023) LORA_API: Mounting filesystem[0m
+[0;31mE (3023) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (3023) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (3073) LORA_API: Mounting filesystem[0m
+[0;31mE (3073) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (3073) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (3123) LORA_API: Mounting filesystem[0m
+[0;31mE (3123) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (3123) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (3173) LORA_API: Mounting filesystem[0m
+[0;31mE (3173) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (3173) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (3223) LORA_API: Mounting filesystem[0m
+[0;31mE (3223) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (3223) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (3273) LORA_API: Mounting filesystem[0m
+[0;31mE (3273) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (3273) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (3323) LORA_API: Mounting filesystem[0m
+[0;31mE (3323) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (3323) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (3373) LORA_API: Mounting filesystem[0m
+[0;31mE (3373) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (3373) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (3423) LORA_API: Mounting filesystem[0m
+[0;31mE (3423) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (3423) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (3473) LORA_API: Mounting filesystem[0m
+[0;31mE (3473) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (3473) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (3523) LORA_API: Mounting filesystem[0m
+[0;31mE (3523) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (3523) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (3573) LORA_API: Mounting filesystem[0m
+[0;31mE (3573) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (3573) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (3623) LORA_API: Mounting filesystem[0m
+[0;31mE (3623) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (3623) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (3673) LORA_API: Mounting filesystem[0m
+[0;31mE (3673) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (3673) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (3723) LORA_API: Mounting filesystem[0m
+[0;31mE (3723) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (3723) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (3773) LORA_API: Mounting filesystem[0m
+[0;31mE (3773) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (3773) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (3823) LORA_API: Mounting filesystem[0m
+[0;31mE (3823) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (3823) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (3873) LORA_API: Mounting filesystem[0m
+[0;31mE (3873) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (3873) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (3923) LORA_API: Mounting filesystem[0m
+[0;31mE (3923) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (3923) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (3973) LORA_API: Mounting filesystem[0m
+[0;31mE (3973) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (3973) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (4023) LORA_API: Mounting filesystem[0m
+[0;31mE (4023) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (4023) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m
+[0;32mI (4073) LORA_API: Mounting filesystem[0m
+[0;31mE (4073) vfs_fat_sdmmc: mount_prepare failed[0m
+[0;31mE (4073) LORA_API: Failed to initialize the card (ESP_ERR_NO_MEM). Make sure SD card lines have pull-up resistors in place.[0m

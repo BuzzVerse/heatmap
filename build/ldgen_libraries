@@ -70,6 +70,7 @@
 /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/spiffs/libspiffs.a
 /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
 /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/main/libmain.a
-/home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/gps/libgps.a
 /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/lora/liblora.a
+/home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/protocol_examples_common/libprotocol_examples_common.a
+/home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/gps/libgps.a
 /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/sdcard/libsdcard.a

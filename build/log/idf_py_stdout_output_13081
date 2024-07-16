@@ -1,9 +1,0 @@
-ESP-ROM:esp32c3-api1-20210207
-Build:Feb  7 2021
-rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
-Saved PC:0x4004c97a
-SPIWP:0xee
-mode:DIO, clock div:1
-load:0x3fcd5820,len:0x1738
-load:0x403cc710,len:0xb9c
-load:0x403ce710,len:0x2e34

@@ -1,0 +1,371 @@
+ (286) sleep: CoESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xa (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4004c0d4
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1738
+load:0x403cc710,len:0xb9c
+load:0x403ce710,len:0x2e34
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.3-dev-892-g692c1fcc52-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jun 17 2024 18:31:40[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (29) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (34) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (75) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (82) boot: End of partition table[0m
+[0;32mI (86) esp_image: segment 0: paddr=00010020 vaddr=3c030020 size=0f770h ( 63344) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001f798 vaddr=3fc8ec00 size=00880h (  2176) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=2de0ch (187916) map[0m
+[0;32mI (142) esp_image: segment 3: paddr=0004de34 vaddr=3fc8f480 size=00e74h (  3700) load[0m
+[0;32mI (143) esp_image: segment 4: paddr=0004ecb0 vaddr=40380000 size=0eab8h ( 60088) load[0m
+[0;32mI (163) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (164) boot: Disabling RNG early entropy source...[0m
+[0;32mI (175) cpu_start: Unicore app[0m
+[0;32mI (184) cpu_start: Pro cpu start user code[0m
+[0;32mI (184) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (184) cpu_start: Application information:[0m
+[0;32mI (187) cpu_start: Project name:     .[0m
+[0;32mI (191) cpu_start: App version:      0cb8190-dirty[0m
+[0;32mI (197) cpu_start: Compile time:     Jun 17 2024 20:51:34[0m
+[0;32mI (203) cpu_start: ELF file SHA256:  f2d839f4b...[0m
+[0;32mI (208) cpu_start: ESP-IDF:          v5.3-dev-892-g692c1fcc52-dirty[0m
+[0;32mI (215) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (220) cpu_start: Max chip rev:     v1.99 [0m
+[0;32mI (225) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (230) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (237) heap_init: At 3FC91330 len 0002ECD0 (187 KiB): RAM[0m
+[0;32mI (243) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (250) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (257) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (264) spi_flash: detected chip: generic[0m
+[0;32mI (268) spi_flash: flash io: dio[0m
+[0;33mW (272) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (285) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (292) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (299) main_task: Started on CPU0[0m
+[0;32mI (299) main_task: Calling app_main()[0m
+[0;32mI (299) SDSPI: Initializing SD card[0m
+[0;32mI (309) SDSPI: Using SPI peripheral[0m
+[0;32mI (309) SDSPI: Initializing LoRa[0m
+[0;31mE (319) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (319) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (349) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (349) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (369) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (369) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (389) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (389) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (409) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (409) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (429) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (429) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (449) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (449) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (469) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (469) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (489) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (489) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (509) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (509) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (529) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (529) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (549) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (549) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (569) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (569) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (589) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (589) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (609) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (609) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (629) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (629) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (649) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (649) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (669) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (669) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (689) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (689) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (709) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (709) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (729) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (729) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (749) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (749) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (769) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (769) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (789) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (789) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (809) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (809) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (829) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (829) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (849) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (849) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (869) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (869) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (889) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (889) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (909) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (909) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (929) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (929) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (949) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (949) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (969) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (969) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (989) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (989) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1009) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1009) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1029) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1029) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1049) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1049) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1069) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1069) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1089) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1089) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1109) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1109) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1129) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1129) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1149) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1149) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1169) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1169) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1189) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1189) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1209) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1209) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1229) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1229) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1249) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1249) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1269) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1269) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1289) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1289) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1309) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1309) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1329) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1329) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1349) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1349) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1369) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1369) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1389) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1389) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1409) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1409) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1429) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1429) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1449) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1449) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1469) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1469) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1489) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1489) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1509) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1509) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1529) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1529) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1549) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1549) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1569) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1569) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1589) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1589) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1609) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1609) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1629) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1629) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1649) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1649) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1669) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1669) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1689) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1689) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1709) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1709) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1729) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1729) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1749) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1749) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1769) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1769) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1789) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1789) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1809) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1809) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1829) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1829) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1849) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1849) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1869) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1869) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1889) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1889) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1909) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1909) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1929) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1929) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1949) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1949) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1969) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1969) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (1989) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (1989) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (2009) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (2009) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (2029) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (2029) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (2049) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (2049) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (2069) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (2069) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (2089) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (2089) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (2109) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (2109) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (2129) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (2129) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (2149) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (2149) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (2169) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (2169) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (2189) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (2189) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (2209) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (2209) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (2229) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (2229) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (2249) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (2249) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (2269) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (2269) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (2289) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (2289) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+[0;31mE (2309) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (2309) LORA_API: SPI read failed: reg=0x42[0m
+version=0x00
+i=101, TIMEOUT_RESET=100[0;32mI (2329) SDSPI: LoRa initialized[0m
+[0;32mI (2329) SDSPI: Mounting filesystem[0m
+[0;32mI (2329) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (2389) vfs_fat_sdmmc: sdmmc_card_init failed (0x107).[0m
+[0;32mI (2389) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (2389) SDSPI: Failed to initialize the card (ESP_ERR_TIMEOUT). Make sure SD card lines have pull-up resistors in place.[0m
+00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+[0;31mE (2409) spi_master: check_trans_valid(826): invalid dev handle[0m
+[0;31mE (2409) LORA_API: SPI read failed: reg=0x00[0m
+[0;32mI (2419) SDSPI: Opening file /sdcard/test.txt[0m
+[0;31mE (2419) SDSPI: Failed to open file for writing[0m
+[0;32mI (2429) SDSPI: Reading file /sdcard/test.txt[0m
+[0;31mE (2429) SDSPI: Failed to open file for reading[0m
+[0;32mI (2439) main_task: Returned from app_main()[0m

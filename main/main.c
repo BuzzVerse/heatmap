@@ -6,51 +6,47 @@
 #include "lora.h"
 #include <string.h>
 
-
-//temp
-#define PACKET_VERSION "1"
-#define DEVICE_ID "HEATMAP"
-#define MESSAGE_ID 1
-#define MESSAGE_COUNT 1
-#define DATA_TYPE "uint8_t"
+#define TAG "Main"
 
 
-static const char *MAIN_TAG = "Main";
-//path to txt in sd card
-const char *path = MOUNT_POINT"/gps.txt";
 //for gps
 static const int RX_BUF_SIZE = 1024;
 
 void transmitter_task(){
     char* coordinates = (char*) malloc(RX_BUF_SIZE+1);
-    lora_packet_t packet;
-    packet.version = (uint8_t) PACKET_VERSION;
-    packet.id = (uint8_t) DEVICE_ID;
-    packet.msgID = (uint8_t) MESSAGE_ID;
-    packet.msgCount = (uint8_t) MESSAGE_COUNT;
-    packet.dataType = (uint8_t) DATA_TYPE;
+    packet_t packet;
+    packet.version = (CONFIG_PACKET_VERSION << 4) | 0; // Reserved 4 bits set to 0
+    packet.id = (CONFIG_CLASS_ID << 4) | CONFIG_DEVICE_ID;
+    packet.msgID = 1;                   // Example message ID
+    packet.msgCount = 1;                // Example message count (optional, set as needed)
+    packet.dataType = CONFIG_DATA_TYPE; // Example data type
 
     while (1) {
         get_gps_data(&coordinates);
-        //ESP_LOGI(MAIN_TAG,"%s",coordinates);
-        packet.data[0] = coordinates;
-        lora_send(&packet);
+        ESP_LOGI(TAG,"%s",coordinates);
+        packet.data[0] = (uint8_t) coordinates;
+        lora_status_t send_status = lora_send(&packet);
+        if (LORA_OK != send_status)
+        {
+            ESP_LOGE(TAG, "Packet send failed");
+        }
+        else
+        {
+            ESP_LOGI(TAG, "Packet sent successfully");
+        }
+        lora_delay(1000);
     }
     free(coordinates);
 }
 
 
 void app_main(void){
-    spi_init();
-    lora_status_t ret = lora_init();
-    if(ret==LORA_OK){
-        //sdspi_init();
-        uart_init();
-        //gps_cold_start();
-
-        transmitter_task();
-
-        sdspi_close();
-    }
-
+    lora_driver_init();
+    lora_dump_registers();
+    // sdspi_init();
+    // sdspi_test();
+    uart_init();
+    gps_cold_start();
+    transmitter_task();
+    lora_close();
 }

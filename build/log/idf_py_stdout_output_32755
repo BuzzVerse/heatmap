@@ -1,59 +1,20 @@
-[1/10] Performing build step for 'bootloader'
+[1/15] Linking C static library esp-idf/gps/libgps.a
+[2/15] Linking C static library esp-idf/protocol_examples_common/libprotocol_examples_common.a
+[3/15] Performing build step for 'bootloader'
 [1/1] cd /home/dsopocko/espressif/esp-git/heatmap/build/bootloader/esp-idf/esptool_py && /home/dsopocko/.espressif/python_env/idf5.3_py3.10_env/bin/python /home/dsopocko/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/dsopocko/espressif/esp-git/heatmap/build/bootloader/bootloader.bin
 Bootloader binary size 0x5160 bytes. 0x2ea0 bytes (36%) free.
-[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[4/13] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj 
+/home/dsopocko/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/riscv32-esp-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.3-dev-892-g692c1fcc52-dirty\" -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -DUNITY_INCLUDE_CONFIG_H -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/dsopocko/espressif/esp-git/heatmap/build/config -I/home/dsopocko/espressif/esp-git/heatmap/main -I/home/dsopocko/esp/esp-idf/components/newlib/platform_include -I/home/dsopocko/esp/esp-idf/components/freertos/config/include -I/home/dsopocko/esp/esp-idf/components/freertos/config/include/freertos -I/home/dsopocko/esp/esp-idf/components/freertos/config/riscv/include -I/home/dsopocko/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/dsopocko/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/include -I/home/dsopocko/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/include/freertos -I/home/dsopocko/esp/esp-idf/components/freertos/esp_additions/include -I/home/dsopocko/esp/esp-idf/components/esp_hw_support/include -I/home/dsopocko/esp/esp-idf/components/esp_hw_support/include/soc -I/home/dsopocko/esp/esp-idf/components/esp_hw_support/include/soc/esp32c3 -I/home/dsopocko/esp/esp-idf/components/heap/include -I/home/dsopocko/esp/esp-idf/components/log/include -I/home/dsopocko/esp/esp-idf/components/soc/include -I/home/dsopocko/esp/esp-idf/components/soc/esp32c3 -I/home/dsopocko/esp/esp-idf/components/soc/esp32c3/include -I/home/dsopocko/esp/esp-idf/components/hal/platform_port/include -I/home/dsopocko/esp/esp-idf/components/hal/esp32c3/include -I/home/dsopocko/esp/esp-idf/components/hal/include -I/home/dsopocko/esp/esp-idf/components/esp_rom/include -I/home/dsopocko/esp/esp-idf/components/esp_rom/include/esp32c3 -I/home/dsopocko/esp/esp-idf/components/esp_rom/esp32c3 -I/home/dsopocko/esp/esp-idf/components/esp_common/include -I/home/dsopocko/esp/esp-idf/components/esp_system/include -I/home/dsopocko/esp/esp-idf/components/esp_system/port/soc -I/home/dsopocko/esp/esp-idf/components/esp_system/port/include/riscv -I/home/dsopocko/esp/esp-idf/components/esp_system/port/include/private -I/home/dsopocko/esp/esp-idf/components/riscv/include -I/home/dsopocko/esp/esp-idf/components/lwip/include -I/home/dsopocko/esp/esp-idf/components/lwip/include/apps -I/home/dsopocko/esp/esp-idf/components/lwip/include/apps/sntp -I/home/dsopocko/esp/esp-idf/components/lwip/lwip/src/include -I/home/dsopocko/esp/esp-idf/components/lwip/port/include -I/home/dsopocko/esp/esp-idf/components/lwip/port/freertos/include -I/home/dsopocko/esp/esp-idf/components/lwip/port/esp32xx/include -I/home/dsopocko/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/dsopocko/esp/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/dsopocko/esp/esp-idf/components/esp_driver_gpio/include -I/home/dsopocko/esp/esp-idf/components/esp_pm/include -I/home/dsopocko/esp/esp-idf/components/mbedtls/port/include -I/home/dsopocko/esp/esp-idf/components/mbedtls/mbedtls/include -I/home/dsopocko/esp/esp-idf/components/mbedtls/mbedtls/library -I/home/dsopocko/esp/esp-idf/components/mbedtls/esp_crt_bundle/include -I/home/dsopocko/esp/esp-idf/components/mbedtls/mbedtls/3rdparty/everest/include -I/home/dsopocko/esp/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m -I/home/dsopocko/esp/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m/p256-m -I/home/dsopocko/esp/esp-idf/components/efuse/include -I/home/dsopocko/esp/esp-idf/components/efuse/esp32c3/include -I/home/dsopocko/esp/esp-idf/components/esp_bootloader_format/include -I/home/dsopocko/esp/esp-idf/components/esp_app_format/include -I/home/dsopocko/esp/esp-idf/components/bootloader_support/include -I/home/dsopocko/esp/esp-idf/components/bootloader_support/bootloader_flash/include -I/home/dsopocko/esp/esp-idf/components/esp_partition/include -I/home/dsopocko/esp/esp-idf/components/app_update/include -I/home/dsopocko/esp/esp-idf/components/esp_mm/include -I/home/dsopocko/esp/esp-idf/components/spi_flash/include -I/home/dsopocko/esp/esp-idf/components/pthread/include -I/home/dsopocko/esp/esp-idf/components/esp_timer/include -I/home/dsopocko/esp/esp-idf/components/esp_driver_gptimer/include -I/home/dsopocko/esp/esp-idf/components/esp_ringbuf/include -I/home/dsopocko/esp/esp-idf/components/esp_driver_pcnt/include -I/home/dsopocko/esp/esp-idf/components/esp_driver_spi/include -I/home/dsopocko/esp/esp-idf/components/esp_driver_mcpwm/include -I/home/dsopocko/esp/esp-idf/components/esp_driver_ana_cmpr/include -I/home/dsopocko/esp/esp-idf/components/esp_driver_i2s/include -I/home/dsopocko/esp/esp-idf/components/sdmmc/include -I/home/dsopocko/esp/esp-idf/components/esp_driver_sdmmc/include -I/home/dsopocko/esp/esp-idf/components/esp_driver_sdspi/include -I/home/dsopocko/esp/esp-idf/components/esp_driver_sdio/include -I/home/dsopocko/esp/esp-idf/components/esp_driver_dac/include -I/home/dsopocko/esp/esp-idf/components/esp_driver_rmt/include -I/home/dsopocko/esp/esp-idf/components/esp_driver_tsens/include -I/home/dsopocko/esp/esp-idf/components/esp_driver_sdm/include -I/home/dsopocko/esp/esp-idf/components/driver/deprecated -I/home/dsopocko/esp/esp-idf/components/driver/i2c/include -I/home/dsopocko/esp/esp-idf/components/driver/ledc/include -I/home/dsopocko/esp/esp-idf/components/driver/parlio/include -I/home/dsopocko/esp/esp-idf/components/driver/touch_sensor/include -I/home/dsopocko/esp/esp-idf/components/driver/twai/include -I/home/dsopocko/esp/esp-idf/components/driver/uart/include -I/home/dsopocko/esp/esp-idf/components/driver/usb_serial_jtag/include -I/home/dsopocko/esp/esp-idf/components/app_trace/include -I/home/dsopocko/esp/esp-idf/components/esp_event/include -I/home/dsopocko/esp/esp-idf/components/nvs_flash/include -I/home/dsopocko/esp/esp-idf/components/esp_phy/include -I/home/dsopocko/esp/esp-idf/components/esp_phy/esp32c3/include -I/home/dsopocko/esp/esp-idf/components/vfs/include -I/home/dsopocko/esp/esp-idf/components/esp_netif/include -I/home/dsopocko/esp/esp-idf/components/wpa_supplicant/include -I/home/dsopocko/esp/esp-idf/components/wpa_supplicant/port/include -I/home/dsopocko/esp/esp-idf/components/wpa_supplicant/esp_supplicant/include -I/home/dsopocko/esp/esp-idf/components/esp_coex/include -I/home/dsopocko/esp/esp-idf/components/esp_wifi/include -I/home/dsopocko/esp/esp-idf/components/esp_wifi/wifi_apps/include -I/home/dsopocko/esp/esp-idf/components/unity/include -I/home/dsopocko/esp/esp-idf/components/unity/unity/src -I/home/dsopocko/esp/esp-idf/components/cmock/CMock/src -I/home/dsopocko/esp/esp-idf/components/console -I/home/dsopocko/esp/esp-idf/components/http_parser -I/home/dsopocko/esp/esp-idf/components/esp-tls -I/home/dsopocko/esp/esp-idf/components/esp-tls/esp-tls-crypto -I/home/dsopocko/esp/esp-idf/components/esp_adc/include -I/home/dsopocko/esp/esp-idf/components/esp_adc/interface -I/home/dsopocko/esp/esp-idf/components/esp_adc/esp32c3/include -I/home/dsopocko/esp/esp-idf/components/esp_adc/deprecated/include -I/home/dsopocko/esp/esp-idf/components/esp_eth/include -I/home/dsopocko/esp/esp-idf/components/esp_gdbstub/include -I/home/dsopocko/esp/esp-idf/components/esp_hid/include -I/home/dsopocko/esp/esp-idf/components/tcp_transport/include -I/home/dsopocko/esp/esp-idf/components/esp_http_client/include -I/home/dsopocko/esp/esp-idf/components/esp_http_server/include -I/home/dsopocko/esp/esp-idf/components/esp_https_ota/include -I/home/dsopocko/esp/esp-idf/components/esp_https_server/include -I/home/dsopocko/esp/esp-idf/components/esp_psram/include -I/home/dsopocko/esp/esp-idf/components/esp_lcd/include -I/home/dsopocko/esp/esp-idf/components/esp_lcd/interface -I/home/dsopocko/esp/esp-idf/components/protobuf-c/protobuf-c -I/home/dsopocko/esp/esp-idf/components/protocomm/include/common -I/home/dsopocko/esp/esp-idf/components/protocomm/include/security -I/home/dsopocko/esp/esp-idf/components/protocomm/include/transports -I/home/dsopocko/esp/esp-idf/components/protocomm/include/crypto/srp6a -I/home/dsopocko/esp/esp-idf/components/esp_local_ctrl/include -I/home/dsopocko/esp/esp-idf/components/espcoredump/include -I/home/dsopocko/esp/esp-idf/components/espcoredump/include/port/riscv -I/home/dsopocko/esp/esp-idf/components/wear_levelling/include -I/home/dsopocko/esp/esp-idf/components/fatfs/diskio -I/home/dsopocko/esp/esp-idf/components/fatfs/src -I/home/dsopocko/esp/esp-idf/components/fatfs/vfs -I/home/dsopocko/esp/esp-idf/components/idf_test/include -I/home/dsopocko/esp/esp-idf/components/idf_test/include/esp32c3 -I/home/dsopocko/esp/esp-idf/components/ieee802154/include -I/home/dsopocko/esp/esp-idf/components/json/cJSON -I/home/dsopocko/esp/esp-idf/components/mqtt/esp-mqtt/include -I/home/dsopocko/esp/esp-idf/components/nvs_sec_provider/include -I/home/dsopocko/esp/esp-idf/components/spiffs/include -I/home/dsopocko/esp/esp-idf/components/wifi_provisioning/include -I/home/dsopocko/espressif/esp-git/heatmap/components/lora/src -I/home/dsopocko/espressif/esp-git/heatmap/components/lora/include -I/home/dsopocko/espressif/esp-git/heatmap/components/lora/include/driver -I/home/dsopocko/espressif/esp-git/heatmap/components/lora/include/protocols/packet -I/home/dsopocko/esp/esp-idf/examples/common_components/protocol_examples_common/include -I/home/dsopocko/espressif/esp-git/heatmap/components/gps/include -I/home/dsopocko/espressif/esp-git/heatmap/components/sdcard/include -march=rv32imc_zicsr_zifencei  -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -nostartfiles -Og -fno-shrink-wrap -fmacro-prefix-map=/home/dsopocko/espressif/esp-git/heatmap=. -fmacro-prefix-map=/home/dsopocko/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj -c /home/dsopocko/espressif/esp-git/heatmap/main/main.c
 /home/dsopocko/espressif/esp-git/heatmap/main/main.c: In function 'app_main':
-/home/dsopocko/espressif/esp-git/heatmap/main/main.c:38:19: warning: unused variable 'ret' [-Wunused-variable]
-   38 |     lora_status_t ret = lora_init();
-      |                   ^~~
-[3/8] Linking C static library esp-idf/main/libmain.a
-[4/8] Generating ld/sections.ld
-[5/8] Linking CXX executable ..elf
-[6/8] Generating binary image from built executable
-esptool.py v4.7.dev3
-Creating esp32c3 image...
-Merged 2 ELF sections
-Successfully created esp32c3 image.
-Generated /home/dsopocko/espressif/esp-git/heatmap/build/..bin
-[7/8] cd /home/dsopocko/espressif/esp-git/heatmap/build/esp-idf/esptool_py && /home/dsopocko/.espressif/python_env/idf5.3_py3.10_env/bin/python /home/dsopocko/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/dsopocko/espressif/esp-git/heatmap/build/partition_table/partition-table.bin /home/dsopocko/espressif/esp-git/heatmap/build/..bin
-..bin binary size 0x3a0f0 bytes. Smallest app partition is 0x100000 bytes. 0xc5f10 bytes (77%) free.
-[7/8] cd /home/dsopocko/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/dsopocko/esp/esp-idf -D "SERIAL_TOOL=/home/dsopocko/.espressif/python_env/idf5.3_py3.10_env/bin/python;;/home/dsopocko/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32c3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/dsopocko/espressif/esp-git/heatmap/build -P /home/dsopocko/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
-esptool.py --chip esp32c3 -p /dev/ttyACM0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 ..bin 0x8000 partition_table/partition-table.bin
-esptool.py v4.7.dev3
-Serial port /dev/ttyACM0
-Connecting...
-Chip is ESP32-C3 (QFN32) (revision v0.4)
-Features: WiFi, BLE, Embedded Flash 4MB (XMC)
-Crystal is 40MHz
-MAC: 84:fc:e6:84:48:74
-Uploading stub...
-Running stub...
-Stub running...
-Changing baud rate to 460800
-Changed.
-Configuring flash size...
-Flash will be erased from 0x00000000 to 0x00005fff...
-Flash will be erased from 0x00010000 to 0x0004afff...
-Flash will be erased from 0x00008000 to 0x00008fff...
-Compressed 20832 bytes to 12762...
-Writing at 0x00000000... (100 %)
-Wrote 20832 bytes (12762 compressed) at 0x00000000 in 0.3 seconds (effective 572.6 kbit/s)...
-Hash of data verified.
-Compressed 237808 bytes to 121704...
-Writing at 0x00010000... (12 %)
-Writing at 0x0001c0ff... (25 %)
-Writing at 0x00023011... (37 %)
-Writing at 0x0002aaab... (50 %)
-Writing at 0x0003202e... (62 %)
-Writing at 0x00038bda... (75 %)
-Writing at 0x0003fc8a... (87 %)
-Writing at 0x00046b6c... (100 %)
-Wrote 237808 bytes (121704 compressed) at 0x00010000 in 1.9 seconds (effective 1017.9 kbit/s)...
-Hash of data verified.
-Compressed 3072 bytes to 103...
-Writing at 0x00008000... (100 %)
-Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 631.2 kbit/s)...
-Hash of data verified.
-
-Leaving...
-Hard resetting via RTS pin...
+/home/dsopocko/espressif/esp-git/heatmap/main/main.c:53:44: error: 'packet' undeclared (first use in this function); did you mean 'packet_t'?
+   53 |     lora_status_t send_status = lora_send(&packet);
+      |                                            ^~~~~~
+      |                                            packet_t
+/home/dsopocko/espressif/esp-git/heatmap/main/main.c:53:44: note: each undeclared identifier is reported only once for each function it appears in
+[5/13] Building C object esp-idf/sdcard/CMakeFiles/__idf_sdcard.dir/sdcard.c.obj
+/home/dsopocko/espressif/esp-git/heatmap/components/sdcard/sdcard.c: In function 'sdspi_init':
+/home/dsopocko/espressif/esp-git/heatmap/components/sdcard/sdcard.c:101:35: warning: unused variable 'loracfg' [-Wunused-variable]
+  101 |     spi_device_interface_config_t loracfg={
+      |                                   ^~~~~~~
+ninja: build stopped: subcommand failed.

@@ -1,9 +1,0 @@
-[0;33m--- esp-idf-monitor 1.3.4 on /dev/ttyACM0 115200 ---[0m
-[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
-[0;33m0x4038b7ec: insert_free_block at /home/dsopocko/esp/esp-idf/components/heap/tlsf/tlsf.c:372
- (inlined by) block_insert at /home/dsopocko/esp/esp-idf/components/heap/tlsf/tlsf.c:388
- (inlined by) block_trim_free at /home/dsopocko/esp/esp-idf/components/heap/tlsf/tlsf.c:502
- (inlined by) block_prepare_used at /home/dsopocko/esp/esp-idf/components/heap/tlsf/tlsf.c:579
- (inlined by) tlsf_malloc at /home/dsopocko/esp/esp-idf/components/heap/tlsf/tlsf.c:1006
-[0m
-[0m

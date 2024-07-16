@@ -1,0 +1,146 @@
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xb (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40383524
+SPIWP:0xee
+mode:DIO, clock div:3
+load:0x3fcd5820,len:0x3fc
+load:0x403cc710,len:0x8ec
+load:0x403ce710,len:0x24bc
+entry 0x403cc710
+[0;32mI (90) cpu_start: Unicore app[0m
+[0;32mI (100) cpu_start: Pro cpu start user code[0m
+[0;32mI (100) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (101) cpu_start: Application information:[0m
+[0;32mI (103) cpu_start: Project name:     .[0m
+[0;32mI (108) cpu_start: App version:      0cb8190-dirty[0m
+[0;32mI (113) cpu_start: Compile time:     Jul 16 2024 18:29:53[0m
+[0;32mI (119) cpu_start: ELF file SHA256:  6bb05328c...[0m
+[0;32mI (125) cpu_start: ESP-IDF:          v5.3-dev-892-g692c1fcc52-dirty[0m
+[0;32mI (132) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (136) cpu_start: Max chip rev:     v1.99 [0m
+[0;32mI (141) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (146) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (153) heap_init: At 3FC8F580 len 00030A80 (194 KiB): RAM[0m
+[0;32mI (159) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (166) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (173) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (182) spi_flash: detected chip: generic[0m
+[0;32mI (184) spi_flash: flash io: dio[0m
+[0;33mW (188) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (202) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (208) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (216) main_task: Started on CPU0[0m
+[0;32mI (216) main_task: Calling app_main()[0m
+[0;32mI (216) LORA_API: Initializing spi...
+[0m
+[0;32mI (226) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (236) gpio: GPIO[10]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (246) LORA_API: SPI initialized successfully[0m
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+i=101, TIMEOUT_RESET=10000 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+00 08 00 08 00 08 00 08 00 08 00 08 00 08 00 08 
+00 08 00 08 00 08 00 08 00 08 00 08 00 08 00 08 
+00 08 00 08 00 08 00 08 00 08 00 08 00 08 00 08 
+00 08 00 08 00 08 00 08 00 08 00 08 00 08 00 08 
+
+[0;32mI (2256) main_task: Returned from app_main()[0m

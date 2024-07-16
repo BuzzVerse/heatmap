@@ -1,105 +1,0 @@
-[0;32mI (105) esp_image: segment 1: paddr=0001f878 vaddr=3fc8ec6k) larger than tESP-ROM:esp32c3-api1-20210207
-Build:Feb  7 2021
-rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
-Saved PC:0x4004c0d4
-SPIWP:0xee
-mode:DIO, clock div:1
-load:0x3fcd5820,len:0x1738
-load:0x403cc710,len:0xb9c
-load:0x403ce710,len:0x2e34
-entry 0x403cc71a
-[0;32mI (24) boot: ESP-IDF v5.3-dev-892-g692c1fcc52-dirty 2nd stage bootloader[0m
-[0;32mI (24) boot: compile time May 20 2024 11:23:44[0m
-[0;32mI (25) boot: chip revision: v0.4[0m
-[0;32mI (29) boot.esp32c3: SPI Speed      : 80MHz[0m
-[0;32mI (34) boot.esp32c3: SPI Mode       : DIO[0m
-[0;32mI (39) boot.esp32c3: SPI Flash Size : 2MB[0m
-[0;32mI (44) boot: Enabling RNG early entropy source...[0m
-[0;32mI (49) boot: Partition Table:[0m
-[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
-[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
-[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
-[0;32mI (75) boot:  2 factory          factory app      00 00 00010000 00100000[0m
-[0;32mI (82) boot: End of partition table[0m
-[0;32mI (86) esp_image: segment 0: paddr=00010020 vaddr=3c030020 size=0f850h ( 63568) map[0m
-[0;32mI (105) esp_image: segment 1: paddr=0001f878 vaddr=3fc8ec00 size=007a0h (  1952) load[0m
-[0;32mI (106) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=2db70h (187248) map[0m
-[0;32mI (142) esp_image: segment 3: paddr=0004db98 vaddr=3fc8f3a0 size=00f54h (  3924) load[0m
-[0;32mI (143) esp_image: segment 4: paddr=0004eaf4 vaddr=40380000 size=0eb2ch ( 60204) load[0m
-[0;32mI (163) boot: Loaded app from partition at offset 0x10000[0m
-[0;32mI (164) boot: Disabling RNG early entropy source...[0m
-[0;32mI (175) cpu_start: Unicore app[0m
-[0;32mI (184) cpu_start: Pro cpu start user code[0m
-[0;32mI (184) cpu_start: cpu freq: 160000000 Hz[0m
-[0;32mI (184) cpu_start: Application information:[0m
-[0;32mI (187) cpu_start: Project name:     .[0m
-[0;32mI (191) cpu_start: App version:      af97de7-dirty[0m
-[0;32mI (197) cpu_start: Compile time:     May 27 2024 12:53:51[0m
-[0;32mI (203) cpu_start: ELF file SHA256:  e0537b164...[0m
-[0;32mI (208) cpu_start: ESP-IDF:          v5.3-dev-892-g692c1fcc52-dirty[0m
-[0;32mI (215) cpu_start: Min chip rev:     v0.3[0m
-[0;32mI (220) cpu_start: Max chip rev:     v1.99 [0m
-[0;32mI (225) cpu_start: Chip rev:         v0.4[0m
-[0;32mI (230) heap_init: Initializing. RAM available for dynamic allocation:[0m
-[0;32mI (237) heap_init: At 3FC91330 len 0002ECD0 (187 KiB): RAM[0m
-[0;32mI (243) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
-[0;32mI (250) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
-[0;32mI (257) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
-[0;32mI (264) spi_flash: detected chip: generic[0m
-[0;32mI (268) spi_flash: flash io: dio[0m
-[0;33mW (272) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
-[0;32mI (285) sleep: Configure to isolate all GPIO pins in sleep state[0m
-[0;32mI (292) sleep: Enable automatic switching of GPIO sleep configuration[0m
-[0;32mI (299) main_task: Started on CPU0[0m
-[0;32mI (299) main_task: Calling app_main()[0m
-[0;32mI (299) LORA_API: Initializing spi...
-[0m
-[0;32mI (309) gpio: GPIO[5]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (319) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (329) LORA_API: SPI initialized successfully[0m
-[0;32mI (329) SDSPI: Initializing SD card[0m
-[0;32mI (339) SDSPI: Using SPI peripheral[0m
-[0;31mE (339) spi: spi_bus_initialize(760): SPI bus already initialized.[0m
-[0;31mE (349) SDSPI: Failed to initialize bus.[0m
-[0;32mI (2449) GPS: Read 1024 bytes:
- 'j
-$GNRMC,110617.000,V,,,,,,,270524,,,M,V*2C
-$GNVTG,,,,,,,,,M*2D
-$GNZDA,110617.000,27,05,2024,00,00*4C
-$GPTXT,01,01,01,ANTENNA OK*35
-$GNGGA,110618.000,,,,,0,00,25.5,,,,,,*75
-$GNGLL,,,,,110618.000,V,M*68'[0m
-[0;32mI (2469) GPS: GNGLL LINE: $GNGLL,,,,,110618.000,V,M*68[0m
-[0;32mI (2469) Main: $GNGLL,,,,,110618.000,V,M*68[0m
-[0;32mI (4329) GPS: Read 1024 bytes:
- '19,19,160,28,0*48
-$GNRMC,110619.000,V,,,,,,,270524,,,M,V*22
-$GNVTG,,,,,,,,,M*2D
-$GNZDA,110619.000,27,05,2024,00,00*42
-$GPTXT,01,01,01,ANTENNA OK*35
-$GNGGA,110620.000,,,,,0,00,25.5,,,,,,*7E
-$GNGLL,,,,,110620.000,V,M*63'[0m
-[0;32mI (4339) GPS: GNGLL LINE: $GNGLL,,,,,110620.000,V,M*63[0m
-[0;32mI (4349) Main: $GNGLL,,,,,110620.000,V,M*63[0m
-[0;32mI (6329) GPS: Read 1024 bytes:
- '
-$BDGSV,1,1,01,19,19,160,28,0*48
-$GNRMC,110621.000,V,,,,,,,270524,,,M,V*29
-$GNVTG,,,,,,,,,M*2D
-$GNZDA,110621.000,27,05,2024,00,00*49
-$GPTXT,01,01,01,ANTENNA OK*35
-$GNGGA,110622.000,,,,,0,00,25.5,,,,,,*7C
-$GNGLL,,,,,110622.000,V,M*61'[0m
-[0;32mI (6339) GPS: GNGLL LINE: $GNGLL,,,,,110622.000,V,M*61[0m
-[0;32mI (6349) Main: $GNGLL,,,,,110622.000,V,M*61[0m
-[0;32mI (8329) GPS: Read 1024 bytes:
- ',30,06,337,,0*6E
-$BDGSV,1,1,01,19,19,160,28,0*48
-$GNRMC,110623.000,V,,,,,,,270524,,,M,V*2B
-$GNVTG,,,,,,,,,M*2D
-$GNZDA,110623.000,27,05,2024,00,00*4B
-$GPTXT,01,01,01,ANTENNA OK*35
-$GNGGA,110624.000,,,,,0,00,25.5,,,,,,*7A
-$GNGLL,,,,,110624.000,V,M*67'[0m
-[0;32mI (8339) GPS: GNGLL LINE: $GNGLL,,,,,110624.000,V,M*67[0m
-[0;32mI (8349) Main: $GNGLL,,,,,110624.000,V,M*67[0m

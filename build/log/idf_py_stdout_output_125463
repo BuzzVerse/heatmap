@@ -1,0 +1,80 @@
+[0;32mI (106) esp_image: segment 2: paddr=00020020 vaddr=420000er.[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xa (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42002dda
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1738
+load:0x403cc710,len:0xb9c
+load:0x403ce710,len:0x2e34
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.3-dev-892-g692c1fcc52-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jun 17 2024 18:31:40[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (29) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (34) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (75) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (82) boot: End of partition table[0m
+[0;32mI (86) esp_image: segment 0: paddr=00010020 vaddr=3c030020 size=0f778h ( 63352) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001f7a0 vaddr=3fc8ec00 size=00878h (  2168) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=2de38h (187960) map[0m
+[0;32mI (142) esp_image: segment 3: paddr=0004de60 vaddr=3fc8f478 size=00e7ch (  3708) load[0m
+[0;32mI (143) esp_image: segment 4: paddr=0004ece4 vaddr=40380000 size=0eab8h ( 60088) load[0m
+[0;32mI (163) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (164) boot: Disabling RNG early entropy source...[0m
+[0;32mI (175) cpu_start: Unicore app[0m
+[0;32mI (184) cpu_start: Pro cpu start user code[0m
+[0;32mI (184) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (184) cpu_start: Application information:[0m
+[0;32mI (187) cpu_start: Project name:     .[0m
+[0;32mI (191) cpu_start: App version:      0cb8190-dirty[0m
+[0;32mI (197) cpu_start: Compile time:     Jun 17 2024 20:51:34[0m
+[0;32mI (203) cpu_start: ELF file SHA256:  0281d9853...[0m
+[0;32mI (208) cpu_start: ESP-IDF:          v5.3-dev-892-g692c1fcc52-dirty[0m
+[0;32mI (215) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (220) cpu_start: Max chip rev:     v1.99 [0m
+[0;32mI (225) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (230) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (237) heap_init: At 3FC91330 len 0002ECD0 (187 KiB): RAM[0m
+[0;32mI (243) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (250) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (257) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (264) spi_flash: detected chip: generic[0m
+[0;32mI (268) spi_flash: flash io: dio[0m
+[0;33mW (272) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (285) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (292) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (299) main_task: Started on CPU0[0m
+[0;32mI (299) main_task: Calling app_main()[0m
+[0;32mI (299) LORA_API: Initializing spi...
+[0m
+[0;32mI (309) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (319) LORA_API: Resetting LoRa module...[0m
+[0;32mI (519) LORA_API: LoRa module reset![0m
+[0;32mI (519) gpio: GPIO[10]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (519) LORA_API: Initializing SD card[0m
+[0;32mI (519) LORA_API: Using SPI peripheral[0m
+[0;32mI (529) LORA_API: Mounting filesystem[0m
+[0;32mI (529) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (599) vfs_fat_sdmmc: sdmmc_card_init failed (0x107).[0m
+[0;32mI (599) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;31mE (599) LORA_API: Failed to initialize the card (ESP_ERR_TIMEOUT). Make sure SD card lines have pull-up resistors in place.[0m
+version=0x12
+i=1, TIMEOUT_RESET=10000 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+19 81 1A 0B 00 52 6C 80 00 8F 09 2B 23 01 00 00 
+00 00 00 00 00 00 00 00 10 00 00 00 00 72 70 64 
+00 08 01 FF 00 00 04 00 00 00 00 00 00 50 14 45 
+55 C3 05 27 1C 0A 03 0A 42 12 52 1D 00 AF 00 00 
+
+[0;32mI (639) SDSPI: Opening file /sdcard/test.txt[0m
+[0;31mE (639) SDSPI: Failed to open file for writing[0m
+[0;32mI (649) SDSPI: Reading file /sdcard/test.txt[0m
+[0;31mE (649) SDSPI: Failed to open file for reading[0m
+[0;32mI (659) main_task: Returned from app_main()[0m

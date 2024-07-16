@@ -1,0 +1,10 @@
+[0;33m--- esp-idf-monitor 1.3.4 on /dev/ttyACM0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x4004c0dc: uart_tx_one_char_uart.part.0 in ROM
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x403834c8: spi_new_trans at /home/dsopocko/esp/esp-idf/components/esp_driver_spi/src/gpspi/spi_master.c:680
+[0m
+[0;33m0x403834c2: spi_new_trans at /home/dsopocko/esp/esp-idf/components/esp_driver_spi/src/gpspi/spi_master.c:680
+[0m
+[0m

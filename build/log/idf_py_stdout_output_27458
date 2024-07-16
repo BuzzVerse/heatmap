@@ -1,0 +1,173 @@
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xa (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42006f06
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1738
+load:0x403cc710,len:0xb9c
+load:0x403ce710,len:0x2e34
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.3-dev-892-g692c1fcc52-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jun 17 2024 18:31:40[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (29) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (34) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (75) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (82) boot: End of partition table[0m
+[0;32mI (86) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0cc98h ( 52376) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001ccc0 vaddr=3fc8e400 size=013d4h (  5076) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001e09c vaddr=40380000 size=01f7ch (  8060) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1df04h (122628) map[0m
+[0;32mI (140) esp_image: segment 4: paddr=0003df2c vaddr=40381f7c size=0c3d0h ( 50128) load[0m
+[0;32mI (154) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (154) boot: Disabling RNG early entropy source...[0m
+[0;32mI (165) cpu_start: Unicore app[0m
+[0;32mI (175) cpu_start: Pro cpu start user code[0m
+[0;32mI (175) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (175) cpu_start: Application information:[0m
+[0;32mI (178) cpu_start: Project name:     .[0m
+[0;32mI (182) cpu_start: App version:      0cb8190-dirty[0m
+[0;32mI (188) cpu_start: Compile time:     Jun 17 2024 18:34:32[0m
+[0;32mI (194) cpu_start: ELF file SHA256:  8ffeba82e...[0m
+[0;32mI (199) cpu_start: ESP-IDF:          v5.3-dev-892-g692c1fcc52-dirty[0m
+[0;32mI (206) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (211) cpu_start: Max chip rev:     v1.99 [0m
+[0;32mI (215) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (220) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (227) heap_init: At 3FC907A0 len 0002F860 (190 KiB): RAM[0m
+[0;32mI (234) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (241) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (247) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (255) spi_flash: detected chip: generic[0m
+[0;32mI (258) spi_flash: flash io: dio[0m
+[0;33mW (262) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (276) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (282) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (290) main_task: Started on CPU0[0m
+[0;32mI (290) main_task: Calling app_main()[0m
+[0;32mI (290) LORA_API: Initializing spi...
+[0m
+[0;32mI (300) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (310) gpio: GPIO[10]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (320) LORA_API: SPI initialized successfully[0m
+[0;32mI (320) MAIN: Initializing LoRa[0m
+FREQ: 433000000.000000
+CODING RATE: 8
+BANDWIDTH: 3
+SPREADING FACTOR: 12
+CRC: 1
+[0;32mI (330) LORA_API: Initializing spi...
+[0m
+[0;32mI (340) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (350) gpio: GPIO[10]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;31mE (360) spi: spi_bus_initialize(760): SPI bus already initialized.[0m
+[0;31mE (360) LORA_API: SPI initialization failed[0m
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+version=0x00
+i=101, TIMEOUT_RESET=100LoRa initialization failed
+[0;31mE (2370) MAIN: LoRa initialization failed[0m

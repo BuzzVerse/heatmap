@@ -1,6 +1,0 @@
-[0/1] Re-running CMake...
--- Building ESP-IDF components for target esp32c3
--- Configuring incomplete, errors occurred!
-See also "/home/dsopocko/espressif/esp-git/heatmap/build/CMakeFiles/CMakeOutput.log".
-FAILED: build.ninja 
-/usr/bin/cmake --regenerate-during-build -S/home/dsopocko/espressif/esp-git/heatmap -B/home/dsopocko/espressif/esp-git/heatmap/build

@@ -1,0 +1,480 @@
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xb (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40383524
+SPIWP:0xee
+mode:DIO, clock div:3
+load:0x3fcd5820,len:0x3fc
+load:0x403cc710,len:0x8ec
+load:0x403ce710,len:0x24bc
+entry 0x403cc710
+[0;32mI (92) cpu_start: Unicore app[0m
+[0;32mI (102) cpu_start: Pro cpu start user code[0m
+[0;32mI (102) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (102) cpu_start: Application information:[0m
+[0;32mI (105) cpu_start: Project name:     .[0m
+[0;32mI (109) cpu_start: App version:      0cb8190-dirty[0m
+[0;32mI (115) cpu_start: Compile time:     Jul 16 2024 18:45:36[0m
+[0;32mI (121) cpu_start: ELF file SHA256:  1fb29d101...[0m
+[0;32mI (126) cpu_start: ESP-IDF:          v5.3-dev-892-g692c1fcc52-dirty[0m
+[0;32mI (133) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (138) cpu_start: Max chip rev:     v1.99 [0m
+[0;32mI (143) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (148) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (155) heap_init: At 3FC900D0 len 0002FF30 (191 KiB): RAM[0m
+[0;32mI (161) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (168) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (175) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (183) spi_flash: detected chip: generic[0m
+[0;32mI (186) spi_flash: flash io: dio[0m
+[0;33mW (190) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (203) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (210) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (217) main_task: Started on CPU0[0m
+[0;32mI (217) main_task: Calling app_main()[0m
+[0;32mI (217) LORA_API: Initializing spi...
+[0m
+[0;32mI (227) gpio: GPIO[3]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (237) LORA_API: Resetting LoRa module...[0m
+[0;32mI (437) LORA_API: LoRa module reset![0m
+[0;32mI (437) gpio: GPIO[10]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (437) LORA_API: SPI initialized successfully[0m
+version=0x12
+i=1, TIMEOUT_RESET=10000 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+59 81 1A 0B 00 52 6C 80 00 8F 09 2B 23 01 00 00 
+00 00 00 00 00 00 00 00 10 00 00 00 00 72 70 64 
+00 08 01 FF 00 00 04 00 00 00 00 00 00 50 14 45 
+55 C3 05 27 1C 0A 03 0A 42 12 52 1D 00 AF 00 00 
+
+[0;32mI (467) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (517) Main: Packet sent successfully[0m
+[0;32mI (1517) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (1567) Main: Packet sent successfully[0m
+[0;32mI (2567) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (2617) Main: Packet sent successfully[0m
+[0;32mI (3617) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (3667) Main: Packet sent successfully[0m
+[0;32mI (4667) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (4717) Main: Packet sent successfully[0m
+[0;32mI (5717) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (5767) Main: Packet sent successfully[0m
+[0;32mI (6767) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (6817) Main: Packet sent successfully[0m
+[0;32mI (7817) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (7867) Main: Packet sent successfully[0m
+[0;32mI (8867) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (8917) Main: Packet sent successfully[0m
+[0;32mI (9917) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (9967) Main: Packet sent successfully[0m
+[0;32mI (10967) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (11017) Main: Packet sent successfully[0m
+[0;32mI (12017) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (12067) Main: Packet sent successfully[0m
+[0;32mI (13067) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (13117) Main: Packet sent successfully[0m
+[0;32mI (14117) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (14167) Main: Packet sent successfully[0m
+[0;32mI (15167) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (15217) Main: Packet sent successfully[0m
+[0;32mI (16217) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (16267) Main: Packet sent successfully[0m
+[0;32mI (17267) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (17317) Main: Packet sent successfully[0m
+[0;32mI (18317) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (18367) Main: Packet sent successfully[0m
+[0;32mI (19367) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (19417) Main: Packet sent successfully[0m
+[0;32mI (20417) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (20467) Main: Packet sent successfully[0m
+[0;32mI (21467) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (21517) Main: Packet sent successfully[0m
+[0;32mI (22517) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (22567) Main: Packet sent successfully[0m
+[0;32mI (23567) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (23617) Main: Packet sent successfully[0m
+[0;32mI (24617) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (24667) Main: Packet sent successfully[0m
+[0;32mI (25667) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (25717) Main: Packet sent successfully[0m
+[0;32mI (26717) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (26767) Main: Packet sent successfully[0m
+[0;32mI (27767) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (27817) Main: Packet sent successfully[0m
+[0;32mI (28817) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (28867) Main: Packet sent successfully[0m
+[0;32mI (29867) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (29917) Main: Packet sent successfully[0m
+[0;32mI (30917) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (30967) Main: Packet sent successfully[0m
+[0;32mI (31967) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (32017) Main: Packet sent successfully[0m
+[0;32mI (33017) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (33067) Main: Packet sent successfully[0m
+[0;32mI (34067) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (34117) Main: Packet sent successfully[0m
+[0;32mI (35117) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (35167) Main: Packet sent successfully[0m
+[0;32mI (36167) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (36217) Main: Packet sent successfully[0m
+[0;32mI (37217) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (37267) Main: Packet sent successfully[0m
+[0;32mI (38267) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (38317) Main: Packet sent successfully[0m
+[0;32mI (39317) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (39367) Main: Packet sent successfully[0m
+[0;32mI (40367) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (40417) Main: Packet sent successfully[0m
+[0;32mI (41417) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (41467) Main: Packet sent successfully[0m
+[0;32mI (42467) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (42517) Main: Packet sent successfully[0m
+[0;32mI (43517) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (43567) Main: Packet sent successfully[0m
+[0;32mI (44567) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (44617) Main: Packet sent successfully[0m
+[0;32mI (45617) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (45667) Main: Packet sent successfully[0m
+[0;32mI (46667) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (46717) Main: Packet sent successfully[0m
+[0;32mI (47717) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (47767) Main: Packet sent successfully[0m
+[0;32mI (48767) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (48817) Main: Packet sent successfully[0m
+[0;32mI (49817) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (49867) Main: Packet sent successfully[0m
+[0;32mI (50867) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (50917) Main: Packet sent successfully[0m
+[0;32mI (51917) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (51967) Main: Packet sent successfully[0m
+[0;32mI (52967) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (53017) Main: Packet sent successfully[0m
+[0;32mI (54017) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (54067) Main: Packet sent successfully[0m
+[0;32mI (55067) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (55117) Main: Packet sent successfully[0m
+[0;32mI (56117) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (56167) Main: Packet sent successfully[0m
+[0;32mI (57167) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (57217) Main: Packet sent successfully[0m
+[0;32mI (58217) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (58267) Main: Packet sent successfully[0m
+[0;32mI (59267) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (59317) Main: Packet sent successfully[0m
+[0;32mI (60317) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (60367) Main: Packet sent successfully[0m
+[0;32mI (61367) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (61417) Main: Packet sent successfully[0m
+[0;32mI (62417) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (62467) Main: Packet sent successfully[0m
+[0;32mI (63467) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (63517) Main: Packet sent successfully[0m
+[0;32mI (64517) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (64567) Main: Packet sent successfully[0m
+[0;32mI (65567) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (65617) Main: Packet sent successfully[0m
+[0;32mI (66617) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (66667) Main: Packet sent successfully[0m
+[0;32mI (67667) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (67717) Main: Packet sent successfully[0m
+[0;32mI (68717) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (68767) Main: Packet sent successfully[0m
+[0;32mI (69767) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (69817) Main: Packet sent successfully[0m
+[0;32mI (70817) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (70867) Main: Packet sent successfully[0m
+[0;32mI (71867) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (71917) Main: Packet sent successfully[0m
+[0;32mI (72917) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (72967) Main: Packet sent successfully[0m
+[0;32mI (73967) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (74017) Main: Packet sent successfully[0m
+[0;32mI (75017) Main: Test[0m
+
+0x0 0x0 0x1 0x1 0x0 0x34 0x20 0x0 
+IRQ_TX_DONE_MASK
+Time taken(ms): 40
+[0;32mI (75067) Main: Packet sent successfully[0m

@@ -1,210 +1,0 @@
-[0;32mI (142) esp_image: segment 3: paddr=0004de20 vaddr=3fc8f3ESP-ROM:esp32c3-api1-20210207
-Build:Feb  7 2021
-rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
-Saved PC:0x42007024
-SPIWP:0xee
-mode:DIO, clock div:1
-load:0x3fcd5820,len:0x1738
-load:0x403cc710,len:0xb9c
-load:0x403ce710,len:0x2e34
-entry 0x403cc71a
-[0;32mI (24) boot: ESP-IDF v5.3-dev-892-g692c1fcc52-dirty 2nd stage bootloader[0m
-[0;32mI (24) boot: compile time May 20 2024 11:23:44[0m
-[0;32mI (25) boot: chip revision: v0.4[0m
-[0;32mI (29) boot.esp32c3: SPI Speed      : 80MHz[0m
-[0;32mI (34) boot.esp32c3: SPI Mode       : DIO[0m
-[0;32mI (39) boot.esp32c3: SPI Flash Size : 2MB[0m
-[0;32mI (44) boot: Enabling RNG early entropy source...[0m
-[0;32mI (49) boot: Partition Table:[0m
-[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
-[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
-[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
-[0;32mI (75) boot:  2 factory          factory app      00 00 00010000 00100000[0m
-[0;32mI (82) boot: End of partition table[0m
-[0;32mI (86) esp_image: segment 0: paddr=00010020 vaddr=3c030020 size=0f848h ( 63560) map[0m
-[0;32mI (105) esp_image: segment 1: paddr=0001f870 vaddr=3fc8ec00 size=007a8h (  1960) load[0m
-[0;32mI (106) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=2ddf8h (187896) map[0m
-[0;32mI (142) esp_image: segment 3: paddr=0004de20 vaddr=3fc8f3a8 size=00f4ch (  3916) load[0m
-[0;32mI (143) esp_image: segment 4: paddr=0004ed74 vaddr=40380000 size=0eb5ch ( 60252) load[0m
-[0;32mI (163) boot: Loaded app from partition at offset 0x10000[0m
-[0;32mI (164) boot: Disabling RNG early entropy source...[0m
-[0;32mI (175) cpu_start: Unicore app[0m
-[0;32mI (184) cpu_start: Pro cpu start user code[0m
-[0;32mI (184) cpu_start: cpu freq: 160000000 Hz[0m
-[0;32mI (184) cpu_start: Application information:[0m
-[0;32mI (187) cpu_start: Project name:     .[0m
-[0;32mI (192) cpu_start: App version:      dbd312c-dirty[0m
-[0;32mI (197) cpu_start: Compile time:     May 20 2024 12:05:54[0m
-[0;32mI (203) cpu_start: ELF file SHA256:  70e74d385...[0m
-[0;32mI (208) cpu_start: ESP-IDF:          v5.3-dev-892-g692c1fcc52-dirty[0m
-[0;32mI (215) cpu_start: Min chip rev:     v0.3[0m
-[0;32mI (220) cpu_start: Max chip rev:     v1.99 [0m
-[0;32mI (225) cpu_start: Chip rev:         v0.4[0m
-[0;32mI (230) heap_init: Initializing. RAM available for dynamic allocation:[0m
-[0;32mI (237) heap_init: At 3FC91330 len 0002ECD0 (187 KiB): RAM[0m
-[0;32mI (243) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
-[0;32mI (250) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
-[0;32mI (257) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
-[0;32mI (264) spi_flash: detected chip: generic[0m
-[0;32mI (268) spi_flash: flash io: dio[0m
-[0;33mW (272) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
-[0;32mI (285) sleep: Configure to isolate all GPIO pins in sleep state[0m
-[0;32mI (292) sleep: Enable automatic switching of GPIO sleep configuration[0m
-[0;32mI (299) main_task: Started on CPU0[0m
-[0;32mI (299) main_task: Calling app_main()[0m
-[0;32mI (299) SDSPI: Initializing SD card[0m
-[0;32mI (309) SDSPI: Using SPI peripheral[0m
-[0;32mI (309) SDSPI: Initializing LoRa[0m
-[0;32mI (319) SDSPI: Mounting filesystem[0m
-[0;32mI (319) gpio: GPIO[3]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
-[0;32mI (369) sdspi_transaction: cmd=52, R1 response: command not supported[0m
-[0;32mI (409) sdspi_transaction: cmd=5, R1 response: command not supported[0m
-[0;32mI (429) SDSPI: Filesystem mounted[0m
-Name: SDABC
-Type: SDHC/SDXC
-Speed: 20.00 MHz (limit: 20.00 MHz)
-Size: 60000MB
-CSD: ver=2, sector_size=512, capacity=122880000 read_bl_len=9
-SSR: bus_width=1
-[0;32mI (439) GPS: GPS cold start $PCAS10,3*1C[0m
-[0;32mI (31429) GPS: Read 1024 bytes:
- '$GNGGA,121320.000,,,,,0,00,25.5,,,,,,*79
-$GNGLL,,,,,121320.000,V,N*67'[0m
-[0;32mI (31429) GPS: GNGLL LINE: $GNGLL,,,,,121320.000,V,N*67[0m
-D�?D�?|��?T[0;32mI (31429) GPS: Read 1024 bytes:
- '2E
-$GNZDA,121322.000,26,05,2024,00,00*4C
-$GPTXT,01,01,01,ANTENNA OK*35
-$GNGGA,121323.000,,,,,0,00,25.5,,,,,,*7A
-$GNGLL,,,,,121323.000,V,N*64'[0m
-[0;32mI (31449) GPS: GNGLL LINE: $GNGLL,,,,,121323.000,V,N*64[0m
-D�?D�?|��?T[0;32mI (34169) GPS: Read 1024 bytes:
- '22,,,18,0*7C
-$GNRMC,1,V,,,,,,,260524,,,N,V*2A
-$GNVTG,,,,,,,,,N*2E
-$GNZDA,121350.000,26,05,2024,00,00*49
-$GPTXT,01,01,01,ANTENNA OK*35
-$GNGGA,121351.000,,,,,0,00,25.5,,,,,,*7F
-$GNGLL,,,,,121351.000,V,N*61'[0m
-[0;32mI (34179) GPS: GNGLL LINE: $GNGLL,,,,,121351.000,V,N*61[0m
-D�?D�?|��?T[0;32mI (37039) GPS: Read 1024 bytes:
- ',4*04
-$GPGSV,1,1,03,16,,,38,27,,,27,32,,,33,0*6B
-$BDGSV,1,1,01,22,,,27,0*70
-$GNRMC,121353.000,V,,,,,,,260524,,,N,V*29
-$GNVTG,,,,,,,,,N*2E
-$GNZDA,121353.000,26,05,2024,00,00*4A
-$GPTXT,01,01,01,ANTENNA OK*35
-$GNGGA,121354.000,,,,,0,00,25.5,,,,,,*7A
-$GNGLL,,,,,121354.000,V,N*64'[0m
-[0;32mI (37059) GPS: GNGLL LINE: $GNGLL,,,,,121354.000,V,N*64[0m
-D�?D�?|��?T[0;32mI (40039) GPS: Read 1024 bytes:
- 'A,1,,,,,,,,,,,,,25.5,25.5,25.5,1*01
-$GNGSA,A,1,,,,,,,,,,,,,25.5,25.5,25.5,4*04
-$GPGSV,1,1,03,16,,,38,27,,,27,32,,,34,0*6C
-$BDGSV,1,1,01,22,,,26,0*71
-$GNRMC,121356.000,V,,,,,,,260524,,,N,V*2C
-$GNVTG,,,,,,,,,N*2E
-$GNZDA,121356.000,26,05,2024,00,00*4F
-$GPTXT,01,01,01,ANTENNA OK*35
-$GNGGA,121357.000,,,,,0,00,25.5,,,,,,*79
-$GNGLL,,,,,121357.000,V,N*67'[0m
-[0;32mI (40069) GPS: GNGLL LINE: $GNGLL,,,,,121357.000,V,N*67[0m
-D�?D�?|��?T[0;32mI (42289) GPS: Read 1024 bytes:
- 'A,121359.000,,,,,0,00,25.5,,,,,,*77
-$GNGLL,,,,,121359.000,V,N*69'[0m
-[0;32mI (42289) GPS: GNGLL LINE: $GNGLL,,,,,121359.000,V,N*69[0m
-D�?D�?|��?T[0;32mI (45159) GPS: Read 1024 bytes:
- 'GNZDA,121401.000,26,05,2024,00,00*4A
-$GPTXT,01,01,01,ANTENNA OK*35
-$GNGGA,121402.000,,,,,0,00,25.5,,,,,,*7E
-$GNGLL,,,,,121402.000,V,N*60'[0m
-[0;32mI (45169) GPS: GNGLL LINE: $GNGLL,,,,,121402.000,V,N*60[0m
-D�?D�?|��?T[0;32mI (48159) GPS: Read 1024 bytes:
- '28,0*7F
-$GNRMC,121404.000,V,,,,,,,260524,,,N,V*2C
-$GNVTG,,,,,,,,,N*2E
-$GNZDA,121404.000,26,05,2024,00,00*4F
-$GPTXT,01,01,01,ANTENNA OK*35
-$GNGGA,121405.000,,,,,0,00,25.5,,,,,,*79
-$GNGLL,,,,,121405.000,V,N*67'[0m
-[0;32mI (48179) GPS: GNGLL LINE: $GNGLL,,,,,121405.000,V,N*67[0m
-D�?D�?|��?T[0;32mI (51039) GPS: Read 1024 bytes:
- '25.5,4*04
-$GPGSV,1,1,03,16,,,37,27,,,27,32,,,33,0*64
-$BDGSV,1,1,01,22,,,29,0*7E
-$GNRMC,121407.000,V,,,,,,,260524,,,N,V*2F
-$GNVTG,,,,,,,,,N*2E
-$GNZDA,121407.000,26,05,2024,00,00*4C
-$GPTXT,01,01,01,ANTENNA OK*35
-$GNGGA,121408.000,,,,,0,00,25.5,,,,,,*74
-$GNGLL,,,,,121408.000,V,N*6A'[0m
-[0;32mI (51059) GPS: GNGLL LINE: $GNGLL,,,,,121408.000,V,N*6A[0m
-D�?D�?|��?T[0;32mI (54039) GPS: Read 1024 bytes:
- 'GSA,A,1,,,,,,,,,,,,,25.5,25.5,25.5,1*01
-$GNGSA,A,1,,,,,,,,,,,,,25.5,25.5,25.5,4*04
-$GPGSV,1,1,03,16,,,38,27,,,27,32,,,34,0*6C
-$BDGSV,1,1,01,22,,,30,0*76
-$GNRMC,121410.000,V,,,,,,,260524,,,N,V*29
-$GNVTG,,,,,,,,,N*2E
-$GNZDA,121410.000,26,05,2024,00,00*4A
-$GPTXT,01,01,01,ANTENNA OK*35
-$GNGGA,121411.000,,,,,0,00,25.5,,,,,,*7C
-$GNGLL,,,,,121411.000,V,N*62'[0m
-[0;32mI (54069) GPS: GNGLL LINE: $GNGLL,,,,,121411.000,V,N*62[0m
-D�?D�?|��?T[0;32mI (56289) GPS: Read 1024 bytes:
- 'GNGGA,121413.000,,,,,0,00,25.5,,,,,,*7E
-$GNGLL,,,,,121413.000,V,N*60'[0m
-[0;32mI (56289) GPS: GNGLL LINE: $GNGLL,,,,,121413.000,V,N*60[0m
-D�?D�?|��?T[0;32mI (59159) GPS: Read 1024 bytes:
- 'E
-$GNZDA,121415.000,26,05,2024,00,00*4F
-$GPTXT,01,01,01,ANTENNA OK*35
-$GNGGA,121416.000,,,,,0,00,25.5,,,,,,*7B
-$GNGLL,,,,,121416.000,V,N*65'[0m
-[0;32mI (59169) GPS: GNGLL LINE: $GNGLL,,,,,121416.000,V,N*65[0m
-D�?D�?|��?T[0;32mI (62159) GPS: Read 1024 bytes:
- '2,,,30,0*76
-$GNRMC,121418.000,V,,,,,,,260524,,,N,V*21
-$GNVTG,,,,,,,,,N*2E
-$GNZDA,121418.000,26,05,2024,00,00*42
-$GPTXT,01,01,01,ANTENNA OK*35
-$GNGGA,121419.000,,,,,0,00,25.5,,,,,,*74
-$GNGLL,,,,,121419.000,V,N*6A'[0m
-[0;32mI (62179) GPS: GNGLL LINE: $GNGLL,,,,,121419.000,V,N*6A[0m
-D�?D�?|��?T[0;32mI (65039) GPS: Read 1024 bytes:
- '5.5,25.5,4*04
-$GPGSV,1,1,03,16,,,38,27,,,26,32,,,34,0*6D
-$BDGSV,1,1,01,22,,,30,0*76
-$GNRMC,121421.000,V,,,,,,,260524,,,N,V*2B
-$GNVTG,,,,,,,,,N*2E
-$GNZDA,121421.000,26,05,2024,00,00*48
-$GPTXT,01,01,01,ANTENNA OK*35
-$GNGGA,121422.000,,,,,0,00,25.5,,,,,,*7C
-$GNGLL,,,,,121422.000,V,N*62'[0m
-[0;32mI (65059) GPS: GNGLL LINE: $GNGLL,,,,,121422.000,V,N*62[0m
-D�?D�?|��?T[0;32mI (67309) GPS: Read 1024 bytes:
- '
-$GNGSA,A,1,,,,,,,,,,,,,25.5,25.5,25.5,1*01
-$GNGSA,A,1,,,,,,,,,,,,,25.5,25.5,25.5,4*04
-$GPGSV,1,1,03,16,,,38,27,,,27,32,,,34,0*6C
-$BDGSV,1,1,01,22,,,29,0*7E
-$GNRMC,121424.000,V,,,,,,,260524,,,N,V*2E
-$GNVTG,,,,,,,,,N*2E
-$GNZDA,121424.000,26,05,2024,00,00*4D
-$GPTXT,01,01,01,ANTENNA OK*35
-$GNGGA,121425.000,,,,,0,00,25.5,,,,,,*7B
-$GNGLL,,,,,121425.000,V,N*65'[0m
-[0;32mI (67329) GPS: GNGLL LINE: $GNGLL,,,,,121425.000,V,N*65[0m
-D�?D�?|��?T[0;32mI (70289) GPS: Read 1024 bytes:
- '5
-$GNGGA,121427.000,,,,,0,00,25.5,,,,,,*79
-$GNGLL,,,,,121427.000,V,N*67'[0m
-[0;32mI (70289) GPS: GNGLL LINE: $GNGLL,,,,,121427.000,V,N*67[0m
-D�?D�?|��?T[0;32mI (73159) GPS: Read 1024 bytes:
- ',N*2E
-$GNZDA,121429.000,26,05,2024,00,00*40
-$GPTXT,01,01,01,ANTENNA OK*35
-$GNGGA,121430.000,,,,,0,00,25.5,,,,,,*7F
-$GNGLL,,,,,121430.000,V,N*61'[0m
-[0;32mI (73169) GPS: GNGLL LINE: $GNGLL,,,,,121430.000,V,N*61[0m

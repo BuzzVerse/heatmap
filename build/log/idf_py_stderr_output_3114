@@ -1,6 +1,0 @@
-[0;33m--- esp-idf-monitor 1.3.4 on /dev/ttyACM0 115200 ---[0m
-[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
-[0;33m0x40389b1a: gdma_ll_rx_reset_channel at /home/dsopocko/esp/esp-idf/components/hal/esp32c3/include/hal/gdma_ll.h:160
- (inlined by) spi_hal_prepare_data at /home/dsopocko/esp/esp-idf/components/hal/spi_hal_iram.c:196
-[0m
-[0m

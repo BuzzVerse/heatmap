@@ -1,109 +1,0 @@
-[0;32mI (142) esp_image: segment 3: paddr=0004ddbc vaddr=3fc8f3sleep configuraESP-ROM:esp32c3-api1-20210207
-Build:Feb  7 2021
-rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
-Saved PC:0x4004c0d6
-SPIWP:0xee
-mode:DIO, clock div:1
-load:0x3fcd5820,len:0x1738
-load:0x403cc710,len:0xb9c
-load:0x403ce710,len:0x2e34
-entry 0x403cc71a
-[0;32mI (24) boot: ESP-IDF v5.3-dev-892-g692c1fcc52-dirty 2nd stage bootloader[0m
-[0;32mI (24) boot: compile time May 20 2024 11:23:44[0m
-[0;32mI (25) boot: chip revision: v0.4[0m
-[0;32mI (29) boot.esp32c3: SPI Speed      : 80MHz[0m
-[0;32mI (34) boot.esp32c3: SPI Mode       : DIO[0m
-[0;32mI (39) boot.esp32c3: SPI Flash Size : 2MB[0m
-[0;32mI (44) boot: Enabling RNG early entropy source...[0m
-[0;32mI (49) boot: Partition Table:[0m
-[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
-[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
-[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
-[0;32mI (75) boot:  2 factory          factory app      00 00 00010000 00100000[0m
-[0;32mI (82) boot: End of partition table[0m
-[0;32mI (86) esp_image: segment 0: paddr=00010020 vaddr=3c030020 size=0f8b8h ( 63672) map[0m
-[0;32mI (105) esp_image: segment 1: paddr=0001f8e0 vaddr=3fc8ec00 size=00738h (  1848) load[0m
-[0;32mI (106) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=2dd94h (187796) map[0m
-[0;32mI (142) esp_image: segment 3: paddr=0004ddbc vaddr=3fc8f338 size=00fbch (  4028) load[0m
-[0;32mI (143) esp_image: segment 4: paddr=0004ed80 vaddr=40380000 size=0eb2ch ( 60204) load[0m
-[0;32mI (163) boot: Loaded app from partition at offset 0x10000[0m
-[0;32mI (163) boot: Disabling RNG early entropy source...[0m
-[0;32mI (175) cpu_start: Unicore app[0m
-[0;32mI (184) cpu_start: Pro cpu start user code[0m
-[0;32mI (184) cpu_start: cpu freq: 160000000 Hz[0m
-[0;32mI (184) cpu_start: Application information:[0m
-[0;32mI (187) cpu_start: Project name:     .[0m
-[0;32mI (191) cpu_start: App version:      af97de7-dirty[0m
-[0;32mI (197) cpu_start: Compile time:     May 26 2024 18:42:19[0m
-[0;32mI (203) cpu_start: ELF file SHA256:  aa730b961...[0m
-[0;32mI (208) cpu_start: ESP-IDF:          v5.3-dev-892-g692c1fcc52-dirty[0m
-[0;32mI (215) cpu_start: Min chip rev:     v0.3[0m
-[0;32mI (220) cpu_start: Max chip rev:     v1.99 [0m
-[0;32mI (225) cpu_start: Chip rev:         v0.4[0m
-[0;32mI (229) heap_init: Initializing. RAM available for dynamic allocation:[0m
-[0;32mI (237) heap_init: At 3FC91330 len 0002ECD0 (187 KiB): RAM[0m
-[0;32mI (243) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
-[0;32mI (250) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
-[0;32mI (257) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
-[0;32mI (264) spi_flash: detected chip: generic[0m
-[0;32mI (268) spi_flash: flash io: dio[0m
-[0;33mW (272) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
-[0;32mI (285) sleep: Configure to isolate all GPIO pins in sleep state[0m
-[0;32mI (291) sleep: Enable automatic switching of GPIO sleep configuration[0m
-[0;32mI (299) main_task: Started on CPU0[0m
-[0;32mI (299) main_task: Calling app_main()[0m
-[0;32mI (299) SDSPI: Initializing SD card[0m
-[0;32mI (309) SDSPI: Using SPI peripheral[0m
-[0;32mI (309) SDSPI: Initializing LoRa[0m
-[0;32mI (319) SDSPI: Mounting filesystem[0m
-[0;32mI (319) gpio: GPIO[3]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
-[0;32mI (369) sdspi_transaction: cmd=52, R1 response: command not supported[0m
-[0;32mI (409) sdspi_transaction: cmd=5, R1 response: command not supported[0m
-[0;32mI (429) SDSPI: Filesystem mounted[0m
-Name: SDABC
-Type: SDHC/SDXC
-Speed: 20.00 MHz (limit: 20.00 MHz)
-Size: 60000MB
-CSD: ver=2, sector_size=512, capacity=122880000 read_bl_len=9
-SSR: bus_width=1
-00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
-[0;31mE (449) spi_master: check_trans_valid(826): invalid dev handle[0m
-[0;31mE (449) LORA_API: SPI read failed: reg=0x00[0m
-[0;32mI (1689) GPS: Read 1024 bytes:
- '*48
-$GNGLL,5156.30195,N,01531.48786,E,164631.000,A,A*4A'[0m
-[0;32mI (1699) GPS: GNGLL LINE: $GNGLL,5156.30195,N,01531.48786,E,164631.000,A,A*4A[0m
-[0;32mI (1699) Main: �?GLL,5156.30195,N,01531.48786,E,164631.000,A,A*4A[0m
-[0;32mI (2969) GPS: Read 1024 bytes:
- ',06,22,311,19,0*6D
-$GPGSV,4,2,13,09,20,219,32,17,35,256,32,19,34,288,20,21,22,152,35,0*6D
-$GPGSV,4,3,13,28,25,050,19,31,33,080,23,193,,,21,194,,,20,0*69
-$GPGSV,4,4,13,197,,,18,0*51
-$BDGSV,2,1,08,11,41,197,39,14,53,251,28,21,43,067,20,22,10,060,,0*70
-$BDGSV,2,2(08,33,26,250,30,34,20,182,43,42,82,260,,43,49,230,26,0*72
-$GNRMC,164632.000,A,5156.30195,N,01531.48785,E,0.00,180.82,260524,,,A,V*03
-$GNVTG,180.82,T,,M,0.00,N,0.00,K,A*20
-$GNZDA,164632.000,26,05,2024,00,00*49
-$GPTXT,01,01,01,ANTENNA OK*35
-$GNGGA,164633.000,5156.30195,N,01531.48784,E,1,15(0.8,181.8,M(39.1,M,,*48
-$GNGLL,5156.30195,N,01531.48784,E,164633.000,A,A*4A'[0m
-[0;32mI (3019) GPS: GNGLL LINE: $GNGLL,5156.30195,N,01531.48784,E,164633.000,A,A*4A[0m
-[0;32mI (3029) Main: $GNGLL,5156.30195,N,01531.48784,E,164633.000,A,A*4A[0m
-[0;32mI (4139) GPS: Read 1024 bytes:
- '28,21,43,067,20,22,10,060,,0*7E
-$BDGSV,2,2,08,33,26,250,31,34,20,182,43,42,82,260,,43,49,230,27,0*72
-$GNRMC,164633.000,A,5156.30195,N,01531.48784,E,0.00,180.82,260524,,,A,V*03
-$GNVTG,180.82,T,,M,0.00,N,0.00,K,A*20
-$GNZDA,164633.000,26,05,2024,00,00*48
-$GPTXT,01,01,01,ANTENNA OK*35
-$GNGGA,164634.000,5156.30195,N,01531.48782,E,1,15,0.8,181.8,M,39.1,M,,*49
-$GNGLL,5156.30195,N,01531.48782,E,164634.000,A,A*4B'[0m
-[0;32mI (4169) GPS: GNGLL LINE: $GNGLL,5156.30195,N,01531.48782,E,164634.000,A,A*4B[0m
-[0;32mI (4179) Main: $GNGLL,5156.30195,N,01531.48782,E,164634.000,A,A*4B[0m
-[0;32mI (5619) GPS: Read 1024 bytes:
- 'DA,164634.000,26,05,2024,00,00*4F
-$GPTXT,01,01,01,ANTENNA OK*35
-$GNGGA,164635.000,5156.30195,N,01531.48782,E,1,15,0.8,181.8,M,39.1,M,,*48
-$GNGLL,5156.30195,N,01531.48782,E,164635.000,A,A*4A'[0m
-[0;32mI (5629) GPS: GNGLL LINE: $GNGLL,5156.30195,N,01531.48782,E,164635.000,A,A*4A[0m
-[0;32mI (5629) Main: $GNGLL,5156.30195,N,01531.48782,E,164635.000,A,A*4A[0m
