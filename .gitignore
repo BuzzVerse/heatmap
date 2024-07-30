@@ -52,4 +52,4 @@
 modules.order
 Module.symvers
 Mkfile.old
-dkms.conf
+dkms.confbuild/project_elf_src_esp32s3.c
