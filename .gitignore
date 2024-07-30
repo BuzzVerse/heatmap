@@ -1737,12 +1737,6 @@ build/partition-table-flash_args
 build/project_description.json
 build/project_elf_src_esp32c3.c
 build/x509_crt_bundle.S
-components/gps/gps.c
-components/gps/include/gps.h
-components/sdcard/sdcard.c
-main/main.c
-sdkconfig
-sdkconfig.old
 build/bootloader/esp-idf/esp_hw_support/lowpower/
 build/bootloader/esp-idf/esp_hw_support/port/esp32s3/
 build/bootloader/esp-idf/xtensa/
