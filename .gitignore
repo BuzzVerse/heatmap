@@ -45,6 +45,10 @@
 # Temporary files
 *~
 
+# Build folder
+build/*
+!build/
+
 # Kernel Module Compile Results
 *.mod*
 v*.cmd
