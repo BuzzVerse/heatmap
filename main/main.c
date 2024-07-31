@@ -5,39 +5,57 @@
 #include "gps.h"
 #include "lora.h"
 #include <string.h>
+#include <inttypes.h>
 
 #define TAG "Main"
 #define PROJECT_VER "0.0.0"
 #define PROJECT_NAME "BuzzVerse"
 
-//for gps
 
-#if 0
-void transmitter_task(){
-    char* coordinates = (char*) malloc(RX_BUF_SIZE+1);
+#if 1
+typedef union {
+  int32_t deserialized;
+  uint8_t serialized[4];
+} coordinates_t;
+
+void lora_task(){
+    coordinates_t coordinates;
     packet_t packet;
+    int32_t lat = 0, lon = 0;
     packet.version = (CONFIG_PACKET_VERSION << 4) | 0; // Reserved 4 bits set to 0
     packet.id = (CONFIG_CLASS_ID << 4) | CONFIG_DEVICE_ID;
     packet.msgID = 1;                   // Example message ID
     packet.msgCount = 1;                // Example message count (optional, set as needed)
     packet.dataType = CONFIG_DATA_TYPE; // Example data type
+    
 
     while (1) {
-        get_gps_data(coordinates);
-        ESP_LOGI(TAG,"%s",coordinates);
-        packet.data[0] = (uint8_t) coordinates[0];
-        lora_status_t send_status = lora_send(&packet);
-        if (LORA_OK != send_status)
-        {
-            ESP_LOGE(TAG, "Packet send failed");
-        }
-        else
-        {
-            ESP_LOGI(TAG, "Packet sent successfully");
-        }
-        lora_delay(1000);
+      gps_get_pos(&lat, &lon);
+
+      packet.data[0] = 8;
+
+      coordinates.deserialized = lat;
+      
+      packet.data[1] = coordinates.serialized[0];
+      packet.data[2] = coordinates.serialized[1];
+      packet.data[3] = coordinates.serialized[2];
+      packet.data[4] = coordinates.serialized[3];
+
+      coordinates.deserialized = lon;
+
+      packet.data[5] = coordinates.serialized[0];
+      packet.data[6] = coordinates.serialized[1];
+      packet.data[7] = coordinates.serialized[2];
+      packet.data[8] = coordinates.serialized[3];
+      
+      lora_status_t send_status = lora_send(&packet);
+      if (LORA_OK != send_status) {
+	ESP_LOGE(TAG, "Packet send failed");
+      } else {
+	ESP_LOGI(TAG, "Packet sent successfully");
+      }
+      vTaskDelay(300);
     }
-    free(coordinates);
 }
 
 #endif
@@ -45,7 +63,7 @@ void app_main(void){
   BaseType_t xReturned;
   TaskHandle_t xHandle = NULL;
 
-#if 0
+#if 1
   lora_driver_init();
   lora_dump_registers();
     
@@ -65,11 +83,11 @@ void app_main(void){
     vTaskDelete( xHandle );
     ESP_LOGE(TAG, "[FATAl] Could not create GPS task!");
   }
-#if 0
+#if 1
   xReturned = xTaskCreate(
-			  lora_task,       /* Function that implements the task. */
+			  &lora_task,      /* Function that implements the task. */
 			  "LoRa",          /* Text name for the task. */
-			  1024,            /* Stack size in words, not bytes. */
+			  4*1024,          /* Stack size in words, not bytes. */
 			  ( void * ) 1,    /* Parameter passed into the task. */
 			  tskIDLE_PRIORITY,/* Priority at which the task is created. */
 			  &xHandle );      /* Used to pass out the created task's handle. */
@@ -80,7 +98,7 @@ void app_main(void){
   }
 #endif
 
-#if 0
+#if 1
   lora_close();
 #endif
 }

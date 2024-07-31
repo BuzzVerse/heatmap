@@ -3,7 +3,7 @@
 
 #include <stdint.h>
 
-#define DATA_SIZE 3
+#define DATA_SIZE 9
 #define META_DATA_SIZE 5
 #define PACKET_SIZE (DATA_SIZE + META_DATA_SIZE)
 

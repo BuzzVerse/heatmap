@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <inttypes.h>
 #include "gps.h"
 #include <sys/unistd.h>
 #include <stdlib.h>
@@ -19,8 +20,8 @@ static const char *TAG = "GPS";
 #define GPS_NMEA_GNGLL_SZ 7
 
 typedef struct {
-  float lon;
-  float lat;
+  int32_t lon;
+  int32_t lat;
   float time;
   float speed;
   uint8_t num_sat;
@@ -30,7 +31,7 @@ typedef struct {
 
 static gps_t gps = { 0 };
 
-void gps_get_pos(float *lon, float *lat)
+void gps_get_pos(int32_t *lon, int32_t *lat)
 {
   if (NULL == lon || NULL == lat)
     return;
@@ -50,6 +51,7 @@ float gps_get_speed(void)
 void gps_task(void *params)
 {
   char *ptr = NULL;
+  float lat, lon;
   
   while (1) {
 
@@ -58,13 +60,17 @@ void gps_task(void *params)
       if (ptr) {
 	ptr += GPS_NMEA_GNGLL_SZ;
 
-	gps.lat = atof(ptr);
+	lat = atof(ptr);
 
 	while (*ptr++ != ','); // TBD: Seek till comma. Need to failsafe here!
 	while (*ptr++ != ','); // TBD: Seek till comma. Need to failsafe here!
 	
-	gps.lon = atof(ptr);
-	ESP_LOGI(TAG, "GNGLL position: [ latitude: %f ], [ longitude: %f ]", gps.lat, gps.lon);
+	lon = atof(ptr);
+
+	gps.lat = (int32_t)(lat * 10000.0);
+	gps.lon = (int32_t)(lon * 10000.0);
+	ESP_LOGI(TAG, "GNGLL position: [ latitude: %ld ], [ longitude: %ld ]", gps.lat, gps.lon);
+	ESP_LOGI(TAG, "NMEA: %s", gps.data);
       }
     }
     vTaskDelay(100);
@@ -91,7 +97,7 @@ static void uart_init(void)
 }
 
 void gps_cold_start(void){
-  char* data = "$PCAS10,3*1C";
+  char* data = "$PCAS10,1*1A"; // TBD Here we have to be smart. When we do cold or warm start?!
 
   uart_init();
   vTaskDelay(500);
