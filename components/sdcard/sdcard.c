@@ -91,11 +91,13 @@ void sdspi_init(){
         .quadhd_io_num = -1,
         .max_transfer_sz = 4000,
     };
+    #if 1
     ret = spi_bus_initialize(host.slot, &bus_cfg, SDSPI_DEFAULT_DMA);
     if (ret != ESP_OK) {
         ESP_LOGE(TAG, "Failed to initialize bus.");
         return;
     }
+    #endif
     // //add lora device on same spi bus
  
     // spi_device_interface_config_t loracfg={
@@ -121,6 +123,9 @@ void sdspi_init(){
     ESP_LOGI(TAG, "Mounting filesystem");
     ret = esp_vfs_fat_sdspi_mount(mount_point, &host, &slot_config, &mount_config, &card);
 
+    ESP_LOGE(TAG, "SDCARD CS pin:%d", slot_config.gpio_cs);
+
+    #if 0
     if (ret != ESP_OK) {
         if (ret == ESP_FAIL) {
             ESP_LOGE(TAG, "Failed to mount filesystem. "
@@ -132,9 +137,14 @@ void sdspi_init(){
         return;
     }
     ESP_LOGI(TAG, "Filesystem mounted");
+    #endif
 
     // Card has been initialized, print its properties
+    ESP_LOGI(TAG, "card print info");
+    //    vTaskDelay(100);
+    ESP_LOGI(TAG, "----------------------------");
     sdmmc_card_print_info(stdout, card);
+    ESP_LOGI(TAG, "----------------------------");
 }
 
 

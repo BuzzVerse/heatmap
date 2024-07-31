@@ -1,0 +1,1897 @@
+On branch dev
+Your branch is ahead of 'origin/dev' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .gitignore
+	modified:   build/..bin
+	modified:   build/..elf
+	modified:   build/..map
+	modified:   build/.bin_timestamp
+	modified:   build/.ninja_deps
+	modified:   build/.ninja_log
+	modified:   build/CMakeCache.txt
+	deleted:    build/CMakeFiles/..elf.dir/project_elf_src_esp32c3.c.obj
+	modified:   build/CMakeFiles/3.22.1/CMakeASMCompiler.cmake
+	modified:   build/CMakeFiles/3.22.1/CMakeCCompiler.cmake
+	modified:   build/CMakeFiles/3.22.1/CMakeCXXCompiler.cmake
+	modified:   build/CMakeFiles/3.22.1/CMakeDetermineCompilerABI_C.bin
+	modified:   build/CMakeFiles/3.22.1/CMakeDetermineCompilerABI_CXX.bin
+	modified:   build/CMakeFiles/3.22.1/CMakeSystem.cmake
+	modified:   build/CMakeFiles/3.22.1/CompilerIdC/a.out
+	modified:   build/CMakeFiles/3.22.1/CompilerIdCXX/a.out
+	modified:   build/CMakeFiles/CMakeOutput.log
+	deleted:    build/CMakeFiles/CheckTypeSize/TIME_T_SIZE.bin
+	deleted:    build/CMakeFiles/CheckTypeSize/TIME_T_SIZE.c
+	modified:   build/CMakeFiles/TargetDirectories.txt
+	modified:   build/CMakeFiles/bootloader.dir/Labels.json
+	modified:   build/CMakeFiles/bootloader.dir/Labels.txt
+	modified:   build/CMakeFiles/clean_additional.cmake
+	modified:   build/CMakeFiles/git-data/grabRef.cmake
+	modified:   build/CMakeFiles/git-data/head-ref
+	modified:   build/CMakeFiles/rules.ninja
+	modified:   build/app-flash_args
+	modified:   build/bootloader-flash_args
+	modified:   build/bootloader-prefix/tmp/bootloader-cfgcmd.txt
+	modified:   build/bootloader/.bin_timestamp
+	modified:   build/bootloader/.ninja_deps
+	modified:   build/bootloader/.ninja_log
+	modified:   build/bootloader/CMakeCache.txt
+	modified:   build/bootloader/CMakeFiles/3.22.1/CMakeASMCompiler.cmake
+	modified:   build/bootloader/CMakeFiles/3.22.1/CMakeCCompiler.cmake
+	modified:   build/bootloader/CMakeFiles/3.22.1/CMakeCXXCompiler.cmake
+	modified:   build/bootloader/CMakeFiles/3.22.1/CMakeDetermineCompilerABI_C.bin
+	modified:   build/bootloader/CMakeFiles/3.22.1/CMakeDetermineCompilerABI_CXX.bin
+	modified:   build/bootloader/CMakeFiles/3.22.1/CMakeSystem.cmake
+	modified:   build/bootloader/CMakeFiles/3.22.1/CompilerIdC/a.out
+	modified:   build/bootloader/CMakeFiles/3.22.1/CompilerIdCXX/a.out
+	modified:   build/bootloader/CMakeFiles/CMakeOutput.log
+	deleted:    build/bootloader/CMakeFiles/CheckTypeSize/TIME_T_SIZE.bin
+	deleted:    build/bootloader/CMakeFiles/CheckTypeSize/TIME_T_SIZE.c
+	modified:   build/bootloader/CMakeFiles/TargetDirectories.txt
+	deleted:    build/bootloader/CMakeFiles/bootloader.elf.dir/project_elf_src_esp32c3.c.obj
+	modified:   build/bootloader/CMakeFiles/clean_additional.cmake
+	modified:   build/bootloader/CMakeFiles/git-data/grabRef.cmake
+	modified:   build/bootloader/CMakeFiles/git-data/head-ref
+	modified:   build/bootloader/CMakeFiles/rules.ninja
+	modified:   build/bootloader/bootloader.bin
+	modified:   build/bootloader/bootloader.elf
+	modified:   build/bootloader/bootloader.map
+	modified:   build/bootloader/build.ninja
+	modified:   build/bootloader/cmake_install.cmake
+	modified:   build/bootloader/compile_commands.json
+	modified:   build/bootloader/config.env
+	modified:   build/bootloader/config/kconfig_menus.json
+	modified:   build/bootloader/config/sdkconfig.cmake
+	modified:   build/bootloader/config/sdkconfig.h
+	modified:   build/bootloader/config/sdkconfig.json
+	modified:   build/bootloader/esp-idf/bootloader/cmake_install.cmake
+	modified:   build/bootloader/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/bootloader_flash.c.obj
+	deleted:    build/bootloader/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/bootloader_flash_config_esp32c3.c.obj
+	modified:   build/bootloader/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/flash_qio_mode.c.obj
+	modified:   build/bootloader/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock_init.c.obj
+	modified:   build/bootloader/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock_loader.c.obj
+	modified:   build/bootloader/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common.c.obj
+	modified:   build/bootloader/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common_loader.c.obj
+	modified:   build/bootloader/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console.c.obj
+	modified:   build/bootloader/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console_loader.c.obj
+	modified:   build/bootloader/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_efuse.c.obj
+	modified:   build/bootloader/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_init.c.obj
+	modified:   build/bootloader/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_mem.c.obj
+	modified:   build/bootloader/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_panic.c.obj
+	modified:   build/bootloader/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random.c.obj
+	deleted:    build/bootloader/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random_esp32c3.c.obj
+	modified:   build/bootloader/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_utility.c.obj
+	deleted:    build/bootloader/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32c3/bootloader_esp32c3.c.obj
+	deleted:    build/bootloader/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32c3/bootloader_sha.c.obj
+	deleted:    build/bootloader/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32c3/bootloader_soc.c.obj
+	modified:   build/bootloader/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp_image_format.c.obj
+	modified:   build/bootloader/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_encrypt.c.obj
+	modified:   build/bootloader/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_partitions.c.obj
+	modified:   build/bootloader/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/secure_boot.c.obj
+	modified:   build/bootloader/esp-idf/bootloader_support/cmake_install.cmake
+	modified:   build/bootloader/esp-idf/bootloader_support/libbootloader_support.a
+	modified:   build/bootloader/esp-idf/cmake_install.cmake
+	deleted:    build/bootloader/esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32c3/esp_efuse_fields.c.obj
+	deleted:    build/bootloader/esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32c3/esp_efuse_rtc_calib.c.obj
+	deleted:    build/bootloader/esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32c3/esp_efuse_table.c.obj
+	deleted:    build/bootloader/esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32c3/esp_efuse_utility.c.obj
+	modified:   build/bootloader/esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/efuse_controller/keys/with_key_purposes/esp_efuse_api_key.c.obj
+	modified:   build/bootloader/esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_api.c.obj
+	modified:   build/bootloader/esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_fields.c.obj
+	modified:   build/bootloader/esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_utility.c.obj
+	modified:   build/bootloader/esp-idf/efuse/cmake_install.cmake
+	modified:   build/bootloader/esp-idf/efuse/libefuse.a
+	modified:   build/bootloader/esp-idf/esp_app_format/cmake_install.cmake
+	modified:   build/bootloader/esp-idf/esp_bootloader_format/CMakeFiles/__idf_esp_bootloader_format.dir/esp_bootloader_desc.c.obj
+	modified:   build/bootloader/esp-idf/esp_bootloader_format/cmake_install.cmake
+	modified:   build/bootloader/esp-idf/esp_bootloader_format/libesp_bootloader_format.a
+	modified:   build/bootloader/esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/esp_err_to_name.c.obj
+	modified:   build/bootloader/esp-idf/esp_common/cmake_install.cmake
+	modified:   build/bootloader/esp-idf/esp_common/libesp_common.a
+	modified:   build/bootloader/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/cpu.c.obj
+	modified:   build/bootloader/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/esp_memory_utils.c.obj
+	deleted:    build/bootloader/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32c3/chip_info.c.obj
+	deleted:    build/bootloader/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32c3/cpu_region_protect.c.obj
+	deleted:    build/bootloader/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32c3/rtc_clk.c.obj
+	deleted:    build/bootloader/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32c3/rtc_clk_init.c.obj
+	deleted:    build/bootloader/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32c3/rtc_init.c.obj
+	deleted:    build/bootloader/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32c3/rtc_sleep.c.obj
+	deleted:    build/bootloader/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32c3/rtc_time.c.obj
+	modified:   build/bootloader/esp-idf/esp_hw_support/cmake_install.cmake
+	modified:   build/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a
+	deleted:    build/bootloader/esp-idf/esp_hw_support/port/esp32c3/cmake_install.cmake
+	modified:   build/bootloader/esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_crc.c.obj
+	modified:   build/bootloader/esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_efuse.c.obj
+	modified:   build/bootloader/esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_spiflash.c.obj
+	modified:   build/bootloader/esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_sys.c.obj
+	modified:   build/bootloader/esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_systimer.c.obj
+	modified:   build/bootloader/esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_uart.c.obj
+	modified:   build/bootloader/esp-idf/esp_rom/cmake_install.cmake
+	modified:   build/bootloader/esp-idf/esp_rom/libesp_rom.a
+	modified:   build/bootloader/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/esp_err.c.obj
+	modified:   build/bootloader/esp-idf/esp_system/cmake_install.cmake
+	modified:   build/bootloader/esp-idf/esp_system/libesp_system.a
+	modified:   build/bootloader/esp-idf/esptool_py/cmake_install.cmake
+	modified:   build/bootloader/esp-idf/freertos/cmake_install.cmake
+	modified:   build/bootloader/esp-idf/hal/CMakeFiles/__idf_hal.dir/cache_hal.c.obj
+	modified:   build/bootloader/esp-idf/hal/CMakeFiles/__idf_hal.dir/efuse_hal.c.obj
+	deleted:    build/bootloader/esp-idf/hal/CMakeFiles/__idf_hal.dir/esp32c3/efuse_hal.c.obj
+	modified:   build/bootloader/esp-idf/hal/CMakeFiles/__idf_hal.dir/hal_utils.c.obj
+	modified:   build/bootloader/esp-idf/hal/CMakeFiles/__idf_hal.dir/mmu_hal.c.obj
+	deleted:    build/bootloader/esp-idf/hal/CMakeFiles/__idf_hal.dir/wdt_hal_iram.c.obj
+	modified:   build/bootloader/esp-idf/hal/cmake_install.cmake
+	modified:   build/bootloader/esp-idf/hal/libhal.a
+	deleted:    build/bootloader/esp-idf/log/CMakeFiles/__idf_log.dir/log.c.obj
+	deleted:    build/bootloader/esp-idf/log/CMakeFiles/__idf_log.dir/log_buffers.c.obj
+	deleted:    build/bootloader/esp-idf/log/CMakeFiles/__idf_log.dir/log_noos.c.obj
+	modified:   build/bootloader/esp-idf/log/cmake_install.cmake
+	modified:   build/bootloader/esp-idf/log/liblog.a
+	modified:   build/bootloader/esp-idf/main/CMakeFiles/__idf_main.dir/bootloader_start.c.obj
+	modified:   build/bootloader/esp-idf/main/cmake_install.cmake
+	modified:   build/bootloader/esp-idf/main/libmain.a
+	modified:   build/bootloader/esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/uECC_verify_antifault.c.obj
+	modified:   build/bootloader/esp-idf/micro-ecc/cmake_install.cmake
+	modified:   build/bootloader/esp-idf/micro-ecc/libmicro-ecc.a
+	modified:   build/bootloader/esp-idf/newlib/cmake_install.cmake
+	modified:   build/bootloader/esp-idf/partition_table/cmake_install.cmake
+	deleted:    build/bootloader/esp-idf/riscv/cmake_install.cmake
+	modified:   build/bootloader/esp-idf/soc/CMakeFiles/__idf_soc.dir/dport_access_common.c.obj
+	deleted:    build/bootloader/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/adc_periph.c.obj
+	deleted:    build/bootloader/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/dedic_gpio_periph.c.obj
+	deleted:    build/bootloader/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/gdma_periph.c.obj
+	deleted:    build/bootloader/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/gpio_periph.c.obj
+	deleted:    build/bootloader/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/i2c_periph.c.obj
+	deleted:    build/bootloader/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/i2s_periph.c.obj
+	deleted:    build/bootloader/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/interrupts.c.obj
+	deleted:    build/bootloader/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/ledc_periph.c.obj
+	deleted:    build/bootloader/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/mpi_periph.c.obj
+	deleted:    build/bootloader/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/rmt_periph.c.obj
+	deleted:    build/bootloader/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/sdm_periph.c.obj
+	deleted:    build/bootloader/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/spi_periph.c.obj
+	deleted:    build/bootloader/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/temperature_sensor_periph.c.obj
+	deleted:    build/bootloader/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/timer_periph.c.obj
+	deleted:    build/bootloader/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/twai_periph.c.obj
+	deleted:    build/bootloader/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/uart_periph.c.obj
+	modified:   build/bootloader/esp-idf/soc/CMakeFiles/__idf_soc.dir/lldesc.c.obj
+	modified:   build/bootloader/esp-idf/soc/cmake_install.cmake
+	modified:   build/bootloader/esp-idf/soc/libsoc.a
+	modified:   build/bootloader/esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_wrap.c.obj
+	modified:   build/bootloader/esp-idf/spi_flash/cmake_install.cmake
+	modified:   build/bootloader/esp-idf/spi_flash/libspi_flash.a
+	modified:   build/bootloader/kconfigs.in
+	modified:   build/bootloader/kconfigs_projbuild.in
+	modified:   build/bootloader/project_description.json
+	deleted:    build/bootloader/project_elf_src_esp32c3.c
+	modified:   build/build.ninja
+	modified:   build/cmake_install.cmake
+	modified:   build/compile_commands.json
+	modified:   build/config.env
+	modified:   build/config/kconfig_menus.json
+	modified:   build/config/sdkconfig.cmake
+	modified:   build/config/sdkconfig.h
+	modified:   build/config/sdkconfig.json
+	modified:   build/esp-idf/app_trace/CMakeFiles/__idf_app_trace.dir/app_trace.c.obj
+	modified:   build/esp-idf/app_trace/CMakeFiles/__idf_app_trace.dir/app_trace_util.c.obj
+	modified:   build/esp-idf/app_trace/CMakeFiles/__idf_app_trace.dir/host_file_io.c.obj
+	modified:   build/esp-idf/app_trace/CMakeFiles/__idf_app_trace.dir/port/port_uart.c.obj
+	modified:   build/esp-idf/app_trace/cmake_install.cmake
+	modified:   build/esp-idf/app_trace/libapp_trace.a
+	modified:   build/esp-idf/app_update/CMakeFiles/__idf_app_update.dir/esp_ota_app_desc.c.obj
+	modified:   build/esp-idf/app_update/CMakeFiles/__idf_app_update.dir/esp_ota_ops.c.obj
+	modified:   build/esp-idf/app_update/cmake_install.cmake
+	modified:   build/esp-idf/app_update/libapp_update.a
+	modified:   build/esp-idf/bootloader/bootloader-flash_args.in
+	modified:   build/esp-idf/bootloader/cmake_install.cmake
+	modified:   build/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/bootloader_flash.c.obj
+	deleted:    build/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/bootloader_flash_config_esp32c3.c.obj
+	modified:   build/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/flash_qio_mode.c.obj
+	modified:   build/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock_init.c.obj
+	modified:   build/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common.c.obj
+	modified:   build/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common_loader.c.obj
+	modified:   build/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_efuse.c.obj
+	modified:   build/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_mem.c.obj
+	modified:   build/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random.c.obj
+	deleted:    build/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random_esp32c3.c.obj
+	modified:   build/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_utility.c.obj
+	modified:   build/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp_image_format.c.obj
+	modified:   build/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_encrypt.c.obj
+	modified:   build/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_partitions.c.obj
+	modified:   build/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/idf/bootloader_sha.c.obj
+	modified:   build/esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/secure_boot.c.obj
+	modified:   build/esp-idf/bootloader_support/cmake_install.cmake
+	modified:   build/esp-idf/bootloader_support/libbootloader_support.a
+	modified:   build/esp-idf/bt/cmake_install.cmake
+	modified:   build/esp-idf/cmake_install.cmake
+	modified:   build/esp-idf/cmock/CMakeFiles/__idf_cmock.dir/CMock/src/cmock.c.obj
+	modified:   build/esp-idf/cmock/cmake_install.cmake
+	modified:   build/esp-idf/cmock/libcmock.a
+	modified:   build/esp-idf/console/CMakeFiles/__idf_console.dir/argtable3/arg_cmd.c.obj
+	modified:   build/esp-idf/console/CMakeFiles/__idf_console.dir/argtable3/arg_date.c.obj
+	modified:   build/esp-idf/console/CMakeFiles/__idf_console.dir/argtable3/arg_dbl.c.obj
+	modified:   build/esp-idf/console/CMakeFiles/__idf_console.dir/argtable3/arg_dstr.c.obj
+	modified:   build/esp-idf/console/CMakeFiles/__idf_console.dir/argtable3/arg_end.c.obj
+	modified:   build/esp-idf/console/CMakeFiles/__idf_console.dir/argtable3/arg_file.c.obj
+	modified:   build/esp-idf/console/CMakeFiles/__idf_console.dir/argtable3/arg_hashtable.c.obj
+	modified:   build/esp-idf/console/CMakeFiles/__idf_console.dir/argtable3/arg_int.c.obj
+	modified:   build/esp-idf/console/CMakeFiles/__idf_console.dir/argtable3/arg_lit.c.obj
+	modified:   build/esp-idf/console/CMakeFiles/__idf_console.dir/argtable3/arg_rem.c.obj
+	modified:   build/esp-idf/console/CMakeFiles/__idf_console.dir/argtable3/arg_rex.c.obj
+	modified:   build/esp-idf/console/CMakeFiles/__idf_console.dir/argtable3/arg_str.c.obj
+	modified:   build/esp-idf/console/CMakeFiles/__idf_console.dir/argtable3/arg_utils.c.obj
+	modified:   build/esp-idf/console/CMakeFiles/__idf_console.dir/argtable3/argtable3.c.obj
+	modified:   build/esp-idf/console/CMakeFiles/__idf_console.dir/commands.c.obj
+	deleted:    build/esp-idf/console/CMakeFiles/__idf_console.dir/esp_console_repl.c.obj
+	modified:   build/esp-idf/console/CMakeFiles/__idf_console.dir/linenoise/linenoise.c.obj
+	modified:   build/esp-idf/console/CMakeFiles/__idf_console.dir/split_argv.c.obj
+	modified:   build/esp-idf/console/cmake_install.cmake
+	modified:   build/esp-idf/console/libconsole.a
+	modified:   build/esp-idf/cxx/CMakeFiles/__idf_cxx.dir/cxx_exception_stubs.cpp.obj
+	modified:   build/esp-idf/cxx/CMakeFiles/__idf_cxx.dir/cxx_guards.cpp.obj
+	modified:   build/esp-idf/cxx/cmake_install.cmake
+	modified:   build/esp-idf/cxx/libcxx.a
+	modified:   build/esp-idf/driver/CMakeFiles/__idf_driver.dir/deprecated/adc_dma_legacy.c.obj
+	modified:   build/esp-idf/driver/CMakeFiles/__idf_driver.dir/deprecated/adc_legacy.c.obj
+	modified:   build/esp-idf/driver/CMakeFiles/__idf_driver.dir/deprecated/i2s_legacy.c.obj
+	modified:   build/esp-idf/driver/CMakeFiles/__idf_driver.dir/deprecated/rmt_legacy.c.obj
+	modified:   build/esp-idf/driver/CMakeFiles/__idf_driver.dir/deprecated/rtc_temperature_legacy.c.obj
+	modified:   build/esp-idf/driver/CMakeFiles/__idf_driver.dir/deprecated/sigma_delta_legacy.c.obj
+	modified:   build/esp-idf/driver/CMakeFiles/__idf_driver.dir/deprecated/timer_legacy.c.obj
+	modified:   build/esp-idf/driver/CMakeFiles/__idf_driver.dir/i2c/i2c.c.obj
+	deleted:    build/esp-idf/driver/CMakeFiles/__idf_driver.dir/i2c/i2c_common.c.obj
+	deleted:    build/esp-idf/driver/CMakeFiles/__idf_driver.dir/i2c/i2c_master.c.obj
+	deleted:    build/esp-idf/driver/CMakeFiles/__idf_driver.dir/i2c/i2c_slave.c.obj
+	deleted:    build/esp-idf/driver/CMakeFiles/__idf_driver.dir/ledc/ledc.c.obj
+	modified:   build/esp-idf/driver/CMakeFiles/__idf_driver.dir/twai/twai.c.obj
+	deleted:    build/esp-idf/driver/CMakeFiles/__idf_driver.dir/uart/uart.c.obj
+	deleted:    build/esp-idf/driver/CMakeFiles/__idf_driver.dir/usb_serial_jtag/usb_serial_jtag.c.obj
+	deleted:    build/esp-idf/driver/CMakeFiles/__idf_driver.dir/usb_serial_jtag/usb_serial_jtag_connection_monitor.c.obj
+	modified:   build/esp-idf/driver/cmake_install.cmake
+	modified:   build/esp-idf/driver/libdriver.a
+	deleted:    build/esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32c3/esp_efuse_fields.c.obj
+	deleted:    build/esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32c3/esp_efuse_rtc_calib.c.obj
+	deleted:    build/esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32c3/esp_efuse_table.c.obj
+	deleted:    build/esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32c3/esp_efuse_utility.c.obj
+	modified:   build/esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/efuse_controller/keys/with_key_purposes/esp_efuse_api_key.c.obj
+	modified:   build/esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_api.c.obj
+	modified:   build/esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_fields.c.obj
+	modified:   build/esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_utility.c.obj
+	modified:   build/esp-idf/efuse/cmake_install.cmake
+	modified:   build/esp-idf/efuse/libefuse.a
+	modified:   build/esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/esp-tls-crypto/esp_tls_crypto.c.obj
+	modified:   build/esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/esp_tls.c.obj
+	modified:   build/esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/esp_tls_error_capture.c.obj
+	modified:   build/esp-idf/esp-tls/CMakeFiles/__idf_esp-tls.dir/esp_tls_mbedtls.c.obj
+	modified:   build/esp-idf/esp-tls/cmake_install.cmake
+	modified:   build/esp-idf/esp-tls/libesp-tls.a
+	modified:   build/esp-idf/esp_adc/CMakeFiles/__idf_esp_adc.dir/adc_cali.c.obj
+	modified:   build/esp-idf/esp_adc/CMakeFiles/__idf_esp_adc.dir/adc_cali_curve_fitting.c.obj
+	modified:   build/esp-idf/esp_adc/CMakeFiles/__idf_esp_adc.dir/adc_common.c.obj
+	modified:   build/esp-idf/esp_adc/CMakeFiles/__idf_esp_adc.dir/adc_continuous.c.obj
+	modified:   build/esp-idf/esp_adc/CMakeFiles/__idf_esp_adc.dir/adc_filter.c.obj
+	modified:   build/esp-idf/esp_adc/CMakeFiles/__idf_esp_adc.dir/adc_monitor.c.obj
+	modified:   build/esp-idf/esp_adc/CMakeFiles/__idf_esp_adc.dir/adc_oneshot.c.obj
+	deleted:    build/esp-idf/esp_adc/CMakeFiles/__idf_esp_adc.dir/deprecated/esp32c3/esp_adc_cal_legacy.c.obj
+	modified:   build/esp-idf/esp_adc/CMakeFiles/__idf_esp_adc.dir/deprecated/esp_adc_cal_common_legacy.c.obj
+	deleted:    build/esp-idf/esp_adc/CMakeFiles/__idf_esp_adc.dir/esp32c3/curve_fitting_coefficients.c.obj
+	modified:   build/esp-idf/esp_adc/cmake_install.cmake
+	modified:   build/esp-idf/esp_adc/libesp_adc.a
+	modified:   build/esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.obj
+	modified:   build/esp-idf/esp_app_format/cmake_install.cmake
+	modified:   build/esp-idf/esp_app_format/libesp_app_format.a
+	modified:   build/esp-idf/esp_bootloader_format/CMakeFiles/__idf_esp_bootloader_format.dir/esp_bootloader_desc.c.obj
+	modified:   build/esp-idf/esp_bootloader_format/cmake_install.cmake
+	modified:   build/esp-idf/esp_bootloader_format/libesp_bootloader_format.a
+	deleted:    build/esp-idf/esp_coex/CMakeFiles/__idf_esp_coex.dir/esp32c3/esp_coex_adapter.c.obj
+	modified:   build/esp-idf/esp_coex/cmake_install.cmake
+	modified:   build/esp-idf/esp_coex/libesp_coex.a
+	modified:   build/esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/esp_err_to_name.c.obj
+	modified:   build/esp-idf/esp_common/cmake_install.cmake
+	modified:   build/esp-idf/esp_common/libesp_common.a
+	modified:   build/esp-idf/esp_driver_ana_cmpr/cmake_install.cmake
+	modified:   build/esp-idf/esp_driver_dac/cmake_install.cmake
+	modified:   build/esp-idf/esp_driver_gpio/CMakeFiles/__idf_esp_driver_gpio.dir/src/dedic_gpio.c.obj
+	modified:   build/esp-idf/esp_driver_gpio/CMakeFiles/__idf_esp_driver_gpio.dir/src/gpio.c.obj
+	modified:   build/esp-idf/esp_driver_gpio/CMakeFiles/__idf_esp_driver_gpio.dir/src/gpio_glitch_filter_ops.c.obj
+	modified:   build/esp-idf/esp_driver_gpio/CMakeFiles/__idf_esp_driver_gpio.dir/src/gpio_pin_glitch_filter.c.obj
+	modified:   build/esp-idf/esp_driver_gpio/CMakeFiles/__idf_esp_driver_gpio.dir/src/rtc_io.c.obj
+	modified:   build/esp-idf/esp_driver_gpio/cmake_install.cmake
+	modified:   build/esp-idf/esp_driver_gpio/libesp_driver_gpio.a
+	modified:   build/esp-idf/esp_driver_gptimer/CMakeFiles/__idf_esp_driver_gptimer.dir/src/gptimer.c.obj
+	deleted:    build/esp-idf/esp_driver_gptimer/CMakeFiles/__idf_esp_driver_gptimer.dir/src/gptimer_priv.c.obj
+	modified:   build/esp-idf/esp_driver_gptimer/cmake_install.cmake
+	modified:   build/esp-idf/esp_driver_gptimer/libesp_driver_gptimer.a
+	modified:   build/esp-idf/esp_driver_i2s/CMakeFiles/__idf_esp_driver_i2s.dir/i2s_common.c.obj
+	modified:   build/esp-idf/esp_driver_i2s/CMakeFiles/__idf_esp_driver_i2s.dir/i2s_pdm.c.obj
+	modified:   build/esp-idf/esp_driver_i2s/CMakeFiles/__idf_esp_driver_i2s.dir/i2s_platform.c.obj
+	modified:   build/esp-idf/esp_driver_i2s/CMakeFiles/__idf_esp_driver_i2s.dir/i2s_std.c.obj
+	modified:   build/esp-idf/esp_driver_i2s/CMakeFiles/__idf_esp_driver_i2s.dir/i2s_tdm.c.obj
+	modified:   build/esp-idf/esp_driver_i2s/cmake_install.cmake
+	modified:   build/esp-idf/esp_driver_i2s/libesp_driver_i2s.a
+	modified:   build/esp-idf/esp_driver_mcpwm/cmake_install.cmake
+	modified:   build/esp-idf/esp_driver_pcnt/cmake_install.cmake
+	modified:   build/esp-idf/esp_driver_rmt/CMakeFiles/__idf_esp_driver_rmt.dir/src/rmt_common.c.obj
+	modified:   build/esp-idf/esp_driver_rmt/CMakeFiles/__idf_esp_driver_rmt.dir/src/rmt_encoder.c.obj
+	modified:   build/esp-idf/esp_driver_rmt/CMakeFiles/__idf_esp_driver_rmt.dir/src/rmt_rx.c.obj
+	modified:   build/esp-idf/esp_driver_rmt/CMakeFiles/__idf_esp_driver_rmt.dir/src/rmt_tx.c.obj
+	modified:   build/esp-idf/esp_driver_rmt/cmake_install.cmake
+	modified:   build/esp-idf/esp_driver_rmt/libesp_driver_rmt.a
+	modified:   build/esp-idf/esp_driver_sdio/cmake_install.cmake
+	modified:   build/esp-idf/esp_driver_sdm/CMakeFiles/__idf_esp_driver_sdm.dir/src/sdm.c.obj
+	modified:   build/esp-idf/esp_driver_sdm/cmake_install.cmake
+	modified:   build/esp-idf/esp_driver_sdm/libesp_driver_sdm.a
+	modified:   build/esp-idf/esp_driver_sdmmc/cmake_install.cmake
+	modified:   build/esp-idf/esp_driver_sdspi/CMakeFiles/__idf_esp_driver_sdspi.dir/src/sdspi_crc.c.obj
+	modified:   build/esp-idf/esp_driver_sdspi/CMakeFiles/__idf_esp_driver_sdspi.dir/src/sdspi_host.c.obj
+	modified:   build/esp-idf/esp_driver_sdspi/CMakeFiles/__idf_esp_driver_sdspi.dir/src/sdspi_transaction.c.obj
+	modified:   build/esp-idf/esp_driver_sdspi/cmake_install.cmake
+	modified:   build/esp-idf/esp_driver_sdspi/libesp_driver_sdspi.a
+	modified:   build/esp-idf/esp_driver_spi/CMakeFiles/__idf_esp_driver_spi.dir/src/gpspi/spi_common.c.obj
+	modified:   build/esp-idf/esp_driver_spi/CMakeFiles/__idf_esp_driver_spi.dir/src/gpspi/spi_dma.c.obj
+	modified:   build/esp-idf/esp_driver_spi/CMakeFiles/__idf_esp_driver_spi.dir/src/gpspi/spi_master.c.obj
+	modified:   build/esp-idf/esp_driver_spi/CMakeFiles/__idf_esp_driver_spi.dir/src/gpspi/spi_slave.c.obj
+	modified:   build/esp-idf/esp_driver_spi/CMakeFiles/__idf_esp_driver_spi.dir/src/gpspi/spi_slave_hd.c.obj
+	modified:   build/esp-idf/esp_driver_spi/cmake_install.cmake
+	modified:   build/esp-idf/esp_driver_spi/libesp_driver_spi.a
+	modified:   build/esp-idf/esp_driver_tsens/CMakeFiles/__idf_esp_driver_tsens.dir/src/temperature_sensor.c.obj
+	modified:   build/esp-idf/esp_driver_tsens/cmake_install.cmake
+	modified:   build/esp-idf/esp_driver_tsens/libesp_driver_tsens.a
+	modified:   build/esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth.c.obj
+	modified:   build/esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_netif_glue.c.obj
+	deleted:    build/esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_phy_802_3.c.obj
+	modified:   build/esp-idf/esp_eth/cmake_install.cmake
+	modified:   build/esp-idf/esp_eth/libesp_eth.a
+	modified:   build/esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/default_event_loop.c.obj
+	modified:   build/esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/esp_event.c.obj
+	modified:   build/esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/esp_event_private.c.obj
+	modified:   build/esp-idf/esp_event/cmake_install.cmake
+	modified:   build/esp-idf/esp_event/libesp_event.a
+	modified:   build/esp-idf/esp_gdbstub/CMakeFiles/__idf_esp_gdbstub.dir/src/gdbstub.c.obj
+	modified:   build/esp-idf/esp_gdbstub/CMakeFiles/__idf_esp_gdbstub.dir/src/gdbstub_transport.c.obj
+	modified:   build/esp-idf/esp_gdbstub/CMakeFiles/__idf_esp_gdbstub.dir/src/packet.c.obj
+	deleted:    build/esp-idf/esp_gdbstub/CMakeFiles/__idf_esp_gdbstub.dir/src/port/riscv/gdbstub_riscv.c.obj
+	deleted:    build/esp-idf/esp_gdbstub/CMakeFiles/__idf_esp_gdbstub.dir/src/port/riscv/rv_decode.c.obj
+	modified:   build/esp-idf/esp_gdbstub/cmake_install.cmake
+	modified:   build/esp-idf/esp_gdbstub/libesp_gdbstub.a
+	modified:   build/esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/src/esp_hid_common.c.obj
+	modified:   build/esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/src/esp_hidd.c.obj
+	modified:   build/esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/src/esp_hidh.c.obj
+	modified:   build/esp-idf/esp_hid/cmake_install.cmake
+	modified:   build/esp-idf/esp_hid/libesp_hid.a
+	modified:   build/esp-idf/esp_http_client/CMakeFiles/__idf_esp_http_client.dir/esp_http_client.c.obj
+	modified:   build/esp-idf/esp_http_client/CMakeFiles/__idf_esp_http_client.dir/lib/http_auth.c.obj
+	modified:   build/esp-idf/esp_http_client/CMakeFiles/__idf_esp_http_client.dir/lib/http_header.c.obj
+	modified:   build/esp-idf/esp_http_client/CMakeFiles/__idf_esp_http_client.dir/lib/http_utils.c.obj
+	modified:   build/esp-idf/esp_http_client/cmake_install.cmake
+	modified:   build/esp-idf/esp_http_client/libesp_http_client.a
+	modified:   build/esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_main.c.obj
+	modified:   build/esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_parse.c.obj
+	modified:   build/esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_sess.c.obj
+	modified:   build/esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_txrx.c.obj
+	modified:   build/esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_uri.c.obj
+	modified:   build/esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_ws.c.obj
+	modified:   build/esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/util/ctrl_sock.c.obj
+	modified:   build/esp-idf/esp_http_server/cmake_install.cmake
+	modified:   build/esp-idf/esp_http_server/libesp_http_server.a
+	modified:   build/esp-idf/esp_https_ota/CMakeFiles/__idf_esp_https_ota.dir/src/esp_https_ota.c.obj
+	modified:   build/esp-idf/esp_https_ota/cmake_install.cmake
+	modified:   build/esp-idf/esp_https_ota/libesp_https_ota.a
+	modified:   build/esp-idf/esp_https_server/CMakeFiles/__idf_esp_https_server.dir/src/https_server.c.obj
+	modified:   build/esp-idf/esp_https_server/cmake_install.cmake
+	modified:   build/esp-idf/esp_https_server/libesp_https_server.a
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/adc_share_hw_ctrl.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/clk_ctrl_os.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/cpu.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/dma/async_memcpy_gdma.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/dma/esp_async_memcpy.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/dma/esp_dma_utils.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/dma/gdma.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/esp_clk.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/esp_clock_output.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/esp_ds.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/esp_gpio_reserve.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/esp_hmac.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/esp_memory_utils.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/hw_random.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/intr_alloc.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/mac_addr.c.obj
+	deleted:    build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/mspi_timing_config.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/mspi_timing_tuning.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/periph_ctrl.c.obj
+	deleted:    build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32c3/adc2_init_cal.c.obj
+	deleted:    build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32c3/chip_info.c.obj
+	deleted:    build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32c3/cpu_region_protect.c.obj
+	deleted:    build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32c3/esp_clk_tree.c.obj
+	deleted:    build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32c3/esp_crypto_lock.c.obj
+	deleted:    build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32c3/esp_memprot.c.obj
+	deleted:    build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32c3/io_mux.c.obj
+	deleted:    build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32c3/rtc_clk.c.obj
+	deleted:    build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32c3/rtc_clk_init.c.obj
+	deleted:    build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32c3/rtc_init.c.obj
+	deleted:    build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32c3/rtc_sleep.c.obj
+	deleted:    build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32c3/rtc_time.c.obj
+	deleted:    build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32c3/sar_periph_ctrl.c.obj
+	deleted:    build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32c3/systimer.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp_clk_tree_common.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp_memprot_conv.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/regi2c_ctrl.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/revision.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/rtc_module.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sar_periph_ctrl_common.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_console.c.obj
+	deleted:    build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_cpu.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_event.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_gpio.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_modem.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_modes.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_wake_stub.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/spi_bus_lock.c.obj
+	modified:   build/esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/spi_share_hw_ctrl.c.obj
+	modified:   build/esp-idf/esp_hw_support/cmake_install.cmake
+	modified:   build/esp-idf/esp_hw_support/libesp_hw_support.a
+	deleted:    build/esp-idf/esp_hw_support/port/esp32c3/cmake_install.cmake
+	modified:   build/esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_common.c.obj
+	modified:   build/esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io.c.obj
+	deleted:    build/esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_i2c_v1.c.obj
+	deleted:    build/esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_i2c_v2.c.obj
+	deleted:    build/esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_spi.c.obj
+	modified:   build/esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_nt35510.c.obj
+	modified:   build/esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ops.c.obj
+	modified:   build/esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ssd1306.c.obj
+	modified:   build/esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_st7789.c.obj
+	modified:   build/esp-idf/esp_lcd/cmake_install.cmake
+	modified:   build/esp-idf/esp_lcd/libesp_lcd.a
+	modified:   build/esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/proto-c/esp_local_ctrl.pb-c.c.obj
+	modified:   build/esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl.c.obj
+	modified:   build/esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_handler.c.obj
+	modified:   build/esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_httpd.c.obj
+	modified:   build/esp-idf/esp_local_ctrl/cmake_install.cmake
+	modified:   build/esp-idf/esp_local_ctrl/libesp_local_ctrl.a
+	modified:   build/esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_cache.c.obj
+	modified:   build/esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/esp_mmu_map.c.obj
+	deleted:    build/esp-idf/esp_mm/CMakeFiles/__idf_esp_mm.dir/port/esp32c3/ext_mem_layout.c.obj
+	modified:   build/esp-idf/esp_mm/cmake_install.cmake
+	modified:   build/esp-idf/esp_mm/libesp_mm.a
+	modified:   build/esp-idf/esp_netif/CMakeFiles/__idf_esp_netif.dir/esp_netif_defaults.c.obj
+	modified:   build/esp-idf/esp_netif/CMakeFiles/__idf_esp_netif.dir/esp_netif_handlers.c.obj
+	modified:   build/esp-idf/esp_netif/CMakeFiles/__idf_esp_netif.dir/esp_netif_objects.c.obj
+	modified:   build/esp-idf/esp_netif/CMakeFiles/__idf_esp_netif.dir/lwip/esp_netif_lwip.c.obj
+	modified:   build/esp-idf/esp_netif/CMakeFiles/__idf_esp_netif.dir/lwip/esp_netif_lwip_defaults.c.obj
+	modified:   build/esp-idf/esp_netif/CMakeFiles/__idf_esp_netif.dir/lwip/esp_netif_sntp.c.obj
+	modified:   build/esp-idf/esp_netif/CMakeFiles/__idf_esp_netif.dir/lwip/netif/esp_pbuf_ref.c.obj
+	modified:   build/esp-idf/esp_netif/CMakeFiles/__idf_esp_netif.dir/lwip/netif/ethernetif.c.obj
+	modified:   build/esp-idf/esp_netif/CMakeFiles/__idf_esp_netif.dir/lwip/netif/wlanif.c.obj
+	modified:   build/esp-idf/esp_netif/cmake_install.cmake
+	modified:   build/esp-idf/esp_netif/libesp_netif.a
+	modified:   build/esp-idf/esp_netif_stack/cmake_install.cmake
+	modified:   build/esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition.c.obj
+	modified:   build/esp-idf/esp_partition/CMakeFiles/__idf_esp_partition.dir/partition_target.c.obj
+	modified:   build/esp-idf/esp_partition/cmake_install.cmake
+	modified:   build/esp-idf/esp_partition/libesp_partition.a
+	modified:   build/esp-idf/esp_phy/CMakeFiles/__idf_esp_phy.dir/src/btbb_init.c.obj
+	modified:   build/esp-idf/esp_phy/CMakeFiles/__idf_esp_phy.dir/src/lib_printf.c.obj
+	modified:   build/esp-idf/esp_phy/CMakeFiles/__idf_esp_phy.dir/src/phy_common.c.obj
+	modified:   build/esp-idf/esp_phy/CMakeFiles/__idf_esp_phy.dir/src/phy_init.c.obj
+	modified:   build/esp-idf/esp_phy/CMakeFiles/__idf_esp_phy.dir/src/phy_override.c.obj
+	modified:   build/esp-idf/esp_phy/cmake_install.cmake
+	modified:   build/esp-idf/esp_phy/libesp_phy.a
+	modified:   build/esp-idf/esp_pm/CMakeFiles/__idf_esp_pm.dir/pm_impl.c.obj
+	modified:   build/esp-idf/esp_pm/CMakeFiles/__idf_esp_pm.dir/pm_locks.c.obj
+	modified:   build/esp-idf/esp_pm/CMakeFiles/__idf_esp_pm.dir/pm_trace.c.obj
+	modified:   build/esp-idf/esp_pm/cmake_install.cmake
+	modified:   build/esp-idf/esp_pm/libesp_pm.a
+	modified:   build/esp-idf/esp_psram/cmake_install.cmake
+	modified:   build/esp-idf/esp_ringbuf/CMakeFiles/__idf_esp_ringbuf.dir/ringbuf.c.obj
+	modified:   build/esp-idf/esp_ringbuf/cmake_install.cmake
+	modified:   build/esp-idf/esp_ringbuf/libesp_ringbuf.a
+	modified:   build/esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_crc.c.obj
+	modified:   build/esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_efuse.c.obj
+	modified:   build/esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_spiflash.c.obj
+	modified:   build/esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_sys.c.obj
+	modified:   build/esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_systimer.c.obj
+	modified:   build/esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_uart.c.obj
+	modified:   build/esp-idf/esp_rom/cmake_install.cmake
+	modified:   build/esp-idf/esp_rom/libesp_rom.a
+	modified:   build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/crosscore_int.c.obj
+	deleted:    build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/debug_stubs.c.obj
+	modified:   build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/esp_err.c.obj
+	modified:   build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/esp_ipc.c.obj
+	modified:   build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/esp_system.c.obj
+	modified:   build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/freertos_hooks.c.obj
+	deleted:    build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/hw_stack_guard.c.obj
+	modified:   build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/int_wdt.c.obj
+	modified:   build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/panic.c.obj
+	deleted:    build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch/riscv/debug_helpers.c.obj
+	deleted:    build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch/riscv/debug_stubs.c.obj
+	deleted:    build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch/riscv/expression_with_stack.c.obj
+	deleted:    build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/arch/riscv/panic_arch.c.obj
+	modified:   build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/brownout.c.obj
+	modified:   build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/cpu_start.c.obj
+	modified:   build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/esp_system_chip.c.obj
+	modified:   build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/panic_handler.c.obj
+	deleted:    build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/soc/esp32c3/apb_backup_dma.c.obj
+	deleted:    build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/soc/esp32c3/cache_err_int.c.obj
+	deleted:    build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/soc/esp32c3/clk.c.obj
+	deleted:    build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/soc/esp32c3/reset_reason.c.obj
+	deleted:    build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/soc/esp32c3/system_internal.c.obj
+	modified:   build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/stack_check.c.obj
+	modified:   build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/startup.c.obj
+	modified:   build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/startup_funcs.c.obj
+	modified:   build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/system_time.c.obj
+	modified:   build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/task_wdt/task_wdt.c.obj
+	modified:   build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/task_wdt/task_wdt_impl_timergroup.c.obj
+	modified:   build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/ubsan.c.obj
+	modified:   build/esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/xt_wdt.c.obj
+	modified:   build/esp-idf/esp_system/cmake_install.cmake
+	modified:   build/esp-idf/esp_system/ld/memory.ld
+	modified:   build/esp-idf/esp_system/ld/sections.ld
+	modified:   build/esp-idf/esp_system/libesp_system.a
+	modified:   build/esp-idf/esp_system/port/cmake_install.cmake
+	deleted:    build/esp-idf/esp_system/port/soc/esp32c3/cmake_install.cmake
+	modified:   build/esp-idf/esp_timer/CMakeFiles/__idf_esp_timer.dir/src/esp_timer.c.obj
+	modified:   build/esp-idf/esp_timer/CMakeFiles/__idf_esp_timer.dir/src/esp_timer_impl_common.c.obj
+	modified:   build/esp-idf/esp_timer/CMakeFiles/__idf_esp_timer.dir/src/esp_timer_impl_systimer.c.obj
+	modified:   build/esp-idf/esp_timer/CMakeFiles/__idf_esp_timer.dir/src/ets_timer_legacy.c.obj
+	modified:   build/esp-idf/esp_timer/CMakeFiles/__idf_esp_timer.dir/src/system_time.c.obj
+	modified:   build/esp-idf/esp_timer/cmake_install.cmake
+	modified:   build/esp-idf/esp_timer/libesp_timer.a
+	deleted:    build/esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/esp32c3/esp_adapter.c.obj
+	modified:   build/esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/mesh_event.c.obj
+	modified:   build/esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/smartconfig.c.obj
+	modified:   build/esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/smartconfig_ack.c.obj
+	modified:   build/esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/wifi_default.c.obj
+	modified:   build/esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/wifi_default_ap.c.obj
+	modified:   build/esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/wifi_init.c.obj
+	modified:   build/esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/wifi_netif.c.obj
+	modified:   build/esp-idf/esp_wifi/cmake_install.cmake
+	modified:   build/esp-idf/esp_wifi/libesp_wifi.a
+	modified:   build/esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_binary.c.obj
+	deleted:    build/esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_checksum.c.obj
+	modified:   build/esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_common.c.obj
+	modified:   build/esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_elf.c.obj
+	modified:   build/esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_flash.c.obj
+	modified:   build/esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_uart.c.obj
+	deleted:    build/esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/port/riscv/core_dump_port.c.obj
+	modified:   build/esp-idf/espcoredump/cmake_install.cmake
+	modified:   build/esp-idf/espcoredump/libespcoredump.a
+	modified:   build/esp-idf/esptool_py/app-flash_args.in
+	modified:   build/esp-idf/esptool_py/cmake_install.cmake
+	modified:   build/esp-idf/esptool_py/flasher_args.json.in
+	modified:   build/esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/diskio/diskio.c.obj
+	modified:   build/esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/diskio/diskio_rawflash.c.obj
+	modified:   build/esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/diskio/diskio_sdmmc.c.obj
+	modified:   build/esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/diskio/diskio_wl.c.obj
+	modified:   build/esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/port/freertos/ffsystem.c.obj
+	modified:   build/esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/src/ff.c.obj
+	modified:   build/esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/src/ffunicode.c.obj
+	modified:   build/esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/vfs/vfs_fat.c.obj
+	modified:   build/esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/vfs/vfs_fat_sdmmc.c.obj
+	modified:   build/esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/vfs/vfs_fat_spiflash.c.obj
+	modified:   build/esp-idf/fatfs/cmake_install.cmake
+	modified:   build/esp-idf/fatfs/libfatfs.a
+	modified:   build/esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/event_groups.c.obj
+	modified:   build/esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/list.c.obj
+	deleted:    build/esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/riscv/port.c.obj
+	deleted:    build/esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/riscv/portasm.S.obj
+	modified:   build/esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/queue.c.obj
+	modified:   build/esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/stream_buffer.c.obj
+	modified:   build/esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/tasks.c.obj
+	modified:   build/esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/timers.c.obj
+	modified:   build/esp-idf/freertos/CMakeFiles/__idf_freertos.dir/app_startup.c.obj
+	modified:   build/esp-idf/freertos/CMakeFiles/__idf_freertos.dir/esp_additions/freertos_compatibility.c.obj
+	modified:   build/esp-idf/freertos/CMakeFiles/__idf_freertos.dir/esp_additions/idf_additions.c.obj
+	modified:   build/esp-idf/freertos/CMakeFiles/__idf_freertos.dir/heap_idf.c.obj
+	modified:   build/esp-idf/freertos/CMakeFiles/__idf_freertos.dir/port_common.c.obj
+	modified:   build/esp-idf/freertos/CMakeFiles/__idf_freertos.dir/port_systick.c.obj
+	modified:   build/esp-idf/freertos/cmake_install.cmake
+	modified:   build/esp-idf/freertos/libfreertos.a
+	modified:   build/esp-idf/gps/CMakeFiles/__idf_gps.dir/gps.c.obj
+	modified:   build/esp-idf/gps/cmake_install.cmake
+	modified:   build/esp-idf/gps/libgps.a
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/adc_hal.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/adc_hal_common.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/adc_oneshot_hal.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/aes_hal.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/brownout_hal.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/cache_hal.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/ds_hal.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/efuse_hal.c.obj
+	deleted:    build/esp-idf/hal/CMakeFiles/__idf_hal.dir/esp32c3/clk_tree_hal.c.obj
+	deleted:    build/esp-idf/hal/CMakeFiles/__idf_hal.dir/esp32c3/efuse_hal.c.obj
+	deleted:    build/esp-idf/hal/CMakeFiles/__idf_hal.dir/esp32c3/rtc_cntl_hal.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/gdma_hal_ahb_v1.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/gdma_hal_top.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/gpio_hal.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/hal_utils.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/hmac_hal.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/i2c_hal.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/i2c_hal_iram.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/i2s_hal.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/ledc_hal.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/ledc_hal_iram.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/mmu_hal.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/mpi_hal.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/rmt_hal.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/sdm_hal.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/sha_hal.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/spi_flash_encrypt_hal_iram.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/spi_flash_hal.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/spi_flash_hal_gpspi.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/spi_flash_hal_iram.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/spi_hal.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/spi_hal_iram.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/spi_slave_hal.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/spi_slave_hal_iram.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/spi_slave_hd_hal.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/systimer_hal.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/timer_hal.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/twai_hal.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/twai_hal_iram.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/uart_hal.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/uart_hal_iram.c.obj
+	deleted:    build/esp-idf/hal/CMakeFiles/__idf_hal.dir/wdt_hal_iram.c.obj
+	modified:   build/esp-idf/hal/CMakeFiles/__idf_hal.dir/xt_wdt_hal.c.obj
+	modified:   build/esp-idf/hal/cmake_install.cmake
+	modified:   build/esp-idf/hal/libhal.a
+	modified:   build/esp-idf/heap/CMakeFiles/__idf_heap.dir/heap_caps.c.obj
+	modified:   build/esp-idf/heap/CMakeFiles/__idf_heap.dir/heap_caps_init.c.obj
+	modified:   build/esp-idf/heap/CMakeFiles/__idf_heap.dir/multi_heap.c.obj
+	deleted:    build/esp-idf/heap/CMakeFiles/__idf_heap.dir/port/esp32c3/memory_layout.c.obj
+	modified:   build/esp-idf/heap/CMakeFiles/__idf_heap.dir/port/memory_layout_utils.c.obj
+	modified:   build/esp-idf/heap/CMakeFiles/__idf_heap.dir/tlsf/tlsf.c.obj
+	modified:   build/esp-idf/heap/cmake_install.cmake
+	modified:   build/esp-idf/heap/libheap.a
+	modified:   build/esp-idf/http_parser/CMakeFiles/__idf_http_parser.dir/http_parser.c.obj
+	modified:   build/esp-idf/http_parser/cmake_install.cmake
+	modified:   build/esp-idf/http_parser/libhttp_parser.a
+	modified:   build/esp-idf/idf_test/cmake_install.cmake
+	modified:   build/esp-idf/ieee802154/cmake_install.cmake
+	modified:   build/esp-idf/json/CMakeFiles/__idf_json.dir/cJSON/cJSON.c.obj
+	modified:   build/esp-idf/json/CMakeFiles/__idf_json.dir/cJSON/cJSON_Utils.c.obj
+	modified:   build/esp-idf/json/cmake_install.cmake
+	modified:   build/esp-idf/json/libjson.a
+	deleted:    build/esp-idf/log/CMakeFiles/__idf_log.dir/log.c.obj
+	deleted:    build/esp-idf/log/CMakeFiles/__idf_log.dir/log_buffers.c.obj
+	deleted:    build/esp-idf/log/CMakeFiles/__idf_log.dir/log_freertos.c.obj
+	modified:   build/esp-idf/log/cmake_install.cmake
+	modified:   build/esp-idf/log/liblog.a
+	modified:   build/esp-idf/lora/CMakeFiles/__idf_lora.dir/include/driver/driver/lora_driver.c.obj
+	deleted:    build/esp-idf/lora/CMakeFiles/__idf_lora.dir/include/driver/lora_driver.c.obj
+	modified:   build/esp-idf/lora/CMakeFiles/__idf_lora.dir/src/esp_api_impl.c.obj
+	modified:   build/esp-idf/lora/CMakeFiles/__idf_lora.dir/src/lora.c.obj
+	modified:   build/esp-idf/lora/cmake_install.cmake
+	modified:   build/esp-idf/lora/liblora.a
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/apps/dhcpserver/dhcpserver.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/apps/ping/esp_ping.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/apps/ping/ping.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/apps/ping/ping_sock.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/apps/sntp/sntp.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/api/api_lib.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/api/api_msg.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/api/err.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/api/if_api.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/api/netbuf.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/api/netdb.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/api/netifapi.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/api/sockets.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/api/tcpip.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/apps/netbiosns/netbiosns.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/apps/sntp/sntp.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/def.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/dns.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/inet_chksum.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/init.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/ip.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/ipv4/autoip.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/ipv4/dhcp.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/ipv4/etharp.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/ipv4/icmp.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/ipv4/igmp.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/ipv4/ip4.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/ipv4/ip4_addr.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/ipv4/ip4_frag.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/ipv4/ip4_napt.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/ipv6/dhcp6.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/ipv6/ethip6.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/ipv6/icmp6.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/ipv6/inet6.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/ipv6/ip6.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/ipv6/ip6_addr.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/ipv6/ip6_frag.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/ipv6/mld6.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/ipv6/nd6.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/mem.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/memp.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/netif.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/pbuf.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/raw.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/stats.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/sys.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/tcp.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/tcp_in.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/tcp_out.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/timeouts.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/core/udp.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/bridgeif.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/bridgeif_fdb.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ethernet.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/auth.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/ccp.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/chap-md5.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/chap-new.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/chap_ms.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/demand.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/eap.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/ecp.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/eui64.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/fsm.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/ipcp.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/ipv6cp.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/lcp.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/magic.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/mppe.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/multilink.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/ppp.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/pppapi.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/pppcrypt.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/pppoe.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/pppol2tp.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/pppos.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/upap.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/utils.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/ppp/vj.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/lwip/src/netif/slipif.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/port/debug/lwip_debug.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/port/esp32xx/vfs_lwip.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/port/freertos/sys_arch.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/port/hooks/lwip_default_hooks.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/port/hooks/tcp_isn_default.c.obj
+	modified:   build/esp-idf/lwip/CMakeFiles/__idf_lwip.dir/port/sockets_ext.c.obj
+	modified:   build/esp-idf/lwip/cmake_install.cmake
+	modified:   build/esp-idf/lwip/liblwip.a
+	modified:   build/esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+	modified:   build/esp-idf/main/cmake_install.cmake
+	modified:   build/esp-idf/main/libmain.a
+	modified:   build/esp-idf/mbedtls/CMakeFiles/__idf_mbedtls.dir/__/__/x509_crt_bundle.S.obj
+	modified:   build/esp-idf/mbedtls/CMakeFiles/__idf_mbedtls.dir/esp_crt_bundle/esp_crt_bundle.c.obj
+	modified:   build/esp-idf/mbedtls/cmake_install.cmake
+	modified:   build/esp-idf/mbedtls/libmbedtls.a
+	modified:   build/esp-idf/mbedtls/mbedtls/3rdparty/cmake_install.cmake
+	modified:   build/esp-idf/mbedtls/mbedtls/3rdparty/everest/CMakeFiles/everest.dir/library/Hacl_Curve25519_joined.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/3rdparty/everest/CMakeFiles/everest.dir/library/everest.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/3rdparty/everest/CMakeFiles/everest.dir/library/x25519.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/3rdparty/everest/cmake_install.cmake
+	modified:   build/esp-idf/mbedtls/mbedtls/3rdparty/everest/libeverest.a
+	modified:   build/esp-idf/mbedtls/mbedtls/3rdparty/p256-m/CMakeFiles/p256m.dir/p256-m/p256-m.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/3rdparty/p256-m/CMakeFiles/p256m.dir/p256-m_driver_entrypoints.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/3rdparty/p256-m/cmake_install.cmake
+	modified:   build/esp-idf/mbedtls/mbedtls/3rdparty/p256-m/libp256m.a
+	modified:   build/esp-idf/mbedtls/mbedtls/cmake_install.cmake
+	modified:   build/esp-idf/mbedtls/mbedtls/include/cmake_install.cmake
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/aes.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/aesce.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/aesni.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/aria.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/asn1parse.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/asn1write.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/base64.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/bignum.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/bignum_core.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/bignum_mod.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/bignum_mod_raw.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/camellia.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/ccm.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/chacha20.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/chachapoly.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/cipher.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/cipher_wrap.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/cmac.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/constant_time.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/ctr_drbg.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/des.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/dhm.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/ecdh.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/ecdsa.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/ecjpake.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/ecp.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/ecp_curves.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/ecp_curves_new.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/entropy.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/entropy_poll.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/error.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/gcm.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/hkdf.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/hmac_drbg.c.obj
+	deleted:    build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/dsopocko/esp/esp-idf/components/mbedtls/port/aes/dma/esp_aes.c.obj
+	deleted:    build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/dsopocko/esp/esp-idf/components/mbedtls/port/aes/dma/esp_aes_gdma_impl.c.obj
+	deleted:    build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/dsopocko/esp/esp-idf/components/mbedtls/port/aes/esp_aes_common.c.obj
+	deleted:    build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/dsopocko/esp/esp-idf/components/mbedtls/port/aes/esp_aes_gcm.c.obj
+	deleted:    build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/dsopocko/esp/esp-idf/components/mbedtls/port/aes/esp_aes_xts.c.obj
+	deleted:    build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/dsopocko/esp/esp-idf/components/mbedtls/port/bignum/bignum_alt.c.obj
+	deleted:    build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/dsopocko/esp/esp-idf/components/mbedtls/port/bignum/esp_bignum.c.obj
+	deleted:    build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/dsopocko/esp/esp-idf/components/mbedtls/port/crypto_shared_gdma/esp_crypto_shared_gdma.c.obj
+	deleted:    build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/dsopocko/esp/esp-idf/components/mbedtls/port/esp_ds/esp_rsa_sign_alt.c.obj
+	deleted:    build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/dsopocko/esp/esp-idf/components/mbedtls/port/esp_hardware.c.obj
+	deleted:    build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/dsopocko/esp/esp-idf/components/mbedtls/port/esp_mem.c.obj
+	deleted:    build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/dsopocko/esp/esp-idf/components/mbedtls/port/esp_timing.c.obj
+	deleted:    build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/dsopocko/esp/esp-idf/components/mbedtls/port/md/esp_md.c.obj
+	deleted:    build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/dsopocko/esp/esp-idf/components/mbedtls/port/sha/dma/esp_sha1.c.obj
+	deleted:    build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/dsopocko/esp/esp-idf/components/mbedtls/port/sha/dma/esp_sha256.c.obj
+	deleted:    build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/dsopocko/esp/esp-idf/components/mbedtls/port/sha/dma/esp_sha512.c.obj
+	deleted:    build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/dsopocko/esp/esp-idf/components/mbedtls/port/sha/dma/esp_sha_gdma_impl.c.obj
+	deleted:    build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/dsopocko/esp/esp-idf/components/mbedtls/port/sha/dma/sha.c.obj
+	deleted:    build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/home/dsopocko/esp/esp-idf/components/mbedtls/port/sha/esp_sha.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/lmots.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/lms.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/md.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/md5.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/memory_buffer_alloc.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/nist_kw.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/oid.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/padlock.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/pem.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/pk.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/pk_wrap.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/pkcs12.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/pkcs5.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/pkparse.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/pkwrite.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/platform.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/platform_util.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/poly1305.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_crypto.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_crypto_aead.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_crypto_cipher.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_crypto_client.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_crypto_driver_wrappers_no_static.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_crypto_ecp.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_crypto_ffdh.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_crypto_hash.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_crypto_mac.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_crypto_pake.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_crypto_rsa.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_crypto_se.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_crypto_slot_management.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_crypto_storage.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_its_file.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/psa_util.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/ripemd160.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/rsa.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/rsa_alt_helpers.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/sha1.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/sha256.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/sha3.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/sha512.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/threading.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/timing.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/version.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/version_features.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/debug.c.obj
+	deleted:    build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/home/dsopocko/esp/esp-idf/components/mbedtls/port/esp_platform_time.c.obj
+	deleted:    build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/home/dsopocko/esp/esp-idf/components/mbedtls/port/mbedtls_debug.c.obj
+	deleted:    build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/home/dsopocko/esp/esp-idf/components/mbedtls/port/net_sockets.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/mps_reader.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/mps_trace.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_cache.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_ciphersuites.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_client.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_cookie.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_debug_helpers_generated.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_msg.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_ticket.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_tls.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_tls12_client.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_tls12_server.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_tls13_client.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_tls13_generic.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_tls13_keys.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedtls.dir/ssl_tls13_server.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/pkcs7.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_create.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_crl.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_crt.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_csr.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509write.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509write_crt.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509write_csr.c.obj
+	modified:   build/esp-idf/mbedtls/mbedtls/library/cmake_install.cmake
+	modified:   build/esp-idf/mbedtls/mbedtls/library/error.c
+	modified:   build/esp-idf/mbedtls/mbedtls/library/libmbedcrypto.a
+	modified:   build/esp-idf/mbedtls/mbedtls/library/libmbedtls.a
+	modified:   build/esp-idf/mbedtls/mbedtls/library/libmbedx509.a
+	modified:   build/esp-idf/mbedtls/mbedtls/library/psa_crypto_driver_wrappers_no_static.c
+	modified:   build/esp-idf/mbedtls/mbedtls/library/ssl_debug_helpers_generated.c
+	modified:   build/esp-idf/mbedtls/mbedtls/library/version_features.c
+	modified:   build/esp-idf/mbedtls/x509_crt_bundle
+	modified:   build/esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt/lib/mqtt_msg.c.obj
+	modified:   build/esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt/lib/mqtt_outbox.c.obj
+	modified:   build/esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt/lib/platform_esp32_idf.c.obj
+	modified:   build/esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt/mqtt_client.c.obj
+	modified:   build/esp-idf/mqtt/cmake_install.cmake
+	modified:   build/esp-idf/mqtt/libmqtt.a
+	modified:   build/esp-idf/newlib/CMakeFiles/__idf_newlib.dir/abort.c.obj
+	modified:   build/esp-idf/newlib/CMakeFiles/__idf_newlib.dir/assert.c.obj
+	modified:   build/esp-idf/newlib/CMakeFiles/__idf_newlib.dir/getentropy.c.obj
+	modified:   build/esp-idf/newlib/CMakeFiles/__idf_newlib.dir/heap.c.obj
+	modified:   build/esp-idf/newlib/CMakeFiles/__idf_newlib.dir/locks.c.obj
+	modified:   build/esp-idf/newlib/CMakeFiles/__idf_newlib.dir/newlib_init.c.obj
+	modified:   build/esp-idf/newlib/CMakeFiles/__idf_newlib.dir/poll.c.obj
+	modified:   build/esp-idf/newlib/CMakeFiles/__idf_newlib.dir/port/esp_time_impl.c.obj
+	modified:   build/esp-idf/newlib/CMakeFiles/__idf_newlib.dir/pthread.c.obj
+	modified:   build/esp-idf/newlib/CMakeFiles/__idf_newlib.dir/random.c.obj
+	modified:   build/esp-idf/newlib/CMakeFiles/__idf_newlib.dir/realpath.c.obj
+	modified:   build/esp-idf/newlib/CMakeFiles/__idf_newlib.dir/reent_init.c.obj
+	modified:   build/esp-idf/newlib/CMakeFiles/__idf_newlib.dir/stdatomic.c.obj
+	modified:   build/esp-idf/newlib/CMakeFiles/__idf_newlib.dir/syscalls.c.obj
+	modified:   build/esp-idf/newlib/CMakeFiles/__idf_newlib.dir/sysconf.c.obj
+	modified:   build/esp-idf/newlib/CMakeFiles/__idf_newlib.dir/termios.c.obj
+	modified:   build/esp-idf/newlib/CMakeFiles/__idf_newlib.dir/time.c.obj
+	modified:   build/esp-idf/newlib/cmake_install.cmake
+	modified:   build/esp-idf/newlib/libnewlib.a
+	modified:   build/esp-idf/newlib/port/cmake_install.cmake
+	modified:   build/esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_api.cpp.obj
+	modified:   build/esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_cxx_api.cpp.obj
+	modified:   build/esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_encrypted_partition.cpp.obj
+	modified:   build/esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_handle_locked.cpp.obj
+	modified:   build/esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_handle_simple.cpp.obj
+	modified:   build/esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_item_hash_list.cpp.obj
+	modified:   build/esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_page.cpp.obj
+	modified:   build/esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_pagemanager.cpp.obj
+	modified:   build/esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_partition.cpp.obj
+	modified:   build/esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_partition_lookup.cpp.obj
+	modified:   build/esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_partition_manager.cpp.obj
+	modified:   build/esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_storage.cpp.obj
+	modified:   build/esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_types.cpp.obj
+	modified:   build/esp-idf/nvs_flash/cmake_install.cmake
+	modified:   build/esp-idf/nvs_flash/libnvs_flash.a
+	modified:   build/esp-idf/nvs_sec_provider/CMakeFiles/__idf_nvs_sec_provider.dir/nvs_sec_provider.c.obj
+	modified:   build/esp-idf/nvs_sec_provider/cmake_install.cmake
+	modified:   build/esp-idf/nvs_sec_provider/libnvs_sec_provider.a
+	modified:   build/esp-idf/openthread/cmake_install.cmake
+	modified:   build/esp-idf/partition_table/cmake_install.cmake
+	modified:   build/esp-idf/partition_table/partition-table-flash_args.in
+	modified:   build/esp-idf/protobuf-c/CMakeFiles/__idf_protobuf-c.dir/protobuf-c/protobuf-c/protobuf-c.c.obj
+	modified:   build/esp-idf/protobuf-c/cmake_install.cmake
+	modified:   build/esp-idf/protobuf-c/libprotobuf-c.a
+	modified:   build/esp-idf/protocol_examples_common/CMakeFiles/__idf_protocol_examples_common.dir/addr_from_stdin.c.obj
+	modified:   build/esp-idf/protocol_examples_common/CMakeFiles/__idf_protocol_examples_common.dir/connect.c.obj
+	modified:   build/esp-idf/protocol_examples_common/CMakeFiles/__idf_protocol_examples_common.dir/console_cmd.c.obj
+	modified:   build/esp-idf/protocol_examples_common/CMakeFiles/__idf_protocol_examples_common.dir/protocol_examples_utils.c.obj
+	modified:   build/esp-idf/protocol_examples_common/CMakeFiles/__idf_protocol_examples_common.dir/stdin_out.c.obj
+	modified:   build/esp-idf/protocol_examples_common/CMakeFiles/__idf_protocol_examples_common.dir/wifi_connect.c.obj
+	modified:   build/esp-idf/protocol_examples_common/cmake_install.cmake
+	modified:   build/esp-idf/protocol_examples_common/libprotocol_examples_common.a
+	modified:   build/esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/constants.pb-c.c.obj
+	modified:   build/esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec0.pb-c.c.obj
+	modified:   build/esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec1.pb-c.c.obj
+	modified:   build/esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/sec2.pb-c.c.obj
+	modified:   build/esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/proto-c/session.pb-c.c.obj
+	modified:   build/esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/common/protocomm.c.obj
+	modified:   build/esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp.c.obj
+	modified:   build/esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/crypto/srp6a/esp_srp_mpi.c.obj
+	modified:   build/esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security0.c.obj
+	modified:   build/esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security1.c.obj
+	modified:   build/esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/security/security2.c.obj
+	modified:   build/esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_console.c.obj
+	modified:   build/esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/src/transports/protocomm_httpd.c.obj
+	modified:   build/esp-idf/protocomm/cmake_install.cmake
+	modified:   build/esp-idf/protocomm/libprotocomm.a
+	modified:   build/esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread.c.obj
+	modified:   build/esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_cond_var.c.obj
+	modified:   build/esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_local_storage.c.obj
+	modified:   build/esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_rwlock.c.obj
+	modified:   build/esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_semaphore.c.obj
+	modified:   build/esp-idf/pthread/cmake_install.cmake
+	modified:   build/esp-idf/pthread/libpthread.a
+	deleted:    build/esp-idf/riscv/CMakeFiles/__idf_riscv.dir/instruction_decode.c.obj
+	deleted:    build/esp-idf/riscv/CMakeFiles/__idf_riscv.dir/interrupt.c.obj
+	deleted:    build/esp-idf/riscv/CMakeFiles/__idf_riscv.dir/vectors.S.obj
+	deleted:    build/esp-idf/riscv/CMakeFiles/__idf_riscv.dir/vectors_intc.S.obj
+	deleted:    build/esp-idf/riscv/cmake_install.cmake
+	deleted:    build/esp-idf/riscv/libriscv.a
+	modified:   build/esp-idf/sdcard/CMakeFiles/__idf_sdcard.dir/sdcard.c.obj
+	modified:   build/esp-idf/sdcard/cmake_install.cmake
+	modified:   build/esp-idf/sdcard/libsdcard.a
+	modified:   build/esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_cmd.c.obj
+	modified:   build/esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_common.c.obj
+	modified:   build/esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_init.c.obj
+	modified:   build/esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_io.c.obj
+	modified:   build/esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_mmc.c.obj
+	modified:   build/esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_sd.c.obj
+	modified:   build/esp-idf/sdmmc/cmake_install.cmake
+	modified:   build/esp-idf/sdmmc/libsdmmc.a
+	modified:   build/esp-idf/soc/CMakeFiles/__idf_soc.dir/dport_access_common.c.obj
+	deleted:    build/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/adc_periph.c.obj
+	deleted:    build/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/dedic_gpio_periph.c.obj
+	deleted:    build/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/gdma_periph.c.obj
+	deleted:    build/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/gpio_periph.c.obj
+	deleted:    build/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/i2c_periph.c.obj
+	deleted:    build/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/i2s_periph.c.obj
+	deleted:    build/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/interrupts.c.obj
+	deleted:    build/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/ledc_periph.c.obj
+	deleted:    build/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/mpi_periph.c.obj
+	deleted:    build/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/rmt_periph.c.obj
+	deleted:    build/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/sdm_periph.c.obj
+	deleted:    build/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/spi_periph.c.obj
+	deleted:    build/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/temperature_sensor_periph.c.obj
+	deleted:    build/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/timer_periph.c.obj
+	deleted:    build/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/twai_periph.c.obj
+	deleted:    build/esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32c3/uart_periph.c.obj
+	modified:   build/esp-idf/soc/CMakeFiles/__idf_soc.dir/lldesc.c.obj
+	modified:   build/esp-idf/soc/cmake_install.cmake
+	modified:   build/esp-idf/soc/libsoc.a
+	modified:   build/esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/cache_utils.c.obj
+	modified:   build/esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/esp_flash_api.c.obj
+	modified:   build/esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/esp_flash_spi_init.c.obj
+	modified:   build/esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/flash_brownout_hook.c.obj
+	modified:   build/esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/flash_mmap.c.obj
+	modified:   build/esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/flash_ops.c.obj
+	modified:   build/esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/memspi_host_driver.c.obj
+	modified:   build/esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_chip_boya.c.obj
+	modified:   build/esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_chip_drivers.c.obj
+	modified:   build/esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_chip_gd.c.obj
+	modified:   build/esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_chip_generic.c.obj
+	modified:   build/esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_chip_issi.c.obj
+	modified:   build/esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_chip_mxic.c.obj
+	modified:   build/esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_chip_mxic_opi.c.obj
+	modified:   build/esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_chip_th.c.obj
+	modified:   build/esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_chip_winbond.c.obj
+	modified:   build/esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_os_func_app.c.obj
+	modified:   build/esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_os_func_noos.c.obj
+	modified:   build/esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_wrap.c.obj
+	modified:   build/esp-idf/spi_flash/cmake_install.cmake
+	modified:   build/esp-idf/spi_flash/libspi_flash.a
+	modified:   build/esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/esp_spiffs.c.obj
+	modified:   build/esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_cache.c.obj
+	modified:   build/esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_check.c.obj
+	modified:   build/esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_gc.c.obj
+	modified:   build/esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_hydrogen.c.obj
+	modified:   build/esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_nucleus.c.obj
+	modified:   build/esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs_api.c.obj
+	modified:   build/esp-idf/spiffs/cmake_install.cmake
+	modified:   build/esp-idf/spiffs/libspiffs.a
+	modified:   build/esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport.c.obj
+	modified:   build/esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_internal.c.obj
+	modified:   build/esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_socks_proxy.c.obj
+	modified:   build/esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_ssl.c.obj
+	modified:   build/esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport_ws.c.obj
+	modified:   build/esp-idf/tcp_transport/cmake_install.cmake
+	modified:   build/esp-idf/tcp_transport/libtcp_transport.a
+	modified:   build/esp-idf/ulp/cmake_install.cmake
+	modified:   build/esp-idf/unity/CMakeFiles/__idf_unity.dir/port/esp/unity_utils_memory_esp.c.obj
+	modified:   build/esp-idf/unity/CMakeFiles/__idf_unity.dir/unity/src/unity.c.obj
+	modified:   build/esp-idf/unity/CMakeFiles/__idf_unity.dir/unity_compat.c.obj
+	modified:   build/esp-idf/unity/CMakeFiles/__idf_unity.dir/unity_port_esp32.c.obj
+	modified:   build/esp-idf/unity/CMakeFiles/__idf_unity.dir/unity_runner.c.obj
+	modified:   build/esp-idf/unity/CMakeFiles/__idf_unity.dir/unity_utils_cache.c.obj
+	modified:   build/esp-idf/unity/CMakeFiles/__idf_unity.dir/unity_utils_freertos.c.obj
+	modified:   build/esp-idf/unity/CMakeFiles/__idf_unity.dir/unity_utils_memory.c.obj
+	modified:   build/esp-idf/unity/cmake_install.cmake
+	modified:   build/esp-idf/unity/libunity.a
+	modified:   build/esp-idf/usb/cmake_install.cmake
+	modified:   build/esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs.c.obj
+	deleted:    build/esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_console.c.obj
+	modified:   build/esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_eventfd.c.obj
+	modified:   build/esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_semihost.c.obj
+	deleted:    build/esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_uart.c.obj
+	deleted:    build/esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_usb_serial_jtag.c.obj
+	modified:   build/esp-idf/vfs/cmake_install.cmake
+	modified:   build/esp-idf/vfs/libvfs.a
+	modified:   build/esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/Partition.cpp.obj
+	modified:   build/esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/SPI_Flash.cpp.obj
+	modified:   build/esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/WL_Ext_Perf.cpp.obj
+	modified:   build/esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/WL_Ext_Safe.cpp.obj
+	modified:   build/esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/WL_Flash.cpp.obj
+	modified:   build/esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/crc32.cpp.obj
+	modified:   build/esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/wear_levelling.cpp.obj
+	modified:   build/esp-idf/wear_levelling/cmake_install.cmake
+	modified:   build/esp-idf/wear_levelling/libwear_levelling.a
+	modified:   build/esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_config.pb-c.c.obj
+	modified:   build/esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_constants.pb-c.c.obj
+	modified:   build/esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_ctrl.pb-c.c.obj
+	modified:   build/esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_scan.pb-c.c.obj
+	modified:   build/esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/handlers.c.obj
+	modified:   build/esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/manager.c.obj
+	modified:   build/esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/scheme_console.c.obj
+	modified:   build/esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/scheme_softap.c.obj
+	modified:   build/esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/wifi_config.c.obj
+	modified:   build/esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/wifi_ctrl.c.obj
+	modified:   build/esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/wifi_scan.c.obj
+	modified:   build/esp-idf/wifi_provisioning/cmake_install.cmake
+	modified:   build/esp-idf/wifi_provisioning/libwifi_provisioning.a
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/crypto/crypto_mbedtls-bignum.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/crypto/crypto_mbedtls-ec.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/crypto/crypto_mbedtls-rsa.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/crypto/crypto_mbedtls.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/crypto/fastpbkdf2.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/crypto/tls_mbedtls.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/esp_common.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/esp_eap_client.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/esp_hostap.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/esp_owe.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/esp_wpa2_api_port.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/esp_wpa3.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/esp_wpa_main.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/esp_wpas_glue.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/esp_wps.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/port/eloop.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/port/os_xtensa.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/ap_config.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/comeback_token.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/ieee802_11.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/ieee802_1x.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/pmksa_cache_auth.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/sta_info.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/wpa_auth.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/wpa_auth_ie.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/common/dragonfly.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/common/ieee802_11_common.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/common/sae.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/common/sae_pk.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/common/wpa_common.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/aes-ccm.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/aes-gcm.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/aes-siv.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/aes-unwrap.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/aes-wrap.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/ccmp.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/crypto_ops.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/des-internal.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/dh_group5.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/dh_groups.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/md4-internal.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/ms_funcs.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/rc4.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha1-prf.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha1-tlsprf.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha1-tprf.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha256-kdf.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha256-prf.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha256-tlsprf.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha384-prf.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha384-tlsprf.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_common/eap_wsc_common.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/chap.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_common.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_fast.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_fast_common.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_fast_pac.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_mschapv2.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_peap.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_peap_common.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_tls.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_tls_common.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_ttls.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/mschapv2.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/rsn_supp/pmksa_cache.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/rsn_supp/wpa.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/rsn_supp/wpa_ie.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/base64.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/bitfield.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/common.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/ext_password.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/json.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/uuid.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/wpa_debug.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/wpabuf.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_attr_build.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_attr_parse.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_attr_process.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_common.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_dev_attr.c.obj
+	modified:   build/esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_enrollee.c.obj
+	modified:   build/esp-idf/wpa_supplicant/cmake_install.cmake
+	modified:   build/esp-idf/wpa_supplicant/libwpa_supplicant.a
+	modified:   build/flash_app_args
+	modified:   build/flash_args
+	modified:   build/flash_args.in
+	modified:   build/flash_bootloader_args
+	modified:   build/flash_project_args
+	modified:   build/flasher_args.json
+	modified:   build/kconfigs.in
+	modified:   build/kconfigs_projbuild.in
+	modified:   build/ldgen_libraries
+	modified:   build/ldgen_libraries.in
+	deleted:    build/log/idf_py_stderr_output_101238
+	deleted:    build/log/idf_py_stderr_output_101251
+	deleted:    build/log/idf_py_stderr_output_101414
+	deleted:    build/log/idf_py_stderr_output_101579
+	deleted:    build/log/idf_py_stderr_output_102163
+	deleted:    build/log/idf_py_stderr_output_102372
+	deleted:    build/log/idf_py_stderr_output_102484
+	deleted:    build/log/idf_py_stderr_output_102686
+	deleted:    build/log/idf_py_stderr_output_102828
+	deleted:    build/log/idf_py_stderr_output_102848
+	deleted:    build/log/idf_py_stderr_output_103054
+	deleted:    build/log/idf_py_stderr_output_103162
+	deleted:    build/log/idf_py_stderr_output_103471
+	deleted:    build/log/idf_py_stderr_output_107584
+	deleted:    build/log/idf_py_stderr_output_107797
+	deleted:    build/log/idf_py_stderr_output_107913
+	deleted:    build/log/idf_py_stderr_output_108083
+	deleted:    build/log/idf_py_stderr_output_108191
+	deleted:    build/log/idf_py_stderr_output_109379
+	deleted:    build/log/idf_py_stderr_output_109605
+	deleted:    build/log/idf_py_stderr_output_109721
+	deleted:    build/log/idf_py_stderr_output_110072
+	deleted:    build/log/idf_py_stderr_output_110193
+	deleted:    build/log/idf_py_stderr_output_110206
+	deleted:    build/log/idf_py_stderr_output_110369
+	deleted:    build/log/idf_py_stderr_output_110477
+	deleted:    build/log/idf_py_stderr_output_110854
+	deleted:    build/log/idf_py_stderr_output_114966
+	deleted:    build/log/idf_py_stderr_output_115217
+	deleted:    build/log/idf_py_stderr_output_115325
+	deleted:    build/log/idf_py_stderr_output_115928
+	deleted:    build/log/idf_py_stderr_output_116036
+	deleted:    build/log/idf_py_stderr_output_116729
+	deleted:    build/log/idf_py_stderr_output_116858
+	deleted:    build/log/idf_py_stderr_output_116871
+	deleted:    build/log/idf_py_stderr_output_117560
+	deleted:    build/log/idf_py_stderr_output_117632
+	deleted:    build/log/idf_py_stderr_output_117679
+	deleted:    build/log/idf_py_stderr_output_117806
+	deleted:    build/log/idf_py_stderr_output_117981
+	deleted:    build/log/idf_py_stderr_output_118125
+	deleted:    build/log/idf_py_stderr_output_123437
+	deleted:    build/log/idf_py_stderr_output_123553
+	deleted:    build/log/idf_py_stderr_output_12357
+	deleted:    build/log/idf_py_stderr_output_123716
+	deleted:    build/log/idf_py_stderr_output_123824
+	deleted:    build/log/idf_py_stderr_output_124005
+	deleted:    build/log/idf_py_stderr_output_124113
+	deleted:    build/log/idf_py_stderr_output_124286
+	deleted:    build/log/idf_py_stderr_output_124395
+	deleted:    build/log/idf_py_stderr_output_124602
+	deleted:    build/log/idf_py_stderr_output_124858
+	deleted:    build/log/idf_py_stderr_output_124929
+	deleted:    build/log/idf_py_stderr_output_125186
+	deleted:    build/log/idf_py_stderr_output_125236
+	deleted:    build/log/idf_py_stderr_output_125286
+	deleted:    build/log/idf_py_stderr_output_125309
+	deleted:    build/log/idf_py_stderr_output_125351
+	deleted:    build/log/idf_py_stderr_output_125463
+	deleted:    build/log/idf_py_stderr_output_125706
+	deleted:    build/log/idf_py_stderr_output_125760
+	deleted:    build/log/idf_py_stderr_output_125868
+	deleted:    build/log/idf_py_stderr_output_126176
+	deleted:    build/log/idf_py_stderr_output_126677
+	deleted:    build/log/idf_py_stderr_output_126810
+	deleted:    build/log/idf_py_stderr_output_127071
+	deleted:    build/log/idf_py_stderr_output_127143
+	deleted:    build/log/idf_py_stderr_output_127218
+	deleted:    build/log/idf_py_stderr_output_12744
+	deleted:    build/log/idf_py_stderr_output_127509
+	deleted:    build/log/idf_py_stderr_output_128313
+	deleted:    build/log/idf_py_stderr_output_128635
+	deleted:    build/log/idf_py_stderr_output_128743
+	deleted:    build/log/idf_py_stderr_output_128935
+	deleted:    build/log/idf_py_stderr_output_129043
+	deleted:    build/log/idf_py_stderr_output_129256
+	deleted:    build/log/idf_py_stderr_output_129365
+	deleted:    build/log/idf_py_stderr_output_129605
+	deleted:    build/log/idf_py_stderr_output_129749
+	deleted:    build/log/idf_py_stderr_output_129953
+	deleted:    build/log/idf_py_stderr_output_130069
+	deleted:    build/log/idf_py_stderr_output_130258
+	deleted:    build/log/idf_py_stderr_output_130332
+	deleted:    build/log/idf_py_stderr_output_134674
+	deleted:    build/log/idf_py_stderr_output_134826
+	deleted:    build/log/idf_py_stderr_output_135025
+	deleted:    build/log/idf_py_stderr_output_13773
+	deleted:    build/log/idf_py_stderr_output_13929
+	deleted:    build/log/idf_py_stderr_output_139502
+	deleted:    build/log/idf_py_stderr_output_139515
+	deleted:    build/log/idf_py_stderr_output_139701
+	deleted:    build/log/idf_py_stderr_output_139775
+	deleted:    build/log/idf_py_stderr_output_140255
+	deleted:    build/log/idf_py_stderr_output_140312
+	deleted:    build/log/idf_py_stderr_output_140428
+	deleted:    build/log/idf_py_stderr_output_140611
+	deleted:    build/log/idf_py_stderr_output_140645
+	deleted:    build/log/idf_py_stderr_output_140692
+	deleted:    build/log/idf_py_stderr_output_141318
+	deleted:    build/log/idf_py_stderr_output_141438
+	deleted:    build/log/idf_py_stderr_output_141625
+	deleted:    build/log/idf_py_stderr_output_141733
+	deleted:    build/log/idf_py_stderr_output_141930
+	deleted:    build/log/idf_py_stderr_output_142038
+	deleted:    build/log/idf_py_stderr_output_142218
+	deleted:    build/log/idf_py_stderr_output_142382
+	deleted:    build/log/idf_py_stderr_output_142490
+	deleted:    build/log/idf_py_stderr_output_142887
+	deleted:    build/log/idf_py_stderr_output_142995
+	deleted:    build/log/idf_py_stderr_output_143197
+	deleted:    build/log/idf_py_stderr_output_143305
+	deleted:    build/log/idf_py_stderr_output_143492
+	deleted:    build/log/idf_py_stderr_output_143600
+	deleted:    build/log/idf_py_stderr_output_143807
+	deleted:    build/log/idf_py_stderr_output_143915
+	deleted:    build/log/idf_py_stderr_output_144127
+	deleted:    build/log/idf_py_stderr_output_144167
+	deleted:    build/log/idf_py_stderr_output_144221
+	deleted:    build/log/idf_py_stderr_output_144342
+	deleted:    build/log/idf_py_stderr_output_144355
+	deleted:    build/log/idf_py_stderr_output_145748
+	deleted:    build/log/idf_py_stderr_output_150183
+	deleted:    build/log/idf_py_stderr_output_150665
+	deleted:    build/log/idf_py_stderr_output_155085
+	deleted:    build/log/idf_py_stderr_output_156724
+	deleted:    build/log/idf_py_stderr_output_157237
+	deleted:    build/log/idf_py_stderr_output_157763
+	deleted:    build/log/idf_py_stderr_output_157871
+	deleted:    build/log/idf_py_stderr_output_158396
+	deleted:    build/log/idf_py_stderr_output_158504
+	deleted:    build/log/idf_py_stderr_output_158899
+	deleted:    build/log/idf_py_stderr_output_159007
+	deleted:    build/log/idf_py_stderr_output_160382
+	deleted:    build/log/idf_py_stderr_output_160503
+	deleted:    build/log/idf_py_stderr_output_160516
+	deleted:    build/log/idf_py_stderr_output_16816
+	deleted:    build/log/idf_py_stderr_output_17347
+	deleted:    build/log/idf_py_stderr_output_17458
+	deleted:    build/log/idf_py_stderr_output_17495
+	deleted:    build/log/idf_py_stderr_output_17570
+	deleted:    build/log/idf_py_stderr_output_17635
+	deleted:    build/log/idf_py_stderr_output_17992
+	deleted:    build/log/idf_py_stderr_output_18027
+	deleted:    build/log/idf_py_stderr_output_18143
+	deleted:    build/log/idf_py_stderr_output_18272
+	deleted:    build/log/idf_py_stderr_output_18285
+	deleted:    build/log/idf_py_stderr_output_18470
+	deleted:    build/log/idf_py_stderr_output_18574
+	deleted:    build/log/idf_py_stderr_output_18577
+	deleted:    build/log/idf_py_stderr_output_18602
+	deleted:    build/log/idf_py_stderr_output_18615
+	deleted:    build/log/idf_py_stderr_output_18876
+	deleted:    build/log/idf_py_stderr_output_18951
+	deleted:    build/log/idf_py_stderr_output_18975
+	deleted:    build/log/idf_py_stderr_output_19912
+	deleted:    build/log/idf_py_stderr_output_20450
+	deleted:    build/log/idf_py_stderr_output_22932
+	deleted:    build/log/idf_py_stderr_output_23019
+	deleted:    build/log/idf_py_stderr_output_23109
+	deleted:    build/log/idf_py_stderr_output_23242
+	deleted:    build/log/idf_py_stderr_output_23255
+	deleted:    build/log/idf_py_stderr_output_23390
+	deleted:    build/log/idf_py_stderr_output_23440
+	deleted:    build/log/idf_py_stderr_output_23566
+	deleted:    build/log/idf_py_stderr_output_25434
+	deleted:    build/log/idf_py_stderr_output_25447
+	deleted:    build/log/idf_py_stderr_output_26023
+	deleted:    build/log/idf_py_stderr_output_26144
+	deleted:    build/log/idf_py_stderr_output_26157
+	deleted:    build/log/idf_py_stderr_output_26522
+	deleted:    build/log/idf_py_stderr_output_26630
+	deleted:    build/log/idf_py_stderr_output_26751
+	deleted:    build/log/idf_py_stderr_output_26778
+	deleted:    build/log/idf_py_stderr_output_26791
+	deleted:    build/log/idf_py_stderr_output_26814
+	deleted:    build/log/idf_py_stderr_output_26820
+	deleted:    build/log/idf_py_stderr_output_26858
+	deleted:    build/log/idf_py_stderr_output_26859
+	deleted:    build/log/idf_py_stderr_output_26891
+	deleted:    build/log/idf_py_stderr_output_26979
+	deleted:    build/log/idf_py_stderr_output_26998
+	deleted:    build/log/idf_py_stderr_output_27005
+	deleted:    build/log/idf_py_stderr_output_27018
+	deleted:    build/log/idf_py_stderr_output_27351
+	deleted:    build/log/idf_py_stderr_output_27458
+	deleted:    build/log/idf_py_stderr_output_27537
+	deleted:    build/log/idf_py_stderr_output_27675
+	deleted:    build/log/idf_py_stderr_output_28407
+	deleted:    build/log/idf_py_stderr_output_28560
+	deleted:    build/log/idf_py_stderr_output_28659
+	deleted:    build/log/idf_py_stderr_output_28722
+	deleted:    build/log/idf_py_stderr_output_32688
+	deleted:    build/log/idf_py_stderr_output_32755
+	deleted:    build/log/idf_py_stderr_output_32814
+	deleted:    build/log/idf_py_stderr_output_32947
+	deleted:    build/log/idf_py_stderr_output_3308
+	deleted:    build/log/idf_py_stderr_output_33152
+	deleted:    build/log/idf_py_stderr_output_33260
+	deleted:    build/log/idf_py_stderr_output_33457
+	deleted:    build/log/idf_py_stderr_output_33637
+	deleted:    build/log/idf_py_stderr_output_33794
+	deleted:    build/log/idf_py_stderr_output_33910
+	deleted:    build/log/idf_py_stderr_output_34111
+	deleted:    build/log/idf_py_stderr_output_34219
+	deleted:    build/log/idf_py_stderr_output_34387
+	deleted:    build/log/idf_py_stderr_output_34413
+	deleted:    build/log/idf_py_stderr_output_34426
+	deleted:    build/log/idf_py_stderr_output_34774
+	deleted:    build/log/idf_py_stderr_output_35114
+	deleted:    build/log/idf_py_stderr_output_3871
+	deleted:    build/log/idf_py_stderr_output_39210
+	deleted:    build/log/idf_py_stderr_output_39223
+	deleted:    build/log/idf_py_stderr_output_39802
+	deleted:    build/log/idf_py_stderr_output_4311
+	deleted:    build/log/idf_py_stderr_output_4337
+	deleted:    build/log/idf_py_stderr_output_44147
+	deleted:    build/log/idf_py_stderr_output_4459
+	deleted:    build/log/idf_py_stderr_output_4854
+	deleted:    build/log/idf_py_stderr_output_5936
+	deleted:    build/log/idf_py_stderr_output_6396
+	deleted:    build/log/idf_py_stderr_output_6422
+	deleted:    build/log/idf_py_stderr_output_7123
+	deleted:    build/log/idf_py_stderr_output_7241
+	deleted:    build/log/idf_py_stderr_output_7711
+	deleted:    build/log/idf_py_stderr_output_7862
+	deleted:    build/log/idf_py_stderr_output_7902
+	deleted:    build/log/idf_py_stderr_output_7920
+	deleted:    build/log/idf_py_stderr_output_8262
+	deleted:    build/log/idf_py_stderr_output_92484
+	deleted:    build/log/idf_py_stderr_output_9454
+	deleted:    build/log/idf_py_stderr_output_9481
+	deleted:    build/log/idf_py_stderr_output_9494
+	deleted:    build/log/idf_py_stderr_output_96538
+	deleted:    build/log/idf_py_stderr_output_9675
+	deleted:    build/log/idf_py_stderr_output_97173
+	deleted:    build/log/idf_py_stdout_output_101238
+	deleted:    build/log/idf_py_stdout_output_101251
+	deleted:    build/log/idf_py_stdout_output_101414
+	deleted:    build/log/idf_py_stdout_output_101579
+	deleted:    build/log/idf_py_stdout_output_102163
+	deleted:    build/log/idf_py_stdout_output_102372
+	deleted:    build/log/idf_py_stdout_output_102484
+	deleted:    build/log/idf_py_stdout_output_102686
+	deleted:    build/log/idf_py_stdout_output_102828
+	deleted:    build/log/idf_py_stdout_output_102848
+	deleted:    build/log/idf_py_stdout_output_103054
+	deleted:    build/log/idf_py_stdout_output_103162
+	deleted:    build/log/idf_py_stdout_output_103471
+	deleted:    build/log/idf_py_stdout_output_107584
+	deleted:    build/log/idf_py_stdout_output_107797
+	deleted:    build/log/idf_py_stdout_output_107913
+	deleted:    build/log/idf_py_stdout_output_108083
+	deleted:    build/log/idf_py_stdout_output_108191
+	deleted:    build/log/idf_py_stdout_output_109379
+	deleted:    build/log/idf_py_stdout_output_109605
+	deleted:    build/log/idf_py_stdout_output_109721
+	deleted:    build/log/idf_py_stdout_output_110072
+	deleted:    build/log/idf_py_stdout_output_110193
+	deleted:    build/log/idf_py_stdout_output_110206
+	deleted:    build/log/idf_py_stdout_output_110369
+	deleted:    build/log/idf_py_stdout_output_110477
+	deleted:    build/log/idf_py_stdout_output_110854
+	deleted:    build/log/idf_py_stdout_output_114966
+	deleted:    build/log/idf_py_stdout_output_115217
+	deleted:    build/log/idf_py_stdout_output_115325
+	deleted:    build/log/idf_py_stdout_output_115928
+	deleted:    build/log/idf_py_stdout_output_116036
+	deleted:    build/log/idf_py_stdout_output_116729
+	deleted:    build/log/idf_py_stdout_output_116858
+	deleted:    build/log/idf_py_stdout_output_116871
+	deleted:    build/log/idf_py_stdout_output_117560
+	deleted:    build/log/idf_py_stdout_output_117632
+	deleted:    build/log/idf_py_stdout_output_117679
+	deleted:    build/log/idf_py_stdout_output_117806
+	deleted:    build/log/idf_py_stdout_output_117981
+	deleted:    build/log/idf_py_stdout_output_118125
+	deleted:    build/log/idf_py_stdout_output_123437
+	deleted:    build/log/idf_py_stdout_output_123553
+	deleted:    build/log/idf_py_stdout_output_12357
+	deleted:    build/log/idf_py_stdout_output_123716
+	deleted:    build/log/idf_py_stdout_output_123824
+	deleted:    build/log/idf_py_stdout_output_124005
+	deleted:    build/log/idf_py_stdout_output_124113
+	deleted:    build/log/idf_py_stdout_output_124286
+	deleted:    build/log/idf_py_stdout_output_124395
+	deleted:    build/log/idf_py_stdout_output_124602
+	deleted:    build/log/idf_py_stdout_output_124858
+	deleted:    build/log/idf_py_stdout_output_124929
+	deleted:    build/log/idf_py_stdout_output_125186
+	deleted:    build/log/idf_py_stdout_output_125236
+	deleted:    build/log/idf_py_stdout_output_125286
+	deleted:    build/log/idf_py_stdout_output_125309
+	deleted:    build/log/idf_py_stdout_output_125351
+	deleted:    build/log/idf_py_stdout_output_125463
+	deleted:    build/log/idf_py_stdout_output_125706
+	deleted:    build/log/idf_py_stdout_output_125760
+	deleted:    build/log/idf_py_stdout_output_125868
+	deleted:    build/log/idf_py_stdout_output_126176
+	deleted:    build/log/idf_py_stdout_output_126677
+	deleted:    build/log/idf_py_stdout_output_126810
+	deleted:    build/log/idf_py_stdout_output_127071
+	deleted:    build/log/idf_py_stdout_output_127143
+	deleted:    build/log/idf_py_stdout_output_127218
+	deleted:    build/log/idf_py_stdout_output_12744
+	deleted:    build/log/idf_py_stdout_output_127509
+	deleted:    build/log/idf_py_stdout_output_128313
+	deleted:    build/log/idf_py_stdout_output_128635
+	deleted:    build/log/idf_py_stdout_output_128743
+	deleted:    build/log/idf_py_stdout_output_128935
+	deleted:    build/log/idf_py_stdout_output_129043
+	deleted:    build/log/idf_py_stdout_output_129256
+	deleted:    build/log/idf_py_stdout_output_129365
+	deleted:    build/log/idf_py_stdout_output_129605
+	deleted:    build/log/idf_py_stdout_output_129749
+	deleted:    build/log/idf_py_stdout_output_129953
+	deleted:    build/log/idf_py_stdout_output_130069
+	deleted:    build/log/idf_py_stdout_output_130258
+	deleted:    build/log/idf_py_stdout_output_130332
+	deleted:    build/log/idf_py_stdout_output_134674
+	deleted:    build/log/idf_py_stdout_output_134826
+	deleted:    build/log/idf_py_stdout_output_135025
+	deleted:    build/log/idf_py_stdout_output_13773
+	deleted:    build/log/idf_py_stdout_output_13929
+	deleted:    build/log/idf_py_stdout_output_139502
+	deleted:    build/log/idf_py_stdout_output_139515
+	deleted:    build/log/idf_py_stdout_output_139701
+	deleted:    build/log/idf_py_stdout_output_139775
+	deleted:    build/log/idf_py_stdout_output_140255
+	deleted:    build/log/idf_py_stdout_output_140312
+	deleted:    build/log/idf_py_stdout_output_140428
+	deleted:    build/log/idf_py_stdout_output_140611
+	deleted:    build/log/idf_py_stdout_output_140645
+	deleted:    build/log/idf_py_stdout_output_140692
+	deleted:    build/log/idf_py_stdout_output_141318
+	deleted:    build/log/idf_py_stdout_output_141438
+	deleted:    build/log/idf_py_stdout_output_141625
+	deleted:    build/log/idf_py_stdout_output_141733
+	deleted:    build/log/idf_py_stdout_output_141930
+	deleted:    build/log/idf_py_stdout_output_142038
+	deleted:    build/log/idf_py_stdout_output_142218
+	deleted:    build/log/idf_py_stdout_output_142382
+	deleted:    build/log/idf_py_stdout_output_142490
+	deleted:    build/log/idf_py_stdout_output_142887
+	deleted:    build/log/idf_py_stdout_output_142995
+	deleted:    build/log/idf_py_stdout_output_143197
+	deleted:    build/log/idf_py_stdout_output_143305
+	deleted:    build/log/idf_py_stdout_output_143492
+	deleted:    build/log/idf_py_stdout_output_143600
+	deleted:    build/log/idf_py_stdout_output_143807
+	deleted:    build/log/idf_py_stdout_output_143915
+	deleted:    build/log/idf_py_stdout_output_144127
+	deleted:    build/log/idf_py_stdout_output_144167
+	deleted:    build/log/idf_py_stdout_output_144221
+	deleted:    build/log/idf_py_stdout_output_144342
+	deleted:    build/log/idf_py_stdout_output_144355
+	deleted:    build/log/idf_py_stdout_output_145748
+	deleted:    build/log/idf_py_stdout_output_150183
+	deleted:    build/log/idf_py_stdout_output_150665
+	deleted:    build/log/idf_py_stdout_output_155085
+	deleted:    build/log/idf_py_stdout_output_156724
+	deleted:    build/log/idf_py_stdout_output_157237
+	deleted:    build/log/idf_py_stdout_output_157763
+	deleted:    build/log/idf_py_stdout_output_157871
+	deleted:    build/log/idf_py_stdout_output_158396
+	deleted:    build/log/idf_py_stdout_output_158504
+	deleted:    build/log/idf_py_stdout_output_158899
+	deleted:    build/log/idf_py_stdout_output_159007
+	deleted:    build/log/idf_py_stdout_output_160382
+	deleted:    build/log/idf_py_stdout_output_160503
+	deleted:    build/log/idf_py_stdout_output_160516
+	deleted:    build/log/idf_py_stdout_output_16816
+	deleted:    build/log/idf_py_stdout_output_17347
+	deleted:    build/log/idf_py_stdout_output_17458
+	deleted:    build/log/idf_py_stdout_output_17495
+	deleted:    build/log/idf_py_stdout_output_17570
+	deleted:    build/log/idf_py_stdout_output_17635
+	deleted:    build/log/idf_py_stdout_output_17992
+	deleted:    build/log/idf_py_stdout_output_18027
+	deleted:    build/log/idf_py_stdout_output_18143
+	deleted:    build/log/idf_py_stdout_output_18272
+	deleted:    build/log/idf_py_stdout_output_18285
+	deleted:    build/log/idf_py_stdout_output_18470
+	deleted:    build/log/idf_py_stdout_output_18574
+	deleted:    build/log/idf_py_stdout_output_18577
+	deleted:    build/log/idf_py_stdout_output_18602
+	deleted:    build/log/idf_py_stdout_output_18615
+	deleted:    build/log/idf_py_stdout_output_18876
+	deleted:    build/log/idf_py_stdout_output_18951
+	deleted:    build/log/idf_py_stdout_output_18975
+	deleted:    build/log/idf_py_stdout_output_19912
+	deleted:    build/log/idf_py_stdout_output_20450
+	deleted:    build/log/idf_py_stdout_output_22932
+	deleted:    build/log/idf_py_stdout_output_23019
+	deleted:    build/log/idf_py_stdout_output_23109
+	deleted:    build/log/idf_py_stdout_output_23242
+	deleted:    build/log/idf_py_stdout_output_23255
+	deleted:    build/log/idf_py_stdout_output_23390
+	deleted:    build/log/idf_py_stdout_output_23440
+	deleted:    build/log/idf_py_stdout_output_23566
+	deleted:    build/log/idf_py_stdout_output_25434
+	deleted:    build/log/idf_py_stdout_output_25447
+	deleted:    build/log/idf_py_stdout_output_26023
+	deleted:    build/log/idf_py_stdout_output_26144
+	deleted:    build/log/idf_py_stdout_output_26157
+	deleted:    build/log/idf_py_stdout_output_26522
+	deleted:    build/log/idf_py_stdout_output_26630
+	deleted:    build/log/idf_py_stdout_output_26751
+	deleted:    build/log/idf_py_stdout_output_26778
+	deleted:    build/log/idf_py_stdout_output_26791
+	deleted:    build/log/idf_py_stdout_output_26814
+	deleted:    build/log/idf_py_stdout_output_26820
+	deleted:    build/log/idf_py_stdout_output_26858
+	deleted:    build/log/idf_py_stdout_output_26859
+	deleted:    build/log/idf_py_stdout_output_26891
+	deleted:    build/log/idf_py_stdout_output_26979
+	deleted:    build/log/idf_py_stdout_output_26998
+	deleted:    build/log/idf_py_stdout_output_27005
+	deleted:    build/log/idf_py_stdout_output_27018
+	deleted:    build/log/idf_py_stdout_output_27351
+	deleted:    build/log/idf_py_stdout_output_27458
+	deleted:    build/log/idf_py_stdout_output_27537
+	deleted:    build/log/idf_py_stdout_output_27675
+	deleted:    build/log/idf_py_stdout_output_28407
+	deleted:    build/log/idf_py_stdout_output_28560
+	deleted:    build/log/idf_py_stdout_output_28659
+	deleted:    build/log/idf_py_stdout_output_28722
+	deleted:    build/log/idf_py_stdout_output_32688
+	deleted:    build/log/idf_py_stdout_output_32755
+	deleted:    build/log/idf_py_stdout_output_32814
+	deleted:    build/log/idf_py_stdout_output_32947
+	deleted:    build/log/idf_py_stdout_output_3308
+	deleted:    build/log/idf_py_stdout_output_33152
+	deleted:    build/log/idf_py_stdout_output_33260
+	deleted:    build/log/idf_py_stdout_output_33457
+	deleted:    build/log/idf_py_stdout_output_33637
+	deleted:    build/log/idf_py_stdout_output_33794
+	deleted:    build/log/idf_py_stdout_output_33910
+	deleted:    build/log/idf_py_stdout_output_34111
+	deleted:    build/log/idf_py_stdout_output_34219
+	deleted:    build/log/idf_py_stdout_output_34387
+	deleted:    build/log/idf_py_stdout_output_34413
+	deleted:    build/log/idf_py_stdout_output_34426
+	deleted:    build/log/idf_py_stdout_output_34774
+	deleted:    build/log/idf_py_stdout_output_35114
+	deleted:    build/log/idf_py_stdout_output_3871
+	deleted:    build/log/idf_py_stdout_output_39210
+	deleted:    build/log/idf_py_stdout_output_39223
+	deleted:    build/log/idf_py_stdout_output_39802
+	deleted:    build/log/idf_py_stdout_output_4311
+	deleted:    build/log/idf_py_stdout_output_4337
+	deleted:    build/log/idf_py_stdout_output_44147
+	deleted:    build/log/idf_py_stdout_output_4459
+	deleted:    build/log/idf_py_stdout_output_4854
+	deleted:    build/log/idf_py_stdout_output_5936
+	deleted:    build/log/idf_py_stdout_output_6396
+	deleted:    build/log/idf_py_stdout_output_6422
+	deleted:    build/log/idf_py_stdout_output_7123
+	deleted:    build/log/idf_py_stdout_output_7241
+	deleted:    build/log/idf_py_stdout_output_7711
+	deleted:    build/log/idf_py_stdout_output_7862
+	deleted:    build/log/idf_py_stdout_output_7902
+	deleted:    build/log/idf_py_stdout_output_7920
+	deleted:    build/log/idf_py_stdout_output_8262
+	deleted:    build/log/idf_py_stdout_output_92484
+	deleted:    build/log/idf_py_stdout_output_9454
+	deleted:    build/log/idf_py_stdout_output_9481
+	deleted:    build/log/idf_py_stdout_output_9494
+	deleted:    build/log/idf_py_stdout_output_96538
+	deleted:    build/log/idf_py_stdout_output_9675
+	deleted:    build/log/idf_py_stdout_output_97173
+	modified:   build/partition-table-flash_args
+	modified:   build/project_description.json
+	deleted:    build/project_elf_src_esp32c3.c
+	modified:   build/x509_crt_bundle.S
+	modified:   components/gps/gps.c
+	modified:   components/gps/include/gps.h
+	modified:   components/sdcard/sdcard.c
+	modified:   main/main.c
+	modified:   sdkconfig
+	modified:   sdkconfig.old
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	build/bootloader/esp-idf/esp_hw_support/lowpower/
+	build/bootloader/esp-idf/esp_hw_support/port/esp32s3/
+	build/bootloader/esp-idf/xtensa/
+	build/bootloader/project_elf_src_esp32s3.c
+	build/esp-idf/esp_driver_cam/
+	build/esp-idf/esp_driver_i2c/
+	build/esp-idf/esp_driver_isp/
+	build/esp-idf/esp_driver_jpeg/
+	build/esp-idf/esp_driver_ledc/
+	build/esp-idf/esp_driver_parlio/
+	build/esp-idf/esp_driver_ppa/
+	build/esp-idf/esp_driver_touch_sens/
+	build/esp-idf/esp_driver_uart/
+	build/esp-idf/esp_driver_usb_serial_jtag/
+	build/esp-idf/esp_hw_support/lowpower/
+	build/esp-idf/esp_hw_support/port/esp32s3/
+	build/esp-idf/esp_system/ld/linker_script_generator.cmake
+	build/esp-idf/esp_system/ld/sections.ld.in
+	build/esp-idf/esp_system/port/soc/esp32s3/
+	build/esp-idf/esp_vfs_console/
+	build/esp-idf/mbedtls/mbedtls/pkgconfig/
+	build/esp-idf/perfmon/
+	build/esp-idf/touch_element/
+	build/esp-idf/xtensa/
+	build/log/idf_py_stderr_output_100127
+	build/log/idf_py_stderr_output_11857
+	build/log/idf_py_stderr_output_11996
+	build/log/idf_py_stderr_output_12009
+	build/log/idf_py_stderr_output_12766
+	build/log/idf_py_stderr_output_12885
+	build/log/idf_py_stderr_output_12897
+	build/log/idf_py_stderr_output_140180
+	build/log/idf_py_stderr_output_140231
+	build/log/idf_py_stderr_output_140246
+	build/log/idf_py_stderr_output_144438
+	build/log/idf_py_stderr_output_144570
+	build/log/idf_py_stderr_output_144728
+	build/log/idf_py_stderr_output_144741
+	build/log/idf_py_stderr_output_159381
+	build/log/idf_py_stderr_output_159503
+	build/log/idf_py_stderr_output_159515
+	build/log/idf_py_stderr_output_22431
+	build/log/idf_py_stderr_output_251723
+	build/log/idf_py_stderr_output_251761
+	build/log/idf_py_stderr_output_251816
+	build/log/idf_py_stderr_output_251958
+	build/log/idf_py_stderr_output_251972
+	build/log/idf_py_stderr_output_26933
+	build/log/idf_py_stderr_output_26952
+	build/log/idf_py_stderr_output_27144
+	build/log/idf_py_stderr_output_27264
+	build/log/idf_py_stderr_output_27277
+	build/log/idf_py_stderr_output_27473
+	build/log/idf_py_stderr_output_27596
+	build/log/idf_py_stderr_output_27623
+	build/log/idf_py_stderr_output_27932
+	build/log/idf_py_stderr_output_28083
+	build/log/idf_py_stderr_output_28623
+	build/log/idf_py_stderr_output_28669
+	build/log/idf_py_stderr_output_28692
+	build/log/idf_py_stderr_output_28721
+	build/log/idf_py_stderr_output_29351
+	build/log/idf_py_stderr_output_29483
+	build/log/idf_py_stderr_output_29495
+	build/log/idf_py_stderr_output_30770
+	build/log/idf_py_stderr_output_30785
+	build/log/idf_py_stderr_output_30803
+	build/log/idf_py_stderr_output_33186
+	build/log/idf_py_stderr_output_33309
+	build/log/idf_py_stderr_output_33324
+	build/log/idf_py_stderr_output_3613
+	build/log/idf_py_stderr_output_37120
+	build/log/idf_py_stderr_output_37198
+	build/log/idf_py_stderr_output_37279
+	build/log/idf_py_stderr_output_37357
+	build/log/idf_py_stderr_output_37430
+	build/log/idf_py_stderr_output_37502
+	build/log/idf_py_stderr_output_37531
+	build/log/idf_py_stderr_output_37678
+	build/log/idf_py_stderr_output_37764
+	build/log/idf_py_stderr_output_37838
+	build/log/idf_py_stderr_output_37862
+	build/log/idf_py_stderr_output_39281
+	build/log/idf_py_stderr_output_44438
+	build/log/idf_py_stderr_output_44451
+	build/log/idf_py_stderr_output_5650
+	build/log/idf_py_stderr_output_60284
+	build/log/idf_py_stderr_output_6148
+	build/log/idf_py_stderr_output_64798
+	build/log/idf_py_stderr_output_64813
+	build/log/idf_py_stderr_output_66166
+	build/log/idf_py_stderr_output_66220
+	build/log/idf_py_stderr_output_66258
+	build/log/idf_py_stderr_output_66382
+	build/log/idf_py_stderr_output_66397
+	build/log/idf_py_stderr_output_67083
+	build/log/idf_py_stderr_output_68544
+	build/log/idf_py_stderr_output_68667
+	build/log/idf_py_stderr_output_68685
+	build/log/idf_py_stderr_output_71592
+	build/log/idf_py_stderr_output_71611
+	build/log/idf_py_stderr_output_7359
+	build/log/idf_py_stderr_output_77678
+	build/log/idf_py_stderr_output_77692
+	build/log/idf_py_stderr_output_77705
+	build/log/idf_py_stderr_output_82907
+	build/log/idf_py_stderr_output_83029
+	build/log/idf_py_stderr_output_83041
+	build/log/idf_py_stdout_output_100127
+	build/log/idf_py_stdout_output_11857
+	build/log/idf_py_stdout_output_11996
+	build/log/idf_py_stdout_output_12009
+	build/log/idf_py_stdout_output_12766
+	build/log/idf_py_stdout_output_12885
+	build/log/idf_py_stdout_output_12897
+	build/log/idf_py_stdout_output_140180
+	build/log/idf_py_stdout_output_140231
+	build/log/idf_py_stdout_output_140246
+	build/log/idf_py_stdout_output_144438
+	build/log/idf_py_stdout_output_144570
+	build/log/idf_py_stdout_output_144728
+	build/log/idf_py_stdout_output_144741
+	build/log/idf_py_stdout_output_159381
+	build/log/idf_py_stdout_output_159503
+	build/log/idf_py_stdout_output_159515
+	build/log/idf_py_stdout_output_22431
+	build/log/idf_py_stdout_output_251723
+	build/log/idf_py_stdout_output_251761
+	build/log/idf_py_stdout_output_251816
+	build/log/idf_py_stdout_output_251958
+	build/log/idf_py_stdout_output_251972
+	build/log/idf_py_stdout_output_26933
+	build/log/idf_py_stdout_output_26952
+	build/log/idf_py_stdout_output_27144
+	build/log/idf_py_stdout_output_27264
+	build/log/idf_py_stdout_output_27277
+	build/log/idf_py_stdout_output_27473
+	build/log/idf_py_stdout_output_27596
+	build/log/idf_py_stdout_output_27623
+	build/log/idf_py_stdout_output_27932
+	build/log/idf_py_stdout_output_28083
+	build/log/idf_py_stdout_output_28623
+	build/log/idf_py_stdout_output_28669
+	build/log/idf_py_stdout_output_28692
+	build/log/idf_py_stdout_output_28721
+	build/log/idf_py_stdout_output_29351
+	build/log/idf_py_stdout_output_29483
+	build/log/idf_py_stdout_output_29495
+	build/log/idf_py_stdout_output_30770
+	build/log/idf_py_stdout_output_30785
+	build/log/idf_py_stdout_output_30803
+	build/log/idf_py_stdout_output_33186
+	build/log/idf_py_stdout_output_33309
+	build/log/idf_py_stdout_output_33324
+	build/log/idf_py_stdout_output_3613
+	build/log/idf_py_stdout_output_37120
+	build/log/idf_py_stdout_output_37198
+	build/log/idf_py_stdout_output_37279
+	build/log/idf_py_stdout_output_37357
+	build/log/idf_py_stdout_output_37430
+	build/log/idf_py_stdout_output_37502
+	build/log/idf_py_stdout_output_37531
+	build/log/idf_py_stdout_output_37678
+	build/log/idf_py_stdout_output_37764
+	build/log/idf_py_stdout_output_37838
+	build/log/idf_py_stdout_output_37862
+	build/log/idf_py_stdout_output_39281
+	build/log/idf_py_stdout_output_44438
+	build/log/idf_py_stdout_output_44451
+	build/log/idf_py_stdout_output_5650
+	build/log/idf_py_stdout_output_60284
+	build/log/idf_py_stdout_output_6148
+	build/log/idf_py_stdout_output_64798
+	build/log/idf_py_stdout_output_64813
+	build/log/idf_py_stdout_output_66166
+	build/log/idf_py_stdout_output_66220
+	build/log/idf_py_stdout_output_66258
+	build/log/idf_py_stdout_output_66382
+	build/log/idf_py_stdout_output_66397
+	build/log/idf_py_stdout_output_67083
+	build/log/idf_py_stdout_output_68544
+	build/log/idf_py_stdout_output_68667
+	build/log/idf_py_stdout_output_68685
+	build/log/idf_py_stdout_output_71592
+	build/log/idf_py_stdout_output_71611
+	build/log/idf_py_stdout_output_7359
+	build/log/idf_py_stdout_output_77678
+	build/log/idf_py_stdout_output_77692
+	build/log/idf_py_stdout_output_77705
+	build/log/idf_py_stdout_output_82907
+	build/log/idf_py_stdout_output_83029
+	build/log/idf_py_stdout_output_83041
+	out
+
+no changes added to commit (use "git add" and/or "git commit -a")

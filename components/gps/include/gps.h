@@ -1,3 +1,3 @@
-void uart_init();
-void get_gps_data(char** coordinates);
+void gps_get_pos(float *lon, float *lat);
 void gps_cold_start();
+void gps_task(void *params);
