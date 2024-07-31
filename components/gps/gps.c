@@ -44,6 +44,9 @@ float gps_get_speed(void)
   return -1.0;
 }
 
+/*
+ * Main GPS task for handling GPS NMEA stream and extract its possition.
+ */
 void gps_task(void *params)
 {
   char *ptr = NULL;
