@@ -31,23 +31,15 @@ TaskHandle_t mainTaskHandle = NULL;
 void pack_packet(uint8_t *buffer, packet_t *packet);
 void print_buffer(uint8_t *buffer, size_t size);
 
-void lora_send_task(void *pvParameters)
+lora_status_t lora_send(packet_t *packet)
 {
-    packet_t *packet = (packet_t *)pvParameters;
     uint8_t buffer[PACKET_SIZE] = {0};
 
     pack_packet(buffer, packet);
-
     print_buffer(buffer, sizeof(buffer));
 
     // Send the packet using the HAL function
     lora_send_packet(buffer, sizeof(buffer));
-
-    // Notify the main task of completion
-    xTaskNotifyGive(mainTaskHandle);
-
-    // Terminate the task
-    vTaskDelete(NULL);
 }
 
 void pack_packet(uint8_t *buffer, packet_t *packet)
@@ -118,9 +110,10 @@ lora_status_t lora_init(void)
 
     return LORA_OK;
 }
-
+#if 0
 lora_status_t lora_send(packet_t *packet)
 {
+
     sendTimer = xTimerCreate("SendTimer", pdMS_TO_TICKS(SEND_TIMEOUT), pdFALSE, (void *)0, sendPacketTimeoutHandler);
 
     if (sendTimer == NULL)
@@ -155,8 +148,9 @@ lora_status_t lora_send(packet_t *packet)
     }
 
     return LORA_OK;
-}
 
+}
+#endif
 lora_status_t lora_receive(packet_t *packet)
 {
     uint8_t buffer[PACKET_SIZE] = {0};

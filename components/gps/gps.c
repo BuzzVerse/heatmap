@@ -96,6 +96,9 @@ static void uart_init(void)
     }
 }
 
+/*
+ * This is warm start not cold!
+ */
 void gps_cold_start(void){
   char* data = "$PCAS10,1*1A"; // TBD Here we have to be smart. When we do cold or warm start?!
 
