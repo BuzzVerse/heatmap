@@ -34,7 +34,6 @@ void lora_task(){
     vTaskDelay(100);
 
     while (1) {
-      gps_get_pos(&lat, &lon);
 
       packet.data[0] = 8;
 
@@ -137,7 +136,7 @@ void app_main(void){
     ESP_LOGE(TAG, "[FATAl] Could not create GPS task!");
   }
 
-#if 0
+#if 1
     xReturned = xTaskCreate(
   			  &lora_task,      /* Function that implements the task. */
   			  "LoRa",          /* Text name for the task. */
@@ -162,7 +161,11 @@ void app_main(void){
   printf(" /    /__\\\n");
   printf("(\\   /____\\\n");
 
-#if 0
+  while(1) {
+    vTaskDelay(1000);
+  }
+
+#if 1
   lora_close();
 #endif
 }

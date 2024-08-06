@@ -11,48 +11,29 @@ static const char *LORA_API_TAG = "LORA_API";
 
 api_status_t spi_init(void)
 {
-    ESP_LOGI(LORA_API_TAG, "Initializing spi...\n");
-    esp_err_t ret;
+    spi_device_interface_config_t spi_dev_config_sd = {
+        .clock_speed_hz = CONFIG_SPI_LORA_SPEED,
+        .mode = CONFIG_SPI_LORA_MODE,
+        .spics_io_num = CONFIG_SPI_LORA_CS_PIN_NUM,
+        .queue_size = 1,
+    };
 
-    ret = gpio_reset_pin(CONFIG_RST_GPIO);
-    ret += gpio_set_direction(CONFIG_RST_GPIO, GPIO_MODE_OUTPUT);
+    // Add SD device to the list of SPI devices.
+    esp_err_t ret =
+        spi_bus_add_device(CONFIG_SPI_HOST, &spi_dev_config_sd, &__spi);
+    if (ret != ESP_OK) {
+        ESP_LOGI(LORA_API_TAG, "Failed to add SD SPI device. Is SD CS in used by someone else?");
+        return ret;
+    } else {
+        ESP_LOGI(LORA_API_TAG, "SD SPI device added.");
+    }
 
+    gpio_reset_pin(CONFIG_RST_GPIO);
+    gpio_set_direction(CONFIG_RST_GPIO, GPIO_MODE_OUTPUT);
+    
     lora_reset();
-
-    ret += gpio_reset_pin(CONFIG_CS_GPIO);
-    ret += gpio_set_direction(CONFIG_CS_GPIO, GPIO_MODE_OUTPUT);
-    ret += gpio_set_level(CONFIG_CS_GPIO, 1);
-
-    spi_bus_config_t bus = {
-        .miso_io_num = CONFIG_MISO_GPIO,
-        .mosi_io_num = CONFIG_MOSI_GPIO,
-        .sclk_io_num = CONFIG_SCK_GPIO,
-        .quadwp_io_num = -1,
-        .quadhd_io_num = -1,
-        .max_transfer_sz = 0};
-
-    ret += spi_bus_initialize(SPI2_HOST, &bus, SPI_DMA_CH_AUTO);
-
-    spi_device_interface_config_t dev = {
-        .clock_speed_hz = 9000000,
-        .mode = 0,
-        .spics_io_num = CONFIG_CS_GPIO,
-        .queue_size = 7,
-        .flags = 0,
-        .pre_cb = NULL};
-
-    ret += spi_bus_add_device(SPI2_HOST, &dev, &__spi);
-
-    if (ESP_OK == ret)
-    {
-        ESP_LOGI(LORA_API_TAG, "SPI initialized successfully");
-        return API_OK;
-    }
-    else
-    {
-        ESP_LOGE(LORA_API_TAG, "SPI initialization failed");
-        return API_SPI_ERROR;
-    }
+    
+    return API_OK;
 }
 
 api_status_t spi_write(uint8_t reg, uint8_t val)
