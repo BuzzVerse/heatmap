@@ -1,6 +1,7 @@
 // lora.c
 
 #include "lora.h"
+#include "driver/lora_driver_defs.h"
 #include "driver/lora_driver.h"
 #include "protocols/packet/packet.h"
 #include "api/driver_api.h"
@@ -40,6 +41,49 @@ lora_status_t lora_send(packet_t *packet)
 
     // Send the packet using the HAL function
     lora_send_packet(buffer, sizeof(buffer));
+
+    return LORA_OK;
+}
+
+void lora_get_config(void)
+{
+  uint8_t cr = 0, sbw = 0, sf = 0, val = 0;
+  
+  if (LORA_OK == lora_get_coding_rate(&cr)) {
+    printf("CR: 0x%x\n", cr);
+  } else {
+    printf("CR: ERROR\n");
+  }
+
+  if (LORA_OK == lora_get_bandwidth(&sbw)) {
+    printf("SBW: 0x%x\n", sbw);
+  } else {
+    printf("SBW: ERROR\n");
+  }
+
+  if (LORA_OK == lora_get_spreading_factor(&sf)) {
+    printf("SF: 0x%x\n", sf);
+  } else {
+    printf("SF: ERROR\n");
+  }
+
+  if (ESP_OK == spi_read(REG_FRF_MSB, &val)) {
+    printf("FREQ MSB: 0x%x\n", val);
+  } else {
+    printf("FREQ MSB: ERROR\n");
+  }
+
+  if (ESP_OK == spi_read(REG_FRF_MID, &val)) {
+    printf("FREQ MSB: 0x%x\n", val);
+  } else {
+    printf("FREQ MSB: ERROR\n");
+  }
+
+  if (ESP_OK == spi_read(REG_FRF_LSB, &val)) {
+    printf("FREQ MSB: 0x%x\n", val);
+  } else {
+    printf("FREQ MSB: ERROR\n");
+  }
 }
 
 void pack_packet(uint8_t *buffer, packet_t *packet)
@@ -100,13 +144,15 @@ lora_status_t lora_init(void)
     }
 
     lora_set_frequency(LORA_FREQUENCY);
+    lora_set_bandwidth(LORA_BANDWIDTH);
+    lora_set_coding_rate(LORA_CODING_RATE);
+    lora_set_spreading_factor(LORA_SPREADING_FACTOR);
     if (LORA_CRC)
     {
         lora_enable_crc();
     }
-    lora_set_coding_rate(LORA_CODING_RATE);
-    lora_set_bandwidth(LORA_BANDWIDTH);
-    lora_set_spreading_factor(LORA_SPREADING_FACTOR);
+
+    lora_idle_mode(); // moved from lora_driver_init()
 
     return LORA_OK;
 }

@@ -12,7 +12,6 @@
 #define PROJECT_NAME "BuzzVerse"
 
 
-#if 1
 typedef union {
   int32_t deserialized;
   uint8_t serialized[4];
@@ -27,7 +26,11 @@ void lora_task(){
     packet.msgID = 1;                   // Example message ID
     packet.msgCount = 1;                // Example message count (optional, set as needed)
     packet.dataType = CONFIG_DATA_TYPE; // Example data type
-    
+
+    vTaskDelay(100);
+    lora_init();
+    lora_dump_registers();
+    vTaskDelay(100);
 
     while (1) {
       gps_get_pos(&lat, &lon);
@@ -54,19 +57,19 @@ void lora_task(){
       } else {
 	ESP_LOGI(TAG, "Packet sent successfully");
       }
-      vTaskDelay(300);
+      vTaskDelay(100);
+      lora_get_config();
+      vTaskDelay(500);
     }
 }
 
-#endif
+
 void app_main(void){
   BaseType_t xReturned;
   TaskHandle_t xHandle = NULL;
 
-#if 1
-  lora_driver_init();
-  lora_dump_registers();
-    
+#if 0
+  
   //sdspi_init();
   //sdspi_test();
 #endif
@@ -83,11 +86,12 @@ void app_main(void){
     vTaskDelete( xHandle );
     ESP_LOGE(TAG, "[FATAl] Could not create GPS task!");
   }
-#if 1
-  xReturned = xTaskCreate(
-			  &lora_task,      /* Function that implements the task. */
-			  "LoRa",          /* Text name for the task. */
-			  4*1024,          /* Stack size in words, not bytes. */
+
+#if 0
+    xReturned = xTaskCreate(
+  			  &lora_task,      /* Function that implements the task. */
+  			  "LoRa",          /* Text name for the task. */
+  			  4*1024,          /* Stack size in words, not bytes. */
 			  ( void * ) 1,    /* Parameter passed into the task. */
 			  tskIDLE_PRIORITY,/* Priority at which the task is created. */
 			  &xHandle );      /* Used to pass out the created task's handle. */
@@ -98,7 +102,17 @@ void app_main(void){
   }
 #endif
 
-#if 1
+  printf("     ,     ,\n");
+  printf("    (\\____/)\n");
+  printf("     (_oo_)\n");
+  printf("       (O)\n");
+  printf("     __||__    \\)\n");
+  printf("  []/______\\[] /\n");
+  printf("  / \\______/ \\/\n");
+  printf(" /    /__\\\n");
+  printf("(\\   /____\\\n");
+
+#if 0
   lora_close();
 #endif
 }

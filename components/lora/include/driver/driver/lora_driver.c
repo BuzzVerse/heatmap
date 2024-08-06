@@ -455,7 +455,7 @@ lora_status_t lora_driver_init(void)
    ret += lora_write_reg(REG_MODEM_CONFIG_3, 0x04);
    ret += lora_set_tx_power(17);
 
-   ret += lora_idle_mode();
+
 
    return ret;
 }

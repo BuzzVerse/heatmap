@@ -9,6 +9,7 @@
 #include "esp_log.h"
 
 static const char *TAG = "GPS";
+#define GPS_DBG_MODE 0
 
 #define TXD_PIN CONFIG_GPS_EXAMPLE_PIN_TXD
 #define RXD_PIN CONFIG_GPS_EXAMPLE_PIN_RXD
@@ -16,33 +17,196 @@ static const char *TAG = "GPS";
 
 
 #define GPS_BUF_SZ 1024
-#define GPS_NMEA_GNGLL "$GNGLL,"
-#define GPS_NMEA_GNGLL_SZ 7
+#define NMEA_NUM_HANDLERS 2
+#define GPS_NMEA_GNGGA "$GNGGA,"
+#define GPS_NMEA_GNZDA "$GNZDA,"
+#define GPS_NMEA_GNGGA_SZ 7
+#define GPS_NMEA_GNZDA_SZ 7
+
+typedef enum {
+  GPS_OK = 0,
+  GPS_ERROR,
+  GPS_NMEA_OK,
+  GPS_NMEA_FAIL
+} gps_rc_t;
 
 typedef struct {
-  int32_t lon;
+  uint32_t time;
+  uint8_t day;
+  uint8_t month;
+  uint16_t year;
+} gps_time_t;
+
+typedef struct {
   int32_t lat;
-  float time;
-  float speed;
+  int32_t lon;
+  char lat_hemisphere;
+  char lon_hemisphere;
+  uint16_t altitude;
+} gps_pos_t;
+
+typedef struct {
+  gps_time_t utc;
+  gps_pos_t pos;
   uint8_t num_sat;
-  bool fix;
+  uint8_t quality;
+  uint16_t hdop;
+  bool fresh;
   uint8_t data[GPS_BUF_SZ];
 } gps_t;
 
 static gps_t gps = { 0 };
 
-void gps_get_pos(int32_t *lon, int32_t *lat)
-{
-  if (NULL == lon || NULL == lat)
-    return;
+typedef struct {
+  char *sentence;
+  gps_rc_t (*handler)(char *);
+} gps_nmea_handler_t;
 
-  *lon = gps.lon;
-  *lat = gps.lat;
+static int32_t nmea_extract_value(char **sentence);
+static char nmea_extract_hemispere(char **sentence);
+static void print_gps_struct(void);
+
+/* NMEA sentence handlers */
+static gps_rc_t nmea_gngga_handler(char *sentence);
+static gps_rc_t nmea_gnzda_handler(char *sentence);
+
+static gps_nmea_handler_t gps_nmea_handlers[NMEA_NUM_HANDLERS] = {
+  { GPS_NMEA_GNGGA, &nmea_gngga_handler },
+  { GPS_NMEA_GNZDA, &nmea_gnzda_handler }
+};
+
+/*
+ * Extracts value as integer from string e.g. "5156.42755," becomes value 515642755
+ */
+static int32_t nmea_extract_value(char **sentence)
+{
+  int32_t value = 0;
+
+  if (NULL == sentence)
+    return -1;
+
+  for (value = 0; **sentence != ','; (*sentence)++) {
+    switch (**sentence) {
+    case '0':
+    case '1':
+    case '2':
+    case '3':
+    case '4':
+    case '5':
+    case '6':
+    case '7':
+    case '8':
+    case '9':
+      value *= 10;
+      value += (**sentence - '0');
+      break;
+      
+    case '.':
+      break;
+
+    default:
+      break;
+    }
+  }
+  (*sentence)++;
+
+  return value;
 }
 
-float gps_get_speed(void)
+/*
+ * $GNGLL,5156.42755,N,01531.78916,E,163017.000,A,A*44
+ * Extracts N,S and E,W for specific hemisphere
+ */
+
+static char nmea_extract_hemispere(char **sentence)
 {
-  return -1.0;
+  char hemisphere = 'H';
+
+  if (NULL != *sentence) {
+    switch (**sentence) {
+    case 'N':
+    case 'S':
+    case 'E':
+    case 'W':
+      hemisphere = **sentence;
+      *sentence += 2; /* Set pointer to value after comma */
+      break;
+    }
+  }
+  return hemisphere;
+}
+
+/*
+ *
+ */
+static void print_gps_struct(void)
+{
+  ESP_LOGI(TAG, "**********************************************");
+  ESP_LOGI(TAG, "* GPS data is %s", gps.fresh?"FRESH":"OLD");
+  ESP_LOGI(TAG, "* [ UTC Time: %ld %d/%d/%d ]", gps.utc.time, gps.utc.day, gps.utc.month, gps.utc.year);
+  if (0 == gps.quality) {
+    ESP_LOGI(TAG, "* [ GPS quality: position fix unavailable ]");    
+  } else {
+    ESP_LOGI(TAG, "* [ GPS quality: %s ]", (gps.quality == 1)?"valid position fix, SPS mode":"valid position fix, differential GPS mode");
+  }
+  ESP_LOGI(TAG, "* [ Latitude: %ld %c ] [ Longitude: %ld %c ]",
+	   gps.pos.lat, gps.pos.lat_hemisphere, gps.pos.lon, gps.pos.lon_hemisphere);
+  ESP_LOGI(TAG, "* [ Altitude: %d ]", gps.pos.altitude);
+  ESP_LOGI(TAG, "* [ HDOP: %d ]", gps.hdop);
+  ESP_LOGI(TAG, "* [ Number of satelites: %d ]", gps.num_sat);
+  ESP_LOGI(TAG, "**********************************************");
+
+#if GPS_DBG_MODE == 1
+  ESP_LOGI(TAG, "##############################################");
+  ESP_LOGI(TAG, "# NMEA: %s", gps.data);
+  ESP_LOGI(TAG, "##############################################");
+#endif
+}
+
+/*
+ * $GNGGA,180651.000,5156.44654,N,01531.81015,E,1,15,1.1,190.2,M,39.1,M,,*47
+ */
+static gps_rc_t nmea_gngga_handler(char *sentence)
+{
+  gps_rc_t rc = GPS_NMEA_FAIL;
+
+  if (NULL != sentence) {
+    sentence += GPS_NMEA_GNGGA_SZ;
+
+    nmea_extract_value(&sentence); /* Drop time. Collected elsewhere. */
+    gps.pos.lat = nmea_extract_value(&sentence);
+    gps.pos.lat_hemisphere = nmea_extract_hemispere(&sentence);
+    gps.pos.lon = nmea_extract_value(&sentence);
+    gps.pos.lon_hemisphere = nmea_extract_hemispere(&sentence);
+    gps.quality = nmea_extract_value(&sentence);
+    gps.num_sat = nmea_extract_value(&sentence);
+    gps.hdop = nmea_extract_value(&sentence);
+    gps.pos.altitude = nmea_extract_value(&sentence);
+
+    rc = GPS_NMEA_OK;
+  }
+
+  return rc;
+}
+
+/*
+ * $GNZDA,140055.000,06,08,2024,00,00*47
+ * Responsible for extracting UTC time, day, month, year.
+ */
+static gps_rc_t nmea_gnzda_handler(char *sentence)
+{
+  gps_rc_t rc = GPS_NMEA_FAIL;
+
+  if (NULL != sentence) {
+    sentence += GPS_NMEA_GNZDA_SZ;
+    gps.utc.time = nmea_extract_value(&sentence);
+    gps.utc.day = nmea_extract_value(&sentence);
+    gps.utc.month = nmea_extract_value(&sentence);
+    gps.utc.year = nmea_extract_value(&sentence);
+    rc = GPS_NMEA_OK;
+  }
+
+  return rc;
 }
 
 /*
@@ -51,29 +215,32 @@ float gps_get_speed(void)
 void gps_task(void *params)
 {
   char *ptr = NULL;
-  float lat, lon;
+  uint8_t i;
   
   while (1) {
 
     if (0 < uart_read_bytes(UART_NUM_1, gps.data, GPS_BUF_SZ, READ_COOLDOWN / portTICK_PERIOD_MS)) {
-      ptr = strstr((char *)gps.data, GPS_NMEA_GNGLL);
-      if (ptr) {
-	ptr += GPS_NMEA_GNGLL_SZ;
-
-	lat = atof(ptr);
-
-	while (*ptr++ != ','); // TBD: Seek till comma. Need to failsafe here!
-	while (*ptr++ != ','); // TBD: Seek till comma. Need to failsafe here!
-	
-	lon = atof(ptr);
-
-	gps.lat = (int32_t)(lat * 10000.0);
-	gps.lon = (int32_t)(lon * 10000.0);
-	ESP_LOGI(TAG, "GNGLL position: [ latitude: %ld ], [ longitude: %ld ]", gps.lat, gps.lon);
-	ESP_LOGI(TAG, "NMEA: %s", gps.data);
+      for (i = 0; i < NMEA_NUM_HANDLERS; i++) {
+	ptr = strstr((char *)gps.data, gps_nmea_handlers[i].sentence);
+	if (NULL != ptr) {
+	  if (GPS_NMEA_OK == gps_nmea_handlers[i].handler(ptr)) {
+	    gps.fresh = true;
+	  }
+	}
       }
     }
     vTaskDelay(100);
+    if (true == gps.fresh) {
+#if 0
+      if (pdTrue == xQueueSend(msg, sdcard_Q, etc... )) {
+	gps.fresh = false;
+      }
+#else
+      gps.fresh = false;
+      
+#endif 
+    }
+    print_gps_struct();
   }
 }
 

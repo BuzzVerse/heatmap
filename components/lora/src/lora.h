@@ -6,6 +6,7 @@
 #include "protocols/packet/packet.h"
 #include "api/driver_api.h"
 
+void lora_get_config(void);
 /**
  * @brief Initialize the LoRa module.
  *
