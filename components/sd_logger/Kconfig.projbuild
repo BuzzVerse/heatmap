@@ -1,0 +1,7 @@
+menu "SD logger configuration"
+
+    config SD_LOGGER
+        bool "Enable SD Logger"
+        default y if IDF_TARGET_ESP32S3
+
+endmenu

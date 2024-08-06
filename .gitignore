@@ -58,3 +58,5 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
+sdkconfig.old
+.vscode/settings.json

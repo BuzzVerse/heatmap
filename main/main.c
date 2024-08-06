@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
-#include "sdcard.h"
+#include "sd_logger.h"
 #include "gps.h"
 #include "lora.h"
 #include <string.h>
 #include <inttypes.h>
+#include "esp_log.h"
 
 #define TAG "Main"
 #define PROJECT_VER "0.0.0"
@@ -63,16 +64,65 @@ void lora_task(){
     }
 }
 
+static void init_spi_bus()
+{
+    // Setup SPI bus
+    spi_bus_config_t bus_cfg = {
+        .mosi_io_num = CONFIG_SPI_MOSI_PIN_NUM,
+        .miso_io_num = CONFIG_SPI_MISO_PIN_NUM,
+        .sclk_io_num = CONFIG_SPI_CLK_PIN_NUM,
+        .quadwp_io_num = -1,
+        .quadhd_io_num = -1,
+        .max_transfer_sz = 4000,
+    };
+
+    esp_err_t ret = spi_bus_initialize(CONFIG_SPI_HOST, &bus_cfg, SPI_DMA_CH_AUTO);
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to initialize SPI bus");
+        return;
+    }
+}
 
 void app_main(void){
   BaseType_t xReturned;
   TaskHandle_t xHandle = NULL;
 
-#if 0
+  // Mandatory initialization of SPI bus, common for LoRa and UEXT module.
+  init_spi_bus();
+
+  // --- Example of sending data to SD logger ---
   
-  //sdspi_init();
-  //sdspi_test();
-#endif
+  // Get the SD logger queue
+  QueueHandle_t sd_logger_queue = sd_logger_init();
+  if (NULL == sd_logger_queue) {
+    ESP_LOGE(TAG, "Failed to initialize SD logger");
+    return;
+  }
+
+  gps_record_t sample_gps_data[] = {
+    {1722963321, 0, -269434373, -1666061503, 5400, 111, -116, 0},
+    {1722963322, 0, -579515899, 898377274, 8239, 92, -33, 0},
+    {1722963323, 0, 612009894, 439500542, 4695, 191, -37, 0},
+    {1722963324, 1, 69669419, 467416384, 4167, 162, -11, 0},
+    {1722963325, 1, 135862440, -291246623, 5899, 112, -50, 1},
+    {1722963326, 0, 40499433, -929341812, 5450, 243, -1, 1},
+    {1722963327, 0, -291827279, 827895210, 6817, 171, -11, 0},
+    {1722963328, 0, 239566285, 1351824774, 4178, 140, -60, 0},
+    {1722963329, 1, 321526551, 20169793, 6455, 216, -99, 0},
+    {1722963330, 0, -266104899, 429023739, 3600, 248, -120, 1},
+  };
+
+  int num_elements = sizeof(sample_gps_data) / sizeof(sample_gps_data[0]);
+  
+  for (int i = 0; i < num_elements; i++) {
+    if (pdTRUE != xQueueSend(sd_logger_queue, &sample_gps_data[i], 0)) {
+      ESP_LOGE(TAG, "Failed to send data to SD logger");
+    }
+    vTaskDelay(30);
+  }
+
+  // --- END of example ---
+
   gps_cold_start();
   xReturned = xTaskCreate(
 			  &gps_task,       /* Function that implements the task. */

@@ -1,9 +1,0 @@
-{
-    "idf.adapterTargetName": "esp32c3",
-    "C_Cpp.errorSquiggles": "disabled",
-    "files.associations": {
-        "sd_filesystem.h": "c",
-        "sdcard.h": "c",
-        "lora.h": "c"
-    }
-}

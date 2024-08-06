@@ -1,5 +1,6 @@
-menu "App Configuration"
+menu "Heatmap App Configuration"
 
+    comment "General configuration"
     config PACKET_VERSION
         int "Packet Version"
         range 0 15
@@ -27,4 +28,56 @@ menu "App Configuration"
         default 0
         help
             Type of data to be sent.
+
+    comment "SPI Common Configuration"
+    config SPI_MISO_PIN_NUM
+        int "MISO that is used for LoRa and UEXT connector."
+        default 13 if IDF_TARGET_ESP32S3
+        
+    config SPI_MOSI_PIN_NUM
+        int "MOSI that is used for LoRa and UEXT connector."
+        default 11 if IDF_TARGET_ESP32S3
+
+    config SPI_CLK_PIN_NUM
+        int "CLK pin that is used for LoRa and UEXT connector."
+        default 12 if IDF_TARGET_ESP32S3
+
+    config SPI_HOST
+        int "Select SPI Host"
+        default 2
+        range 0 2
+        help
+            0 = SPI1_HOST
+            1 = SPI2_HOST
+            2 = SPI3_HOST
+
+    comment "LoRa SPI configuration"
+    config SPI_LORA_SPEED
+        int "Speed of SPI BUS for LoRa in HZ"
+        default 1000000
+
+    config SPI_LORA_CS_PIN_NUM
+        int "CS pin for LoRa device."
+        default 10 if IDF_TARGET_ESP32S3
+
+    config SPI_LORA_MODE
+        int "SPI mode for LoRA"
+        default 0
+        range 0 3
+
+    comment "UEXT SPI configuration"
+    config SPI_UEXT_SPEED
+        int "Speed of SPI BUS for UEXT in HZ"
+        default 1000000
+
+    config SPI_UEXT_CS_PIN_NUM
+        int "CS pin for UEXT device."
+        default 8
+
+    config SPI_UEXT_MODE
+        int "SPI mode for UEXT"
+        default 0
+        range 0 3
+
+
 endmenu

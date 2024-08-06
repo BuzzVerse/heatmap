@@ -1,4 +1,4 @@
-idf_component_register(SRCS "sdcard.c"
+idf_component_register(SRCS "sd_logger.c"
                     INCLUDE_DIRS "include"
                     REQUIRES fatfs
                     )
