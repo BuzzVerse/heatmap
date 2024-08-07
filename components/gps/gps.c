@@ -7,6 +7,7 @@
 #include "driver/gpio.h"
 #include "driver/uart.h"
 #include "esp_log.h"
+#include "sd_logger.h"
 
 static const char *TAG = "GPS";
 #define GPS_DBG_MODE 0
@@ -214,6 +215,8 @@ static gps_rc_t nmea_gnzda_handler(char *sentence)
  */
 void gps_task(void *params)
 {
+  QueueHandle_t sd_gps_queue = (QueueHandle_t)params;
+  gps_record_t gps_record;
   char *ptr = NULL;
   uint8_t i;
   
@@ -231,14 +234,18 @@ void gps_task(void *params)
     }
     vTaskDelay(100);
     if (true == gps.fresh) {
-#if 0
-      if (pdTrue == xQueueSend(msg, sdcard_Q, etc... )) {
-	gps.fresh = false;
-      }
-#else
       gps.fresh = false;
-      
-#endif 
+#if 0
+      gps_record.timestamp = gps.utc.time;
+      gps_record.fix = gps.quality;
+      gps_record.lat = gps.pos.lat;
+      gps_record.lon = gps.pos.lon;
+      gps_record.alt = gps.pos.altitude;
+   
+      if (pdTRUE != xQueueSend(sd_gps_queue, &gps_record, 0)) {
+	ESP_LOGE(TAG, "Failed to send data to SD logger");
+      }
+#endif
     }
     print_gps_struct();
   }
@@ -264,15 +271,30 @@ static void uart_init(void)
 }
 
 /*
- * This is warm start not cold!
+ * GPS warm start.
  */
-void gps_cold_start(void){
+void gps_warm_start(void){
   char* data = "$PCAS10,1*1A"; // TBD Here we have to be smart. When we do cold or warm start?!
 
   uart_init();
   vTaskDelay(500);
-  ESP_LOGI(TAG, "GPS cold start %s", data);
+  ESP_LOGI(TAG, "GPS warm start %s", data);
   uart_write_bytes(UART_NUM_1, data, 100);
   vTaskDelay(10000 / portTICK_PERIOD_MS);
+}
+
+int32_t gps_get_lat(void)
+{
+  return gps.pos.lat;
+}
+
+int32_t gps_get_lon(void)
+{
+  return gps.pos.lon;
+}
+
+uint16_t gps_get_alt(void)
+{
+  return gps.pos.altitude;
 }
 

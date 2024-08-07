@@ -20,7 +20,7 @@
 #define SD_MAX_OPENED_FILES 5
 #define SD_MOUNT_POINT "/sdcard"
 #define SD_DATA_FILENAME "data.csv"
-#define SD_DATA_FILE_HEADER "Timestamp,Fix,Lat,Lon,Alt,RSSI,CRC\n"
+#define SD_DATA_FILE_HEADER "Timestamp,Fix,Lat,Lon,Alt\n"
 
 static sdmmc_card_t *card;
 static spi_device_handle_t sd_spi;
@@ -41,13 +41,16 @@ static esp_err_t tool_sd_static_append_record_to_file(
     const char *filename, const gps_record_t *record) {
     FILE *file = fopen(filename, "a");
     if (file == NULL) {
-        perror("Error opening file for appending");
-        return ESP_FAIL;
+      ESP_LOGE(TAG, "Error opening %s for appending", filename);
+      return ESP_FAIL;
     }
 
-    int status = fprintf(file, "%d,%d,%d,%d,%d,%d,%d, %d\n", record->timestamp,
-                         record->fix, record->lat, record->lon, record->alt,
-                         record->spd, record->rssi, record->crc_error);
+    int status = fprintf(file, "%d,%d,%d,%d,%d\n",
+			 record->timestamp,
+                         record->fix,
+			 record->lat,
+			 record->lon,
+			 record->alt);
 
     fclose(file);
 
@@ -133,10 +136,6 @@ static void gps_logger_task(void *pvParameters) {
                               SD_MOUNT_POINT "/" SD_DATA_FILENAME, &gps_data)) {
                 ESP_LOGE(TAG, "Failed to append record to file");
             }
-            ESP_LOGI(TAG, "Record appended to file: %d,%d,%d,%d,%d,%d,%d,%d\n",
-                     gps_data.timestamp, gps_data.fix, gps_data.lat,
-                     gps_data.lon, gps_data.alt, gps_data.spd, gps_data.rssi,
-                     gps_data.crc_error);
         }
     }
 }
@@ -147,14 +146,14 @@ QueueHandle_t sd_logger_init() {
         return NULL;
     }
 
-    ESP_LOGD(TAG, "SD SPI device initialized");
+    ESP_LOGI(TAG, "SD SPI device initialized");
 
     if (ESP_OK != sd_mount()) {
         ESP_LOGE(TAG, "Failed to mount SD card");
         return NULL;
     }
 
-    ESP_LOGD(TAG, "SD card mounted");
+    ESP_LOGI(TAG, "SD card mounted");
 
     if (!tool_sd_file_exists(SD_MOUNT_POINT "/" SD_DATA_FILENAME)) {
         // If the file does not exist, create and initialize it
@@ -164,15 +163,19 @@ QueueHandle_t sd_logger_init() {
 
     QueueHandle_t gps_queue = xQueueCreate(10, sizeof(gps_record_t));
     if (gps_queue == NULL) {
-        printf("Failed to create queue\n");
-        return NULL;
+      ESP_LOGE(TAG,"Failed to create queue\n");
+      return NULL;
     }
 
-    if (xTaskCreate(gps_logger_task, "gps_logger_task", 2048, (void *)gps_queue,
-                    5, NULL) != pdPASS) {
-        printf("Failed to create task\n");
-        vQueueDelete(gps_queue);
-        return NULL;
+    if (xTaskCreate(gps_logger_task,
+		    "gps_logger_task",
+		    8*1024,
+		    (void *)gps_queue,
+                    tskIDLE_PRIORITY,
+		    NULL) != pdPASS) {
+      ESP_LOGE(TAG, "Failed to create task\n");
+      vQueueDelete(gps_queue);
+      return NULL;
     }
 
     return gps_queue;
