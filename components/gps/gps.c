@@ -35,7 +35,7 @@ typedef struct {
   uint8_t day;
   uint8_t month;
   uint16_t year;
-} gps_time_t;
+} gps_utc_t;
 
 typedef struct {
   int32_t lat;
@@ -46,7 +46,7 @@ typedef struct {
 } gps_pos_t;
 
 typedef struct {
-  gps_time_t utc;
+  gps_utc_t utc;
   gps_pos_t pos;
   uint8_t num_sat;
   uint8_t quality;
@@ -229,7 +229,7 @@ void gps_task(void *params)
 	}
       }
     }
-    vTaskDelay(100);
+    vTaskDelay(6000);
     if (true == gps.fresh) {
 #if 0
       if (pdTrue == xQueueSend(msg, sdcard_Q, etc... )) {
@@ -264,15 +264,38 @@ static void uart_init(void)
 }
 
 /*
- * This is warm start not cold!
+ * GPS warm start (remember ephemerides)
  */
-void gps_cold_start(void){
+void gps_warm_start(void){
   char* data = "$PCAS10,1*1A"; // TBD Here we have to be smart. When we do cold or warm start?!
 
   uart_init();
-  vTaskDelay(500);
-  ESP_LOGI(TAG, "GPS cold start %s", data);
+  //  vTaskDelay(5);
+  ESP_LOGI(TAG, "GPS warm start %s", data);
   uart_write_bytes(UART_NUM_1, data, 100);
-  vTaskDelay(10000 / portTICK_PERIOD_MS);
+  vTaskDelay(1000 / portTICK_PERIOD_MS);
 }
 
+/*
+ * GPS get position
+ */
+void gps_get_pos(int32_t *lat, int32_t *lon, uint16_t *alt)
+{
+  if (lat != NULL && lon != NULL && alt != NULL) {
+    *lat = gps.pos.lat;
+    *lon = gps.pos.lon;
+    *alt = gps.pos.altitude;
+  }
+}
+
+/*
+ * GPS get status
+ */
+void gps_get_status(uint8_t *status)
+{
+  if (status != NULL) {
+    *status = gps.quality << 6;
+    *status |= (gps.pos.lat_hemisphere == 'N')?0x20:0x00;
+    *status |= (gps.pos.lon_hemisphere == 'E')?0x10:0x00;
+  }
+}

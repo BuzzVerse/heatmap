@@ -34,15 +34,45 @@ void print_buffer(uint8_t *buffer, size_t size);
 
 lora_status_t lora_send(packet_t *packet)
 {
-    uint8_t buffer[PACKET_SIZE] = {0};
+  uint8_t size = 0;
 
-    pack_packet(buffer, packet);
-    print_buffer(buffer, sizeof(buffer));
+  switch (packet->dataType) {
+  case PACKET_TYPE_BME280:
+    size = 3;
+    break;
+  case PACKET_TYPE_BMA400:
+    size = 24;
+    break;
+  case PACKET_TYPE_MQ2:
+    size = 17;
+    break;
+  case PACKET_TYPE_GPS:
+    size = 11;
+    break;
+  case PACKET_TYPE_SMS:
+    size = 59;
+    break;
+  default:
+    size = 0;
+    break;
+  }
+  uint8_t buffer[size] = {};
+  memset(buffer, 0, META_DATA_SIZE + size);
 
-    // Send the packet using the HAL function
-    lora_send_packet(buffer, sizeof(buffer));
+  buffer[0] = packet->version;
+  buffer[1] = packet->id;
+  buffer[2] = packet->msgID;
+  buffer[3] = packet->msgCount;
+  buffer[4] = packet->dataType;
 
-    return LORA_OK;
+  memcpy(&buffer[META_DATA_SIZE], packet->data, size);
+
+  print_buffer(buffer, META_DATA_SIZE + size);
+
+  // Send the packet using the HAL function
+  lora_send_packet(buffer, META_DATA_SIZE + size);
+
+  return LORA_OK;
 }
 
 void lora_get_config(void)
@@ -88,12 +118,7 @@ void lora_get_config(void)
 
 void pack_packet(uint8_t *buffer, packet_t *packet)
 {
-    buffer[0] = packet->version;
-    buffer[1] = packet->id;
-    buffer[2] = packet->msgID;
-    buffer[3] = packet->msgCount;
-    buffer[4] = packet->dataType;
-    memcpy(&buffer[META_DATA_SIZE], packet->data, DATA_SIZE);
+
 }
 
 void print_buffer(uint8_t *buffer, size_t size)
@@ -104,29 +129,6 @@ void print_buffer(uint8_t *buffer, size_t size)
         printf("0x%x ", buffer[i]);
     }
     printf("\n");
-}
-
-void sendPacketTimeoutHandler(TimerHandle_t xTimer)
-{
-    printf("Send packet timeout.\n");
-    timeout_occurred = true;
-
-    if (sendTaskHandle != NULL)
-    {
-        vTaskDelete(sendTaskHandle);
-    }
-
-    lora_sleep_mode();
-    lora_write_reg(REG_IRQ_FLAGS, IRQ_TX_DONE_MASK);
-
-    xTaskNotifyGive(mainTaskHandle);
-}
-
-void noConfirmationHandler(TimerHandle_t xTimer)
-{
-    printf("Confirmation timeout.\n");
-    timeout_occurred = true;
-    xTimerStop(xTimer, 0);
 }
 
 lora_status_t lora_init(void)
@@ -156,47 +158,7 @@ lora_status_t lora_init(void)
 
     return LORA_OK;
 }
-#if 0
-lora_status_t lora_send(packet_t *packet)
-{
 
-    sendTimer = xTimerCreate("SendTimer", pdMS_TO_TICKS(SEND_TIMEOUT), pdFALSE, (void *)0, sendPacketTimeoutHandler);
-
-    if (sendTimer == NULL)
-    {
-        printf("Failed to create timer.\n");
-        return LORA_FAILED_SEND_PACKET;
-    }
-
-    mainTaskHandle = xTaskGetCurrentTaskHandle();
-
-    BaseType_t xReturned = xTaskCreate(lora_send_task, "LoRaSendTask", 2048, (void *)packet, tskIDLE_PRIORITY, &sendTaskHandle);
-
-    if (xReturned != pdPASS)
-    {
-        printf("Failed to create send task.\n");
-        return LORA_FAILED_SEND_PACKET;
-    }
-
-    if (xTimerStart(sendTimer, 0) != pdPASS)
-    {
-        printf("Failed to start timer.\n");
-        return LORA_FAILED_SEND_PACKET;
-    }
-
-    ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
-
-    xTimerStop(sendTimer, 0);
-
-    if (timeout_occurred)
-    {
-        return LORA_FAILED_SEND_PACKET;
-    }
-
-    return LORA_OK;
-
-}
-#endif
 lora_status_t lora_receive(packet_t *packet)
 {
     uint8_t buffer[PACKET_SIZE] = {0};

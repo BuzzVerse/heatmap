@@ -3,9 +3,18 @@
 
 #include <stdint.h>
 
-#define DATA_SIZE 9
+#define DATA_SIZE 60
 #define META_DATA_SIZE 5
 #define PACKET_SIZE (DATA_SIZE + META_DATA_SIZE)
+
+typedef enum {
+  PACKET_TYPE_RESERVED = 0,
+  PACKET_TYPE_BME280,
+  PACKET_TYPE_BMA400,
+  PACKET_TYPE_MQ2,
+  PACKET_TYPE_GPS,
+  PACKET_TYPE_SMS = 32
+} packet_type_t;
 
 /**
  * @brief Structure representing a LoRa packet.
