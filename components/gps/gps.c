@@ -14,7 +14,8 @@ static const char *TAG = "GPS";
 #define TXD_PIN CONFIG_GPS_EXAMPLE_PIN_TXD
 #define RXD_PIN CONFIG_GPS_EXAMPLE_PIN_RXD
 #define READ_COOLDOWN 10000
-
+#define GPS_POS_DD 10000000
+#define GPS_POS_DOT 0.6
 
 #define GPS_BUF_SZ 1024
 #define NMEA_NUM_HANDLERS 2
@@ -169,19 +170,28 @@ static void print_gps_struct(void)
 static gps_rc_t nmea_gngga_handler(char *sentence)
 {
   gps_rc_t rc = GPS_NMEA_FAIL;
+  int32_t lat, lon;
 
   if (NULL != sentence) {
     sentence += GPS_NMEA_GNGGA_SZ;
 
     nmea_extract_value(&sentence); /* Drop time. Collected elsewhere. */
-    gps.pos.lat = nmea_extract_value(&sentence);
+    lat = nmea_extract_value(&sentence);
     gps.pos.lat_hemisphere = nmea_extract_hemispere(&sentence);
-    gps.pos.lon = nmea_extract_value(&sentence);
+    lon = nmea_extract_value(&sentence);
     gps.pos.lon_hemisphere = nmea_extract_hemispere(&sentence);
     gps.quality = nmea_extract_value(&sentence);
     gps.num_sat = nmea_extract_value(&sentence);
     gps.hdop = nmea_extract_value(&sentence);
     gps.pos.altitude = nmea_extract_value(&sentence);
+
+    // Combine the division and multiplication steps into a single operation
+    gps.pos.lat = lat - (lat % GPS_POS_DD);
+    gps.pos.lon = lon - (lon % GPS_POS_DD);
+
+    // Calculate the remainder directly, avoiding unnecessary floating-point casting
+    gps.pos.lat += (lat % GPS_POS_DD) / GPS_POS_DOT;
+    gps.pos.lon += (lon % GPS_POS_DD) / GPS_POS_DOT;
 
     rc = GPS_NMEA_OK;
   }
